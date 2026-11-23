@@ -80,3 +80,17 @@ body { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 [data-node-id="503:362"] [data-node-id="503:380"] {
   margin-left: max(0px, calc((100cqw - 1920px) / 2));
 }
+
+/* ---------- Heart icons: inner heart still, halo pulses ---------- */
+.heart-halo {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: heart-halo 2.4s ease-in-out infinite;
+}
+@keyframes heart-halo {
+  0%, 100% { transform: scale(0.9); opacity: 0.6; }
+  50%      { transform: scale(1.2); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .heart-halo { animation: none; }
+}

@@ -1,5 +1,6 @@
 import ReserveChart from './components/ReserveChart'
 import Popups from './components/Popups'
+import PulseHeart from './components/PulseHeart'
 import StepsScroll from './components/StepsScroll'
 import { useReveal } from './lib/reveal'
 import { useOrbitIn } from './lib/orbitIn'
@@ -53,10 +54,8 @@ const imgRectangle36 = "./assets/imgRectangle36.jpg";
 const imgRectangle778 = "./assets/imgRectangle778.jpg";
 const imgVector3 = "./assets/imgVector3.png";
 const imgEllipse46 = "./assets/imgEllipse46.svg";
-const imgVector1 = "./assets/imgVector1.svg";
 const imgGroup45 = "./assets/imgGroup45.svg";
 const imgRadijalniPrikazRezervi = "./assets/imgRadijalniPrikazRezervi.svg";
-const imgVector2 = "./assets/imgVector2.svg";
 const imgErrorWarningFill = "./assets/imgErrorWarningFill.svg";
 const imgMaskGroup = "./assets/imgMaskGroup.svg";
 const imgIcon = "./assets/imgIcon.svg";
@@ -164,7 +163,7 @@ export default function Home() {
                     <div className="-scale-y-100 flex-none rotate-180">
                       <div className="h-[14px] relative w-[16.333px]" data-name="Vector">
                         <div className="absolute inset-[-41.67%_-35.71%]">
-                          <img alt="" className="block max-w-none size-full" src={imgVector1} />
+                          <PulseHeart variant="large" />
                         </div>
                       </div>
                     </div>
@@ -296,7 +295,7 @@ export default function Home() {
                     <div className="-scale-y-100 flex-none rotate-180">
                       <div className="h-[14px] relative w-[16.333px]" data-name="Vector">
                         <div className="absolute inset-[-35.71%_-30.61%]">
-                          <img alt="" className="block max-w-none size-full" src={imgVector2} />
+                          <PulseHeart variant="small" />
                         </div>
                       </div>
                     </div>
@@ -332,7 +331,7 @@ export default function Home() {
                     <div className="-scale-y-100 flex-none rotate-180">
                       <div className="h-[14px] relative w-[16.333px]" data-name="Vector">
                         <div className="absolute inset-[-35.71%_-30.61%]">
-                          <img alt="" className="block max-w-none size-full" src={imgVector2} />
+                          <PulseHeart variant="small" />
                         </div>
                       </div>
                     </div>

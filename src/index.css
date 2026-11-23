@@ -1,0 +1,79 @@
+@import "@fontsource-variable/archivo/wdth.css";
+@import "@fontsource-variable/host-grotesk/index.css";
+@import "@fontsource-variable/dm-sans/opsz.css";
+@import "@fontsource-variable/inter/index.css";
+@import "tailwindcss";
+
+html, body { margin: 0; background: #fff; }
+body { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+
+/* ---------- Text: line mask reveal (bottom → top) ---------- */
+#root:not(.reveal-ready) p { visibility: hidden; }
+.rl {
+  display: block;
+  overflow: hidden;
+  /* room for descenders inside the mask */
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
+}
+.ri {
+  display: block;
+  transform: translate3d(0, 110%, 0);
+  transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+.is-revealed .ri { transform: none; }
+
+/* ---------- Preloader (motion from the Figma timeline, 2s) ---------- */
+[data-node-id="503:794"] {
+  animation:
+    hero-size 2s linear both,
+    hero-pos 2s linear both;
+}
+@keyframes hero-size {
+  0%       { width: 117.343%; height: 1103.021px; }
+  25.863%  { width: 117.343%; height: 1103.021px; animation-timing-function: cubic-bezier(0.252, 1.109, 1, 1); }
+  95.247%, 100% { width: 100%; height: 1000px; }
+}
+@keyframes hero-pos {
+  0%       { left: -8.697%; top: -73px; }
+  25.863%  { left: -8.697%; top: -73px; animation-timing-function: cubic-bezier(0.227, 1.042, 1, 1); }
+  95.247%, 100% { left: 0; top: 0; }
+}
+[data-node-id="503:806"] { animation: logo-drop 2s linear both; }
+@keyframes logo-drop {
+  0%       { translate: 0 -93.416px; }
+  40.653%  { translate: 0 -93.416px; animation-timing-function: cubic-bezier(0.076, 1.185, 1, 1); }
+  89.712%, 100% { translate: 0 0; }
+}
+[data-node-id="503:813"] { animation: hero-content 2s linear both; }
+@keyframes hero-content {
+  0%       { opacity: 0; }
+  49.312%  { opacity: 0; animation-timing-function: cubic-bezier(0.193, 0.546, 0.5, 1); }
+  67.758%, 100% { opacity: 1; }
+}
+/* footer logo uses the same drop, played when the footer is in view */
+[data-node-id="503:506"] { translate: 0 -143.717px; }
+[data-node-id="503:506"].is-revealed { animation: footer-logo 1s cubic-bezier(0.076, 1.185, 1, 1) both; }
+@keyframes footer-logo { from { translate: 0 -143.717px; } to { translate: 0 0; } }
+
+/* ---------- Popups ---------- */
+.popup-tile {
+  position: absolute;
+  border-radius: 2px;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 1.1s ease, transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.popup-tile.is-in { opacity: 1; transform: scale(1); }
+.popup-tile.is-out { opacity: 0; transform: scale(1.03); transition-duration: 0.9s, 1s; }
+
+/* ---------- Sticky steps ---------- */
+.step { opacity: 0; transition: opacity 0.6s ease; }
+.step[data-state="active"] { opacity: 1; }
+.step[data-state="prev"] { opacity: 0.15; }
+.step[data-state="active"] .ri,
+.step[data-state="prev"] .ri { transform: none; }
+.step[data-state="past"] .ri { transform: translate3d(0, -110%, 0); }

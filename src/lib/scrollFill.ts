@@ -7,7 +7,7 @@ import { useEffect } from 'react'
  */
 
 const GREY = [0xa9, 0xa9, 0xa9]
-const DARK = [0x26, 0x26, 0x26]
+const DARK = [0x48, 0x34, 0x34] // #483434
 const START = 0.8 // fill starts when the heading top reaches 80% of the viewport height
 const END = 0.44 // …and is complete when its bottom reaches 44% (heading sitting in the upper third)
 

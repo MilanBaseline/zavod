@@ -5,9 +5,9 @@ import { useEffect, useRef } from 'react'
  * Arrows switch hero: the name and story change with the same line mask
  * animation as the rest of the site, the photo wipes in from the bottom.
  *
- * Slide 1 (Neda Petrović) is from the design. Slides 2–3 are PLACEHOLDERS:
- * their names and stories are not in the Figma file yet, the photos are
- * donor photos from the file.
+ * Slide 1 (Neda Petrović) is from the design. Slides 2–3 are EXAMPLES written
+ * for the demo (names and stories are not in the Figma file); the photos are
+ * donor photos from the file. Replace with real heroes before launch.
  */
 
 type Hero = {
@@ -25,17 +25,17 @@ const HEROES: Hero[] = [
     image: './assets/imgImageWomanInABeigeShirtHoldingAWickerBasketInsideAGreenhouseWithPlants2.jpg',
     imgClass: 'absolute h-[156.33%] left-[-81.3%] max-w-none top-[-19.55%] w-[327%]',
   },
-  // PLACEHOLDER — name and story not in the design yet
+  // EXAMPLE — name and story written for the demo, replace with a real hero
   {
-    name: 'Ime Prezime',
-    text: 'Ovde ide kratka priča drugog tihog heroja: ko je, koliko dugo daje krv i zašto.',
+    name: 'Jelena Marković',
+    text: 'Krv daje od svoje osamnaeste godine, četiri puta godišnje. Kaže da je pola sata vremena najmanje što može da pokloni nekome ko se upravo bori za oporavak.',
     image: './assets/imgRectangle36.jpg',
     imgClass: 'absolute inset-0 size-full max-w-none object-cover object-[40%_50%]',
   },
-  // PLACEHOLDER — name and story not in the design yet
+  // EXAMPLE — name and story written for the demo, replace with a real hero
   {
-    name: 'Ime Prezime',
-    text: 'Ovde ide kratka priča trećeg tihog heroja: ko je, koliko dugo daje krv i zašto.',
+    name: 'Marko Jovanović',
+    text: 'Prvi put je dao krv kada je njegovom ocu bila potrebna transfuzija. Od tada dolazi redovno, jer zna koliko je važno da krv bude tu kada je najpotrebnija.',
     image: './assets/imgRectangle32.jpg',
     imgClass: 'absolute inset-0 size-full max-w-none object-cover object-[30%_50%]',
   },

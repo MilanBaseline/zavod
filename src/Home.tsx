@@ -354,8 +354,7 @@ export default function Home() {
                 </div>
               </div>
               <DaySchedule />
-              <div className="absolute bg-gradient-to-t bottom-0 from-white h-[102px] left-0 to-[rgba(255,255,255,0)] w-[757px]" data-node-id="503:3229" />
-            </div>
+                          </div>
           </div>
         </div>
       </div>

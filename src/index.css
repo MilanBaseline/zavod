@@ -113,6 +113,3 @@ body { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: none; }
 }
-/* the bottom fade only hints at more rows when the list is full (5) */
-[data-node-id="503:3229"] { transition: opacity 0.3s ease; }
-[data-node-id="503:1679"]:has([data-row-count]:not([data-row-count="5"])) [data-node-id="503:3229"] { opacity: 0; }

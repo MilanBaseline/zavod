@@ -152,7 +152,8 @@ export default function Popups() {
       void el.offsetWidth // restart transition
       el.classList.add('is-in')
 
-      const hold = rand(2600, 4400)
+      // every tile keeps its own random rhythm so they never move in groups
+      const hold = rand(1800, 6500)
       timers.push(
         window.setTimeout(() => {
           el.classList.remove('is-in')
@@ -162,7 +163,7 @@ export default function Popups() {
               boxes[i] = null
               zoneOf[i] = null
               if (rectSlots.delete(i)) rectAllowedAt = Date.now() + RECT_COOLDOWN
-              timers.push(window.setTimeout(() => show(i), rand(200, 1400)))
+              timers.push(window.setTimeout(() => show(i), rand(400, 4000)))
             }, 1000),
           )
         }, 1100 + hold),
@@ -172,7 +173,8 @@ export default function Popups() {
     const start = () => {
       if (running) return
       running = true
-      tiles.forEach((_, i) => timers.push(window.setTimeout(() => show(i), i * 450 + rand(0, 300))))
+      // first appearances are scattered over the first few seconds, in random order
+      tiles.forEach((_, i) => timers.push(window.setTimeout(() => show(i), rand(0, 4500))))
     }
     const stop = () => {
       running = false

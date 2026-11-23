@@ -139,3 +139,11 @@ body { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 [data-node-id="503:209"] > div > [aria-hidden] * { border-radius: 0 !important; }
 /* only the top photo layer (and anything above it) is visible in the design; hide every layer underneath so none can peek out at the edges */
 [data-node-id="503:209"] > div > [aria-hidden] > *:has(~ div.overflow-hidden) { display: none; }
+
+/* ---------- Corner radii ---------- */
+/* Tihi heroji slider photo */
+[data-node-id="503:284"] { border-radius: 22px; overflow: hidden; clip-path: inset(0 round 22px); }
+/* small photos / rectangles in "Krv je potrebna svakog dana." and the popup section */
+[data-orbit-frame] > [data-node-id],
+.popup-tile { border-radius: 2px; overflow: hidden; clip-path: inset(0 round 2px); }
+[data-orbit-frame] > [data-node-id] > [aria-hidden] > *:not(:last-child) { display: none; }

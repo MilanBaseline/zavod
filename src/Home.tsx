@@ -2,6 +2,7 @@ import ReserveChart from './components/ReserveChart'
 import Popups from './components/Popups'
 import StepsScroll from './components/StepsScroll'
 import { useReveal } from './lib/reveal'
+import { useOrbitIn } from './lib/orbitIn'
 const imgVector = "./assets/imgVector.png";
 const imgFrame39 = "./assets/imgFrame39.jpg";
 const imgFotografijaRestauracije1 = "./assets/imgFotografijaRestauracije1.png";
@@ -86,6 +87,7 @@ function NavItem({ className, property1 = true }: NavItemProps) {
 
 export default function Home() {
   useReveal()
+  useOrbitIn('503:304')
   return (
     <div className="bg-white content-stretch flex flex-col items-center relative size-full" data-node-id="503:47" data-name="Home">
       <div className="h-[1000px] overflow-clip relative shrink-0 w-full" data-node-id="503:784" data-name="Preloader">
@@ -715,6 +717,7 @@ export default function Home() {
               Svako davanje znači mnogo. Kada daješ krv redovno, pomažeš da ona bude dostupna kad god nekome zatreba. Neka tvoj prvi dolazak bude početak dobre navike.
             </p>
           </div>
+          <div className="absolute inset-y-0 left-[calc(50%-876px)] pointer-events-none w-[1752px]" data-orbit-frame>
           <div className="absolute h-[70.963px] left-[244.47px] rounded-[2px] top-[-17.48px] w-[111.076px]" data-node-id="503:312">
             <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[2px]">
               <img alt="" className="absolute max-w-none object-cover rounded-[2px] size-full" src={imgRectangle28} />
@@ -792,12 +795,15 @@ export default function Home() {
             <img alt="" className="absolute max-w-none object-cover rounded-[2px] size-full" src={imgRectangle33} />
             <img alt="" className="absolute max-w-none object-cover rounded-[2px] size-full" src={imgRectangle34} />
           </div>
+          </div>
         </div>
+        <div className="absolute inset-y-0 left-[calc(50%-960px)] pointer-events-none w-[1920px]" data-orbit-frame>
         <div className="absolute h-[110.493px] left-[904.93px] rounded-[2px] top-[167.26px] w-[172.951px]" data-node-id="503:325">
           <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[2px]">
             <img alt="" className="absolute max-w-none object-cover rounded-[2px] size-full" src={imgRectangle22} />
             <img alt="" className="absolute max-w-none object-cover rounded-[2px] size-full" src={imgRectangle23} />
           </div>
+        </div>
         </div>
       </div>
       <div className="bg-white content-stretch flex flex-col gap-[24px] items-center justify-center overflow-clip px-[84px] py-[160px] relative shrink-0 w-full" data-node-id="503:326">

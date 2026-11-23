@@ -8,9 +8,8 @@ import { useEffect, useRef } from 'react'
  *
  * State 1: "Lokalni Crveni krst je kontakt…" with the CPR photo left,
  *          volunteers top-right and the MIT tent bottom-right.
- * State 2: red cross + "Podrška je i u tvom mestu." The right column moves up
- *          one slot (MIT tent goes to the top, a new tent photo enters at the
- *          bottom) and the left photo changes.
+ * State 2: red cross + "Podrška je i u tvom mestu." Each photo swaps in place:
+ *          the state 1 photo masks out upward and reveals the state 2 photo.
  *
  * Vertical positions are proportions of the 1080px design frame.
  */
@@ -64,17 +63,18 @@ export default function CrveniKrst() {
         <div className="absolute inset-x-0 h-px bg-[rgba(195,195,195,0.3)]" style={{ top: TOP }} />
         <div className="absolute inset-x-0 h-px bg-[rgba(195,195,195,0.3)]" style={{ top: LOW }} />
 
-        {/* left photo: CPR boy, then the CPR group wipes in */}
+        {/* photo slots: each swaps in place — the state 1 photo masks out upward, revealing the state 2 photo */}
         <div className="absolute left-0 w-[280px] overflow-hidden" style={{ top: TOP, height: MID }}>
-          <img alt="" className="absolute inset-0 size-full object-cover" src="./assets/ck_cpr_boy.jpg" />
-          <img alt="" className="ck-left-two absolute inset-0 size-full object-cover" src="./assets/ck_cpr_group.jpg" />
+          <img alt="" className="absolute inset-0 size-full object-cover" src="./assets/ck_cpr_group.jpg" />
+          <img alt="" className="ck-out absolute inset-0 size-full object-cover" src="./assets/ck_cpr_boy.jpg" />
         </div>
-
-        {/* right column: photos move up one slot between states */}
-        <div className="absolute inset-y-0 right-0 w-[280px] overflow-hidden">
-          <img alt="" className="ck-r ck-r-volunteers absolute left-0 w-full object-cover" src="./assets/ck_volunteers.jpg" />
-          <img alt="" className="ck-r ck-r-mit absolute left-0 w-full object-cover" src="./assets/ck_mit.jpg" />
-          <img alt="" className="ck-r ck-r-tent absolute left-0 w-full object-cover" src="./assets/ck_tent.jpg" />
+        <div className="absolute right-0 top-0 w-[280px] overflow-hidden" style={{ height: TOP }}>
+          <img alt="" className="absolute inset-0 size-full object-cover" src="./assets/ck_mit.jpg" />
+          <img alt="" className="ck-out ck-out-2 absolute inset-0 size-full object-cover" src="./assets/ck_volunteers.jpg" />
+        </div>
+        <div className="absolute right-0 w-[280px] overflow-hidden" style={{ top: LOW, height: BOT }}>
+          <img alt="" className="absolute inset-0 size-full object-cover" src="./assets/ck_tent.jpg" />
+          <img alt="" className="ck-out ck-out-3 absolute inset-0 size-full object-cover" src="./assets/ck_mit.jpg" />
         </div>
 
         {/* state 1 text */}

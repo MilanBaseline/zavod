@@ -122,16 +122,10 @@ body { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 .ck-stage[data-state="two"] .ck-cross,
 .ck-stage[data-state="two"] .ck-year { opacity: 1; transform: none; transition-delay: 0.3s; }
 
-.ck-left-two {
-  clip-path: inset(100% 0 0 0);
+.ck-out {
+  clip-path: inset(0 0 0 0);
   transition: clip-path 1.1s cubic-bezier(0.65, 0, 0.35, 1);
 }
-.ck-stage[data-state="two"] .ck-left-two { clip-path: inset(0 0 0 0); }
-
-.ck-r { transition: top 1.1s cubic-bezier(0.65, 0, 0.35, 1), height 1.1s cubic-bezier(0.65, 0, 0.35, 1); }
-.ck-r-volunteers { top: 0; height: 26.944%; }
-.ck-r-mit { top: 71.111%; height: 28.889%; }
-.ck-r-tent { top: 100%; height: 28.889%; }
-.ck-stage[data-state="two"] .ck-r-volunteers { top: -26.944%; }
-.ck-stage[data-state="two"] .ck-r-mit { top: 0; height: 26.944%; }
-.ck-stage[data-state="two"] .ck-r-tent { top: 71.111%; }
+.ck-stage[data-state="two"] .ck-out { clip-path: inset(0 0 100% 0); }
+.ck-out-2 { transition-delay: 0.08s; }
+.ck-out-3 { transition-delay: 0.16s; }

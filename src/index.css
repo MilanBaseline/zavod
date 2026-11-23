@@ -23,21 +23,6 @@ body { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 .is-revealed .ri { transform: none; }
 
 /* ---------- Preloader (motion from the Figma timeline, 2s) ---------- */
-[data-node-id="503:794"] {
-  animation:
-    hero-size 2s linear both,
-    hero-pos 2s linear both;
-}
-@keyframes hero-size {
-  0%       { width: 117.343%; height: 1103.021px; }
-  25.863%  { width: 117.343%; height: 1103.021px; animation-timing-function: cubic-bezier(0.252, 1.109, 1, 1); }
-  95.247%, 100% { width: 100%; height: 1000px; }
-}
-@keyframes hero-pos {
-  0%       { left: -8.697%; top: -73px; }
-  25.863%  { left: -8.697%; top: -73px; animation-timing-function: cubic-bezier(0.227, 1.042, 1, 1); }
-  95.247%, 100% { left: 0; top: 0; }
-}
 [data-node-id="503:806"] { animation: logo-drop 2s linear both; }
 @keyframes logo-drop {
   0%       { translate: 0 -93.416px; }

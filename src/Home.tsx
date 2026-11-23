@@ -788,6 +788,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </div>
+        <div className="absolute inset-y-0 left-[calc(50%-960px)] pointer-events-none w-[1920px]" data-orbit-frame>
         <div className="absolute h-[63.453px] left-[1274.3px] rounded-[2px] top-[293.85px] w-[99.321px]" data-node-id="503:324">
           <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[2px]">
             <img alt="" className="absolute max-w-none object-cover rounded-[2px] size-full" src={imgRectangle22} />
@@ -796,8 +798,6 @@ export default function Home() {
             <img alt="" className="absolute max-w-none object-cover rounded-[2px] size-full" src={imgRectangle34} />
           </div>
           </div>
-        </div>
-        <div className="absolute inset-y-0 left-[calc(50%-960px)] pointer-events-none w-[1920px]" data-orbit-frame>
         <div className="absolute h-[110.493px] left-[904.93px] rounded-[2px] top-[167.26px] w-[172.951px]" data-node-id="503:325">
           <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[2px]">
             <img alt="" className="absolute max-w-none object-cover rounded-[2px] size-full" src={imgRectangle22} />

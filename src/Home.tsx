@@ -284,7 +284,7 @@ export default function Home() {
             Krv možeš da daš u Zavodu u Novom Sadu ili na nekoj od terenskih akcija širom Vojvodine. Pronađi lokaciju i vreme koji ti odgovaraju.
           </p>
         </div>
-        <div className="content-stretch flex gap-[16px] h-[700px] items-start relative shrink-0 w-full" data-node-id="503:1662">
+        <div className="content-stretch flex gap-[16px] h-[700px] items-start justify-center relative shrink-0 w-full" data-node-id="503:1662">
           <div className="content-stretch flex flex-col h-full items-start relative shrink-0 w-[479px]" data-node-id="503:1663">
             <div className="bg-white content-stretch flex flex-[1_0_0] flex-col gap-[32px] items-center min-h-px overflow-clip px-[64px] py-[56px] relative rounded-[24px] w-full" data-node-id="503:1664">
               <div className="content-stretch flex flex-[1_0_0] flex-col gap-[32px] items-start min-h-px relative w-full" data-node-id="503:1665">
@@ -621,7 +621,7 @@ export default function Home() {
             <img alt="" className="absolute h-[142.19%] left-0 max-w-none top-[-42.21%] w-full" src={imgFrame2131329957} />
           </div>
         </div>
-        <div className="bg-[#fffbe3] content-stretch flex flex-col gap-[44px] items-start p-[48px] relative rounded-[14px] shrink-0 w-full" data-node-id="503:271">
+        <div className="bg-[#fffbe3] content-stretch flex flex-col gap-[44px] items-start p-[48px] relative rounded-[14px] shrink-0 w-full max-w-[1520px] self-center" data-node-id="503:271">
           <div className="content-stretch flex flex-col gap-[24px] items-start justify-center p-[32px] relative shrink-0 w-full" data-node-id="503:272" data-name="Container">
             <div className="border border-[rgba(226,226,226,0.3)] border-solid content-stretch flex gap-[10px] h-[26px] items-center justify-center pl-[10px] pr-[16px] py-[2px] relative rounded-[39px] shrink-0" data-node-id="503:273">
               <div className="relative shrink-0 size-[2px]" data-node-id="503:274">

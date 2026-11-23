@@ -23,12 +23,6 @@ body { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 .is-revealed .ri { transform: none; }
 
 /* ---------- Preloader (motion from the Figma timeline, 2s) ---------- */
-[data-node-id="503:806"] { animation: logo-drop 2s linear both; }
-@keyframes logo-drop {
-  0%       { translate: 0 -93.416px; }
-  40.653%  { translate: 0 -93.416px; animation-timing-function: cubic-bezier(0.076, 1.185, 1, 1); }
-  89.712%, 100% { translate: 0 0; }
-}
 [data-node-id="503:813"] { animation: hero-content 2s linear both; }
 @keyframes hero-content {
   0%       { opacity: 0; }

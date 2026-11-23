@@ -7,31 +7,47 @@ import { useEffect, useRef } from 'react'
  * right (02, 04). Only the active step is visible; the previous one leaves
  * completely (text slides up and out), the next one slides in on its side.
  *
- * Steps 01 and 02 are from the design. Steps 03–05 are not in the Figma file
- * yet: their copy and photos are PLACEHOLDERS to be replaced.
+ * Copy and photos for all 5 steps come from the Figma "Section 1" frame (541:123).
  */
 
-type Step = { num: string; title: string; text: string; image: string }
+type Step = { num: string; title: string; text: string; image: string; position: string }
 
 const STEPS: Step[] = [
   {
     num: '01',
     title: 'Davanje krvi',
     text: 'Sve počinje tvojim dolaskom. Posle upitnika i lekarskog pregleda sledi davanje krvi uz podršku našeg tima.',
-    image: '/assets/imgRectangle755.jpg',
+    image: './assets/step1.jpg',
+    position: '35% 50%',
   },
   {
     num: '02',
     title: 'Priprema komponenti',
     text: 'Krv razdvajamo na komponente, kako bi pacijenti dobili deo krvi koji im je potreban.',
-    image: '/assets/imgRectangle754.jpg',
+    image: './assets/step2.jpg',
+    position: '55% 50%',
   },
-  // PLACEHOLDER — not in the design yet
-  { num: '03', title: 'Naslov koraka', text: 'Tekst za treći korak.', image: '/assets/imgRectangle33.jpg' },
-  // PLACEHOLDER — not in the design yet
-  { num: '04', title: 'Naslov koraka', text: 'Tekst za četvrti korak.', image: '/assets/imgRectangle10.jpg' },
-  // PLACEHOLDER — not in the design yet
-  { num: '05', title: 'Naslov koraka', text: 'Tekst za peti korak.', image: '/assets/imgRectangle18.jpg' },
+  {
+    num: '03',
+    title: 'Testiranje i kontrola kvaliteta',
+    text: 'Laboratorijskim analizama proveravamo krv i ispunjenost zahteva za bezbednost i kvalitet.',
+    image: './assets/step3.jpg',
+    position: '50% 50%',
+  },
+  {
+    num: '04',
+    title: 'Završna provera i obeležavanje',
+    text: 'Proveravamo rezultate i obeležavamo komponente tako da njihov put može da se prati.',
+    image: './assets/step4.jpg',
+    position: '50% 50%',
+  },
+  {
+    num: '05',
+    title: 'Čuvanje i dostavljanje',
+    text: 'Komponente čuvamo u odgovarajućim uslovima i dostavljamo zdravstvenim ustanovama prema potrebama pacijenata.',
+    image: './assets/step5.jpg',
+    position: '45% 50%',
+  },
 ]
 
 const ROW_H = 940 // design height of the steps row
@@ -130,7 +146,7 @@ export default function StepsScroll() {
             <div ref={stackRef} className="flex flex-col gap-[8px] will-change-transform">
               {STEPS.map((step, i) => (
                 <div key={i} className="h-[766px] relative rounded-[22px] shrink-0 w-full overflow-hidden bg-[#d9d9d9]">
-                  <img alt="" className="absolute max-w-none object-cover rounded-[22px] size-full" src={step.image} />
+                  <img alt="" className="absolute max-w-none object-cover rounded-[22px] size-full" src={step.image} style={{ objectPosition: step.position }} />
                 </div>
               ))}
             </div>

@@ -29,8 +29,8 @@ const HEROES: Hero[] = [
   {
     name: 'Ime Prezime',
     text: 'Ovde ide kratka priča drugog tihog heroja: ko je, koliko dugo daje krv i zašto.',
-    image: './assets/imgImageWomanInABeigeShirtHoldingAWickerBasketInsideAGreenhouseWithPlants1.jpg',
-    imgClass: 'absolute inset-0 size-full max-w-none object-cover object-[45%_50%]',
+    image: './assets/imgRectangle36.jpg',
+    imgClass: 'absolute inset-0 size-full max-w-none object-cover object-[40%_50%]',
   },
   // PLACEHOLDER — name and story not in the design yet
   {

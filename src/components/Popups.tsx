@@ -9,7 +9,7 @@ import { useEffect, useRef } from 'react'
 
 // Photos used in the design's photo collages (no stock/couple layers).
 const PHOTOS = [10, 12, 13, 17, 18, 19, 23, 24, 25, 26, 27, 29, 30, 31, 32, 33, 34, 35, 36, 754, 755].map(
-  (n) => `/assets/imgRectangle${n}.jpg`,
+  (n) => `./assets/imgRectangle${n}.jpg`,
 )
 
 const RED = '#d32027'

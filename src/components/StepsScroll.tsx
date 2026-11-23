@@ -140,7 +140,7 @@ export default function StepsScroll() {
 
           <div className="-translate-x-1/2 absolute border border-[rgba(226,226,226,0.3)] border-solid content-stretch flex gap-[10px] h-[26px] items-center justify-center left-[calc(50%-0.5px)] pl-[10px] pr-[16px] py-[2px] rounded-[39px] top-[35px]">
             <div className="relative shrink-0 size-[2px]">
-              <img alt="" className="absolute block inset-0 max-w-none size-full" src="/assets/imgEllipse46.svg" />
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src="./assets/imgEllipse46.svg" />
             </div>
             <p
               className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[22.5px] opacity-60 relative shrink-0 text-[10px] text-balance text-black tracking-[3px] uppercase whitespace-nowrap"

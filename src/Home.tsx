@@ -1,6 +1,7 @@
 import ReserveChart from './components/ReserveChart'
 import Popups from './components/Popups'
 import PulseHeart from './components/PulseHeart'
+import HeroSlider from './components/HeroSlider'
 import StepsScroll from './components/StepsScroll'
 import { useReveal } from './lib/reveal'
 import { useOrbitIn } from './lib/orbitIn'
@@ -641,46 +642,7 @@ export default function Home() {
             </p>
           </div>
           <div className="content-stretch flex gap-[48px] items-start relative shrink-0 w-full" data-node-id="503:278">
-            <div className="content-stretch flex flex-col gap-[44px] items-center justify-center p-[32px] relative self-stretch shrink-0 w-[755px]" data-node-id="503:279" data-name="Container">
-              <div className="content-stretch flex flex-[1_0_0] gap-[126px] items-end justify-end min-h-px relative w-full" data-node-id="503:280">
-                <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col font-normal gap-[24px] h-full items-start justify-end min-w-px relative" data-node-id="503:281">
-                  <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] font-['Archivo_Variable'] leading-[1.3] relative shrink-0 text-[40px] text-balance text-black w-full" data-node-id="503:282" style={{ fontVariationSettings: '"wdth" 100' }}>
-                    Neda Petrović
-                  </p>
-                  <div className="flex flex-col font-['DM_Sans_Variable'] justify-end leading-[0] opacity-60 relative shrink-0 text-[#483434] text-[18px] tracking-[-0.09px] w-full" data-node-id="503:283">
-                    <p className="leading-[22.5px] text-balance">Tihi heroji su ljudi poput tebe. Ljudi koji izdvoje vreme da pomognu nekome koga možda nikada neće upoznati. Ovde njihove priče susreću priče ljudi kojima krv pomaže.</p>
-                  </div>
-                </div>
-                <div className="h-[237px] relative shrink-0 w-[203px]" data-node-id="503:284" data-name="Image (Woman in a beige shirt holding a wicker basket inside a greenhouse with plants.)">
-                  <div aria-hidden className="absolute inset-0 pointer-events-none">
-                    <img alt="" className="absolute max-w-none object-cover size-full" src={imgImageWomanInABeigeShirtHoldingAWickerBasketInsideAGreenhouseWithPlants} />
-                    <div className="absolute inset-0 overflow-hidden">
-                      <img alt="" className="absolute h-[121.43%] left-[-30.58%] max-w-none top-[-21.43%] w-[252.04%]" src={imgImageWomanInABeigeShirtHoldingAWickerBasketInsideAGreenhouseWithPlants1} />
-                    </div>
-                    <div className="absolute inset-0 overflow-hidden">
-                      <img alt="" className="absolute h-[156.33%] left-[-81.3%] max-w-none top-[-19.55%] w-[327%]" src={imgImageWomanInABeigeShirtHoldingAWickerBasketInsideAGreenhouseWithPlants2} />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="content-stretch flex gap-[24px] items-center justify-center pt-[16px] relative shrink-0 w-full shadow-[inset_0_1px_0_#e6e6e6]" data-node-id="503:285">
-                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] flex-[1_0_0] font-['Archivo_Variable'] font-light leading-[55.2px] min-w-px relative text-[#483434] text-[24px] tracking-[-0.72px]" data-node-id="503:286" style={{ fontVariationSettings: '"wdth" 100' }}>
-                  Upoznaj tihe heroje
-                </p>
-                <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0" data-node-id="503:287">
-                  <div className="border-[0.55px] border-[rgba(61,66,46,0.3)] border-solid col-1 content-stretch flex items-center justify-center ml-0 mt-0 overflow-clip relative rounded-[55.023px] row-1 size-[26.411px]" data-node-id="503:288" data-name="Button - previous slide">
-                    <div className="relative shrink-0 size-[13.206px]" data-node-id="503:289" data-name="Icon">
-                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon} />
-                    </div>
-                  </div>
-                  <div className="border-[#08153f] border-[0.825px] border-solid col-1 content-stretch flex items-center justify-center ml-[30.29px] mt-0 overflow-clip relative rounded-[55.023px] row-1 size-[26.411px]" data-node-id="503:291" data-name="Button - next slide">
-                    <div className="relative shrink-0 size-[13.206px]" data-node-id="503:292" data-name="Icon">
-                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon1} />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <HeroSlider />
             <div className="relative self-stretch shrink-0 w-0" data-node-id="503:294">
               <div className="absolute inset-[0_-0.5px]">
                 <img alt="" className="block max-w-none size-full" src={imgVector487} />

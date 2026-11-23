@@ -1,1 +1,1 @@
-{"root":["./src/Home.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/Popups.tsx","./src/components/PulseHeart.tsx","./src/components/ReserveChart.tsx","./src/components/StepsScroll.tsx","./src/lib/orbitIn.ts","./src/lib/reveal.ts"],"version":"5.6.3"}
+{"root":["./src/Home.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/HeroSlider.tsx","./src/components/Popups.tsx","./src/components/PulseHeart.tsx","./src/components/ReserveChart.tsx","./src/components/StepsScroll.tsx","./src/lib/orbitIn.ts","./src/lib/reveal.ts"],"version":"5.6.3"}

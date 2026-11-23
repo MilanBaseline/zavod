@@ -94,3 +94,9 @@ body { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .heart-halo { animation: none; }
 }
+
+/* ---------- Tihi heroji slider buttons ---------- */
+.slider-btn { transition: background-color 0.25s ease, transform 0.25s ease; }
+.slider-btn:hover { background-color: rgba(8, 21, 63, 0.06); }
+.slider-btn:active { transform: scale(0.94); }
+.slider-btn:focus-visible { outline: 2px solid #08153f; outline-offset: 2px; }

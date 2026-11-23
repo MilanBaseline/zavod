@@ -13,6 +13,8 @@ const PHOTOS = [10, 12, 13, 17, 18, 19, 23, 24, 25, 26, 27, 29, 30, 31, 32, 33, 
 )
 
 const RED = '#d32027'
+const RECT_CHANCE = 0.12
+const RECT_COOLDOWN = 9000 // ms with no red rectangle after one leaves
 const RATIO = 1.565 // width / height of every tile in the design
 const SLOTS = 7
 const GAP = 28 // min distance between tiles / text
@@ -32,6 +34,8 @@ export default function Popups() {
     const section = wrap.parentElement!
     const tiles = tileRefs.current.filter(Boolean) as HTMLDivElement[]
     const boxes: (Box | null)[] = tiles.map(() => null)
+    const rectSlots = new Set<number>() // slots currently showing a red rectangle
+    let rectAllowedAt = 0
     const timers: number[] = []
     let running = false
     let lastPhoto = -1
@@ -68,7 +72,8 @@ export default function Popups() {
     const show = (i: number) => {
       if (!running) return
       const el = tiles[i]
-      const isRect = Math.random() < 0.3
+      // Red rectangles are rare: at most one on screen, and only occasionally.
+      const isRect = rectSlots.size === 0 && Date.now() >= rectAllowedAt && Math.random() < RECT_CHANCE
       const w = isRect ? rand(37, 82) : rand(99, 175)
       const h = w / RATIO
       const box = findSpot(i, w, h)
@@ -77,6 +82,7 @@ export default function Popups() {
         return
       }
       boxes[i] = box
+      if (isRect) rectSlots.add(i)
 
       if (isRect) {
         el.style.backgroundImage = 'none'
@@ -106,6 +112,7 @@ export default function Popups() {
           timers.push(
             window.setTimeout(() => {
               boxes[i] = null
+              if (rectSlots.delete(i)) rectAllowedAt = Date.now() + RECT_COOLDOWN
               timers.push(window.setTimeout(() => show(i), rand(200, 1400)))
             }, 1000),
           )
@@ -123,6 +130,7 @@ export default function Popups() {
       timers.forEach(clearTimeout)
       timers.length = 0
       boxes.fill(null)
+      rectSlots.clear()
       tiles.forEach((el) => el.classList.remove('is-in', 'is-out'))
     }
 

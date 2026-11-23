@@ -597,14 +597,6 @@ export default function Home() {
       <div className="content-stretch flex flex-col items-center justify-center relative shrink-0 w-full" data-node-id="503:245">
         <div className="bg-white content-stretch flex flex-col gap-[34px] items-center overflow-clip px-[84px] py-[64px] relative shrink-0 w-[1440px]" data-node-id="503:246">
           <div className="content-stretch flex flex-col gap-[24px] items-center justify-center p-[32px] relative shrink-0 w-full" data-node-id="503:247" data-name="Container">
-            <div className="border border-[rgba(226,226,226,0.3)] border-solid content-stretch flex gap-[10px] h-[26px] items-center justify-center pl-[10px] pr-[16px] py-[2px] relative rounded-[39px] shrink-0" data-node-id="503:248">
-              <div className="relative shrink-0 size-[2px]" data-node-id="503:249">
-                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse46} />
-              </div>
-              <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[22.5px] opacity-60 relative shrink-0 text-[10px] text-balance text-black tracking-[3px] uppercase whitespace-nowrap" data-node-id="503:250">
-                Put Krvi
-              </p>
-            </div>
             <p className="[word-break:break-word] font-['Archivo_Variable'] font-light leading-[55.2px] relative shrink-0 text-[#483434] text-[48px] text-center tracking-[-0.72px] whitespace-nowrap" data-node-id="503:251" style={{ fontVariationSettings: '"wdth" 100' }}>
               Tvoja krv nastavlja put.
             </p>

@@ -69,17 +69,7 @@ body { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 [data-node-id="503:270"] { padding-inline: max(200px, calc((100cqw - 1920px) / 2 + 200px)); }
 [data-node-id="503:304"] { padding-inline: max(84px, calc((100cqw - 1920px) / 2 + 84px)); }
 [data-node-id="503:326"] { padding-inline: max(84px, calc((100cqw - 1920px) / 2 + 84px)); }
-[data-node-id="503:362"] { padding-inline: max(126px, calc((100cqw - 1920px) / 2 + 126px)); }
 [data-node-id="503:381"] { padding-inline: max(270px, calc((100cqw - 1920px) / 2 + 270px)); }
-[data-node-id="503:362"] [data-node-id="503:374"],
-[data-node-id="503:362"] [data-node-id="503:375"],
-[data-node-id="503:362"] [data-node-id="503:376"],
-[data-node-id="503:362"] [data-node-id="503:377"],
-[data-node-id="503:362"] [data-node-id="503:378"],
-[data-node-id="503:362"] [data-node-id="503:379"],
-[data-node-id="503:362"] [data-node-id="503:380"] {
-  margin-left: max(0px, calc((100cqw - 1920px) / 2));
-}
 
 /* ---------- Heart icons: inner heart still, halo pulses ---------- */
 .heart-halo {
@@ -113,3 +103,35 @@ body { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: none; }
 }
+
+/* ---------- Crveni krst: two scroll-triggered states ---------- */
+.ck-stage .ck-one .ri,
+.ck-stage .ck-two .ri { transition-duration: 0.9s; }
+.ck-stage[data-state="one"] .ck-one .ri { transform: none; }
+.ck-stage[data-state="two"] .ck-one .ri { transform: translate3d(0, calc(-100% - 0.7em), 0); }
+.ck-stage[data-state="two"] .ck-two .ri { transform: none; }
+/* incoming text waits for the outgoing text to leave */
+.ck-stage[data-state="two"] .ck-two,
+.ck-stage[data-state="one"] .ck-one { --reveal-base: 0.35s; }
+
+.ck-cross, .ck-year {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.6s ease, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.ck-stage[data-state="two"] .ck-cross,
+.ck-stage[data-state="two"] .ck-year { opacity: 1; transform: none; transition-delay: 0.3s; }
+
+.ck-left-two {
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 1.1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.ck-stage[data-state="two"] .ck-left-two { clip-path: inset(0 0 0 0); }
+
+.ck-r { transition: top 1.1s cubic-bezier(0.65, 0, 0.35, 1), height 1.1s cubic-bezier(0.65, 0, 0.35, 1); }
+.ck-r-volunteers { top: 0; height: 26.944%; }
+.ck-r-mit { top: 71.111%; height: 28.889%; }
+.ck-r-tent { top: 100%; height: 28.889%; }
+.ck-stage[data-state="two"] .ck-r-volunteers { top: -26.944%; }
+.ck-stage[data-state="two"] .ck-r-mit { top: 0; height: 26.944%; }
+.ck-stage[data-state="two"] .ck-r-tent { top: 71.111%; }

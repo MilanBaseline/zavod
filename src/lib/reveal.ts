@@ -64,7 +64,7 @@ function splitIntoLines(p: HTMLElement) {
     mask.className = 'rl'
     const inner = document.createElement('span')
     inner.className = 'ri'
-    inner.style.transitionDelay = `${i * LINE_STAGGER}s`
+    inner.style.transitionDelay = `calc(var(--reveal-base, 0s) + ${i * LINE_STAGGER}s)`
     line.forEach((t, j) => {
       let target: HTMLElement = inner
       t.chain.forEach((wrapper) => {

@@ -3,6 +3,7 @@ import Popups from './components/Popups'
 import PulseHeart from './components/PulseHeart'
 import HeroSlider from './components/HeroSlider'
 import DaySchedule from './components/DaySchedule'
+import CrveniKrst from './components/CrveniKrst'
 import StepsScroll from './components/StepsScroll'
 import { useReveal } from './lib/reveal'
 import { useOrbitIn } from './lib/orbitIn'
@@ -91,7 +92,6 @@ export default function Home() {
   useReveal()
   useOrbitIn('503:304')
   useScrollFill('503:239')
-  useOrbitIn('503:362', '[data-node-id="503:373"] > [data-node-id]')
   return (
     <div className="bg-white content-stretch flex flex-col items-center relative size-full" data-node-id="503:47" data-name="Home">
       <div className="h-[1000px] overflow-clip relative shrink-0 w-full" data-node-id="503:784" data-name="Preloader">
@@ -714,71 +714,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-[#480c0c] content-stretch flex flex-col gap-[24px] h-[1080px] items-start justify-center overflow-clip px-[126px] py-[160px] relative shrink-0 w-full" data-node-id="503:362">
-        <div className="content-stretch flex flex-[1_0_0] flex-col gap-[48px] items-start min-h-px p-[24px] relative w-[1034px]" data-node-id="503:363">
-          <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0" data-node-id="503:364">
-            <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-0 mt-0 place-items-start relative row-1" data-node-id="503:365">
-              <div className="col-1 ml-0 mt-0 relative row-1 size-[169.988px]" data-node-id="503:366" data-name="Union">
-                <img alt="" className="absolute block inset-0 max-w-none size-full" height="169.988" src={imgUnion} width="169.988" />
-              </div>
-              <div className="col-1 h-[19.76px] ml-[56.8px] mt-[186.24px] relative row-1 w-[57.327px]" data-node-id="503:369" data-name="1876">
-                <img alt="" className="absolute block inset-0 max-w-none size-full" src={img1876} />
-              </div>
-            </div>
-          </div>
-          <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col font-normal gap-[32px] items-start justify-end min-h-px pt-[12px] relative text-balance text-white w-full" data-node-id="503:370">
-            <p className="font-['DM_Sans_Variable'] leading-[1.5] opacity-60 relative shrink-0 text-[24px] w-full" data-node-id="503:371">
-              Podrška je i u tvom mestu.
-            </p>
-            <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] font-['Archivo_Variable'] leading-[1.3] relative shrink-0 text-[48px] tracking-[-0.72px] w-full" data-node-id="503:372" style={{ fontVariationSettings: '"wdth" 100' }}>
-              <span className="leading-[1.3] text-[48px]">Lokalni</span>
-              <span className="leading-[1.3] text-[#ff474e] text-[48px]">{` Crveni krst`}</span>
-              <span className="leading-[1.3] text-[48px]">{` je kontakt za pojedince, kompanije i organizacije koji žele da se uključe. Pomaže u organizovanju akcija i povezuje davaoce sa informacijama i aktivnostima u njihovoj sredini.`}</span>
-            </p>
-          </div>
-        </div>
-        <div className="absolute contents left-[888px] top-[133.71px]" data-node-id="503:373">
-          <div className="absolute h-[152.38px] left-[1355.63px] rounded-[2.905px] top-[419px] w-[238.515px]" data-node-id="503:374">
-            <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[2.905px]">
-              <img alt="" className="absolute max-w-none object-cover rounded-[2.905px] size-full" src={imgRectangle9} />
-              <img alt="" className="absolute max-w-none object-cover rounded-[2.905px] size-full" src={imgRectangle10} />
-              <img alt="" className="absolute max-w-none object-cover rounded-[2.905px] size-full" src={imgRectangle12} />
-              <img alt="" className="absolute max-w-none object-cover rounded-[2.905px] size-full" src={imgRectangle13} />
-            </div>
-          </div>
-          <div className="absolute bg-[#d32027] h-[29.084px] left-[1208px] rounded-[2.07px] top-[891px] w-[45.524px]" data-node-id="503:375" />
-          <div className="absolute bg-[#d32027] h-[29.084px] left-[1185px] rounded-[2.07px] top-[248px] w-[45.524px]" data-node-id="503:376" />
-          <div className="absolute h-[58.363px] left-[1288.64px] rounded-[2.07px] top-[816.94px] w-[91.353px]" data-node-id="503:377">
-            <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[2.07px]">
-              <img alt="" className="absolute max-w-none object-cover rounded-[2.07px] size-full" src={imgRectangle28} />
-              <img alt="" className="absolute max-w-none object-cover rounded-[2.07px] size-full" src={imgRectangle29} />
-              <div className="absolute inset-0 overflow-hidden rounded-[2.07px]">
-                <img alt="" className="absolute h-[104.32%] left-0 max-w-none top-[-2.16%] w-full" src={imgRectangle30} />
-              </div>
-              <img alt="" className="absolute max-w-none object-cover rounded-[2.07px] size-full" src={imgRectangle35} />
-            </div>
-          </div>
-          <div className="absolute h-[131.283px] left-[1406.49px] rounded-[2.07px] top-[679.5px] w-[91.353px]" data-node-id="503:378">
-            <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[2.07px]">
-              <img alt="" className="absolute max-w-none object-cover rounded-[2.07px] size-full" src={imgRectangle28} />
-              <img alt="" className="absolute max-w-none object-cover rounded-[2.07px] size-full" src={imgRectangle29} />
-            </div>
-          </div>
-          <div className="absolute h-[65.686px] left-[1270.37px] rounded-[2.07px] top-[264.75px] w-[102.815px]" data-node-id="503:379">
-            <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[2.07px]">
-              <img alt="" className="absolute max-w-none object-cover rounded-[2.07px] size-full" src={imgRectangle22} />
-              <img alt="" className="absolute max-w-none object-cover rounded-[2.07px] size-full" src={imgRectangle23} />
-            </div>
-          </div>
-          <div className="absolute h-[114.381px] left-[888px] rounded-[2.07px] top-[133.71px] w-[179.035px]" data-node-id="503:380">
-            <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[2.07px]">
-              <img alt="" className="absolute max-w-none object-cover rounded-[2.07px] size-full" src={imgRectangle22} />
-              <img alt="" className="absolute max-w-none object-cover rounded-[2.07px] size-full" src={imgRectangle23} />
-              <img alt="" className="absolute max-w-none object-cover rounded-[2.07px] size-full" src={imgRectangle36} />
-            </div>
-          </div>
-        </div>
-      </div>
+      <CrveniKrst />
       <div className="bg-white content-stretch flex items-start justify-center overflow-clip px-[270px] py-[200px] relative shrink-0 w-full" data-node-id="503:381">
         <div className="content-stretch flex flex-[1_0_0] flex-col items-center min-w-px px-[24px] py-[44px] relative rounded-[19px]" data-node-id="503:382">
           <div className="content-stretch flex gap-[44px] items-start relative shrink-0 w-full" data-node-id="503:383">

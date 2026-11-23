@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 
 /**
- * "Krv je potrebna svakog dana." — the photos and red rectangles load in
+ * Used by "Krv je potrebna svakog dana." and "Crveni krst" — the photos and red rectangles load in
  * clockwise, starting at 12 o'clock and going right. Each one fades in while
  * gliding a short way along a circle around the heading into its design spot.
  */
@@ -11,11 +11,11 @@ const DURATION = 1400
 const STAGGER = 90
 const STEPS = 12 // keyframes used to trace the arc
 
-export function useOrbitIn(sectionId: string) {
+export function useOrbitIn(sectionId: string, itemSelector = '[data-orbit-frame] > [data-node-id]') {
   useEffect(() => {
     const section = document.querySelector<HTMLElement>(`[data-node-id="${sectionId}"]`)
     if (!section) return
-    const items = Array.from(section.querySelectorAll<HTMLElement>('[data-orbit-frame] > [data-node-id]'))
+    const items = Array.from(section.querySelectorAll<HTMLElement>(itemSelector))
     if (!items.length) return
 
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -78,5 +78,5 @@ export function useOrbitIn(sectionId: string) {
       animations.forEach((a) => a.cancel())
       items.forEach((el) => (el.style.opacity = ''))
     }
-  }, [sectionId])
+  }, [sectionId, itemSelector])
 }

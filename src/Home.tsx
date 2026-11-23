@@ -88,6 +88,7 @@ function NavItem({ className, property1 = true }: NavItemProps) {
 export default function Home() {
   useReveal()
   useOrbitIn('503:304')
+  useOrbitIn('503:362', '[data-node-id="503:373"] > [data-node-id]')
   return (
     <div className="bg-white content-stretch flex flex-col items-center relative size-full" data-node-id="503:47" data-name="Home">
       <div className="h-[1000px] overflow-clip relative shrink-0 w-full" data-node-id="503:784" data-name="Preloader">

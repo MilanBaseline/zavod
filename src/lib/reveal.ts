@@ -93,6 +93,7 @@ export function useReveal() {
       const ps = Array.from(root.querySelectorAll<HTMLElement>('p'))
       ps.forEach(splitIntoLines)
       root.classList.add('reveal-ready')
+      window.dispatchEvent(new Event('reveal:split'))
 
       const auto = ps.filter((p) => !p.closest('[data-reveal-manual]') || p.hasAttribute('data-reveal-auto'))
       observer = new IntersectionObserver(

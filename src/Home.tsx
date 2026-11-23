@@ -5,6 +5,7 @@ import HeroSlider from './components/HeroSlider'
 import StepsScroll from './components/StepsScroll'
 import { useReveal } from './lib/reveal'
 import { useOrbitIn } from './lib/orbitIn'
+import { useScrollFill } from './lib/scrollFill'
 const imgVector = "./assets/imgVector.png";
 const imgFrame39 = "./assets/imgFrame39.jpg";
 const imgFotografijaRestauracije1 = "./assets/imgFotografijaRestauracije1.png";
@@ -88,6 +89,7 @@ function NavItem({ className, property1 = true }: NavItemProps) {
 export default function Home() {
   useReveal()
   useOrbitIn('503:304')
+  useScrollFill('503:239')
   useOrbitIn('503:362', '[data-node-id="503:373"] > [data-node-id]')
   return (
     <div className="bg-white content-stretch flex flex-col items-center relative size-full" data-node-id="503:47" data-name="Home">
@@ -587,11 +589,8 @@ export default function Home() {
         <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.4] opacity-62 relative shrink-0 text-[22px] text-balance text-black tracking-[-0.09px] whitespace-nowrap" data-node-id="503:238">
           Svakih minut i po, nekome je potrebna krv.
         </p>
-        <p className="[word-break:break-word] font-['Archivo_Variable'] font-light leading-[0] min-w-full relative shrink-0 text-[#262626] text-[64px] text-balance text-center tracking-[-0.72px] w-[min-content]" data-node-id="503:239" style={{ fontVariationSettings: '"wdth" 100' }}>
-          <span className="leading-[1.3]">Svakog dana u Srbiji potreb</span>
-          <span className="leading-[1.3] text-[#a9a9a9]">no</span>
-          <span className="leading-[1.3]">{` `}</span>
-          <span className="leading-[1.3] text-[#a9a9a9]">je oko 1.000 jedinica krvi. Iza svake potrebe je osoba kojoj davalac poput tebe može da pomogne.</span>
+        <p className="[word-break:break-word] font-['Archivo_Variable'] font-light leading-[0] min-w-full relative shrink-0 text-[#a9a9a9] text-[64px] text-balance text-center tracking-[-0.72px] w-[min-content]" data-node-id="503:239" style={{ fontVariationSettings: '"wdth" 100' }}>
+          <span className="leading-[1.3]">Svakog dana u Srbiji potrebno je oko 1.000 jedinica krvi. Iza svake potrebe je osoba kojoj davalac poput tebe može da pomogne.</span>
         </p>
         <Popups />
       </div>

@@ -2,13 +2,12 @@ import { useEffect } from 'react'
 
 /**
  * "Svakog dana u Srbiji potrebno je oko 1.000 jedinica krvi…"
- * The heading starts fully grey and fills with dark, letter by letter,
+ * The heading starts fully grey and fills with dark, letter by letter (sharp edge),
  * as it scrolls up through the viewport (the design shows it mid-fill).
  */
 
 const GREY = [0xa9, 0xa9, 0xa9]
 const DARK = [0x26, 0x26, 0x26]
-const SOFT = 8 // letters in the soft edge between dark and grey
 const START = 0.8 // fill starts when the heading top reaches 80% of the viewport height
 const END = 0.2 // …and is complete when its bottom reaches 20%
 
@@ -52,11 +51,11 @@ export function useScrollFill(nodeId: string) {
       const p = Math.min(1, Math.max(0, (from - r.top) / (from - to)))
       if (Math.abs(p - last) < 0.001) return
       last = p
-      const head = p * (chars.length + SOFT)
+      const filled = Math.round(p * chars.length)
+      const dark = `rgb(${DARK.join(', ')})`
+      const grey = `rgb(${GREY.join(', ')})`
       chars.forEach((c, i) => {
-        const t = Math.min(1, Math.max(0, (head - i) / SOFT))
-        const rgb = GREY.map((g, k) => Math.round(g + (DARK[k] - g) * t))
-        c.style.color = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`
+        c.style.color = i < filled ? dark : grey
       })
     }
     const onScroll = () => {

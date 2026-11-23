@@ -90,7 +90,8 @@ export function useReveal() {
     document.fonts.ready.then(() => {
       if (cancelled) return
       const root = document.getElementById('root')!
-      const ps = Array.from(root.querySelectorAll<HTMLElement>('p'))
+      // [data-no-split]: React-updated text (e.g. the day schedule) keeps its own animation
+      const ps = Array.from(root.querySelectorAll<HTMLElement>('p')).filter((p) => !p.closest('[data-no-split]'))
       ps.forEach(splitIntoLines)
       root.classList.add('reveal-ready')
       window.dispatchEvent(new Event('reveal:split'))

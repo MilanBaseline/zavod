@@ -2,6 +2,7 @@ import ReserveChart from './components/ReserveChart'
 import Popups from './components/Popups'
 import PulseHeart from './components/PulseHeart'
 import HeroSlider from './components/HeroSlider'
+import DaySchedule from './components/DaySchedule'
 import StepsScroll from './components/StepsScroll'
 import { useReveal } from './lib/reveal'
 import { useOrbitIn } from './lib/orbitIn'
@@ -352,125 +353,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="503:1685">
-                <div className="content-stretch flex h-[64px] items-center relative shrink-0 w-full" data-node-id="503:1686">
-                  <div className="border-[#d32027] border-b-9 border-solid content-stretch flex flex-[1_0_0] h-full items-center justify-center min-w-px px-[24px] relative" data-node-id="503:1687" data-name="Button">
-                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-bold leading-[normal] relative shrink-0 text-[#333c43] text-[20px] whitespace-nowrap" data-node-id="I503:1687;313:2843">
-                      Pon
-                    </p>
-                  </div>
-                  <div className="border-[rgba(93,98,102,0.2)] border-b border-solid content-stretch flex flex-[1_0_0] h-full items-center justify-center min-w-px px-[24px] relative" data-node-id="503:1688" data-name="Button">
-                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] opacity-30 relative shrink-0 text-[#5d6266] text-[20px] whitespace-nowrap" data-node-id="I503:1688;313:2834">
-                      Uto
-                    </p>
-                  </div>
-                  <div className="border-[rgba(93,98,102,0.2)] border-b border-solid content-stretch flex flex-[1_0_0] h-full items-center justify-center min-w-px px-[24px] relative" data-node-id="503:1689" data-name="Button">
-                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] opacity-30 relative shrink-0 text-[#5d6266] text-[20px] whitespace-nowrap" data-node-id="I503:1689;313:2834">
-                      Sre
-                    </p>
-                  </div>
-                  <div className="border-[rgba(93,98,102,0.2)] border-b border-solid content-stretch flex flex-[1_0_0] h-full items-center justify-center min-w-px px-[24px] relative" data-node-id="503:1690" data-name="Button">
-                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] opacity-30 relative shrink-0 text-[#5d6266] text-[20px] whitespace-nowrap" data-node-id="I503:1690;313:2834">
-                      Čet
-                    </p>
-                  </div>
-                  <div className="border-[rgba(93,98,102,0.2)] border-b border-solid content-stretch flex flex-[1_0_0] h-full items-center justify-center min-w-px px-[24px] relative" data-node-id="503:1691" data-name="Button">
-                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] opacity-30 relative shrink-0 text-[#5d6266] text-[20px] whitespace-nowrap" data-node-id="I503:1691;313:2834">
-                      Pet
-                    </p>
-                  </div>
-                  <div className="border-[rgba(93,98,102,0.2)] border-b border-solid content-stretch flex flex-[1_0_0] h-full items-center justify-center min-w-px px-[24px] relative" data-node-id="503:1692" data-name="Button">
-                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] opacity-30 relative shrink-0 text-[#5d6266] text-[20px] whitespace-nowrap" data-node-id="I503:1692;313:2834">
-                      Sub
-                    </p>
-                  </div>
-                  <div className="border-[rgba(93,98,102,0.2)] border-b border-solid content-stretch flex flex-[1_0_0] h-full items-center justify-center min-w-px px-[24px] relative" data-node-id="503:1693" data-name="Button">
-                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] opacity-30 relative shrink-0 text-[#5d6266] text-[20px] whitespace-nowrap" data-node-id="I503:1693;313:2834">
-                      Ned
-                    </p>
-                  </div>
-                </div>
-                <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-node-id="503:1694" data-name="Frame">
-                  <div className="[word-break:break-word] content-stretch flex font-['DM_Sans_Variable'] font-semibold gap-[12px] h-[32px] items-center justify-center leading-[normal] px-[8px] py-[12px] relative shrink-0 text-[#bfc8d0] text-[11px] tracking-[2px] uppercase w-full" data-node-id="503:1695" data-name="Frame">
-                    <p className="flex-[1_0_0] min-w-px relative" data-node-id="503:1696">
-                      Mesto / lokacija
-                    </p>
-                    <p className="relative shrink-0 text-right w-[120px]" data-node-id="503:1697">
-                      Vreme
-                    </p>
-                  </div>
-                  <div className="[word-break:break-word] bg-white border-[rgba(191,200,208,0.3)] border-solid border-t content-stretch flex gap-[10px] h-[56px] items-center justify-center leading-[normal] px-[8px] py-[16px] relative shrink-0 text-[16px] w-full" data-node-id="503:1698" data-name="Frame">
-                    <div className="content-stretch flex flex-[1_0_0] gap-[12px] items-center min-w-px relative whitespace-nowrap" data-node-id="503:1699" data-name="Frame">
-                      <p className="font-['DM_Sans_Variable'] font-medium relative shrink-0 text-[#111]" data-node-id="503:1700">
-                        Begeč
-                      </p>
-                      <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#888]" data-node-id="503:1701">
-                        Prostorije udruženja Begečka Nana
-                      </p>
-                    </div>
-                    <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#444] text-right w-[120px]" data-node-id="503:1702">
-                      09:00 – 11:00
-                    </p>
-                  </div>
-                  <div className="bg-white border-[rgba(191,200,208,0.3)] border-solid border-t content-stretch flex gap-[10px] h-[56px] items-center justify-center px-[8px] py-[16px] relative shrink-0 w-full" data-node-id="503:1703" data-name="Frame">
-                    <div className="bg-[#d32027] content-stretch flex items-center justify-center p-[3.25px] relative rounded-[69.875px] shrink-0" data-node-id="503:1704" data-name="Frame">
-                      <div className="relative shrink-0 size-[19.5px]" data-node-id="503:1705" data-name="error-warning-fill">
-                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgErrorWarningFill} />
-                      </div>
-                    </div>
-                    <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] gap-[12px] items-center leading-[normal] min-w-px relative text-[16px] whitespace-nowrap" data-node-id="503:1707" data-name="Frame">
-                      <p className="font-['DM_Sans_Variable'] font-medium relative shrink-0 text-[#111]" data-node-id="503:1708">
-                        Inđija
-                      </p>
-                      <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#888]" data-node-id="503:1709">
-                        Dom Zdravlja
-                      </p>
-                    </div>
-                    <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] relative shrink-0 text-[#444] text-[16px] text-right w-[120px]" data-node-id="503:1710">
-                      09:00 – 11:00
-                    </p>
-                  </div>
-                  <div className="[word-break:break-word] bg-white border-[rgba(191,200,208,0.3)] border-solid border-t content-stretch flex gap-[10px] h-[56px] items-center justify-center leading-[normal] px-[8px] py-[16px] relative shrink-0 text-[16px] w-full" data-node-id="503:1711" data-name="Frame">
-                    <div className="content-stretch flex flex-[1_0_0] gap-[12px] items-center min-w-px relative whitespace-nowrap" data-node-id="503:1712" data-name="Frame">
-                      <p className="font-['DM_Sans_Variable'] font-medium relative shrink-0 text-[#111]" data-node-id="503:1713">
-                        Sombor
-                      </p>
-                      <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#888]" data-node-id="503:1714">
-                        Crveni krst
-                      </p>
-                    </div>
-                    <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#444] text-right w-[120px]" data-node-id="503:1715">
-                      09:00 – 11:00
-                    </p>
-                  </div>
-                  <div className="[word-break:break-word] bg-white border-[rgba(191,200,208,0.3)] border-solid border-t content-stretch flex gap-[10px] h-[56px] items-center justify-center leading-[normal] px-[8px] py-[16px] relative shrink-0 text-[16px] w-full" data-node-id="503:1716" data-name="Frame">
-                    <div className="content-stretch flex flex-[1_0_0] gap-[12px] items-center min-w-px relative whitespace-nowrap" data-node-id="503:1717" data-name="Frame">
-                      <p className="font-['DM_Sans_Variable'] font-medium relative shrink-0 text-[#111]" data-node-id="503:1718">
-                        Sremska Mitrovica
-                      </p>
-                      <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#888]" data-node-id="503:1719">
-                        KPZ
-                      </p>
-                    </div>
-                    <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#444] text-right w-[120px]" data-node-id="503:1720">
-                      09:00 – 11:00
-                    </p>
-                  </div>
-                  <div className="[word-break:break-word] bg-white border-[rgba(191,200,208,0.3)] border-solid border-t content-stretch flex gap-[10px] h-[56px] items-center justify-center leading-[normal] px-[8px] py-[16px] relative shrink-0 text-[16px] w-full" data-node-id="503:1721" data-name="Frame">
-                    <div className="content-stretch flex flex-[1_0_0] gap-[12px] items-center min-w-px relative whitespace-nowrap" data-node-id="503:1722" data-name="Frame">
-                      <p className="font-['DM_Sans_Variable'] font-medium relative shrink-0 text-[#111]" data-node-id="503:1723">
-                        Pančevo
-                      </p>
-                      <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#888]" data-node-id="503:1724">
-                        Crveni krst
-                      </p>
-                    </div>
-                    <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#444] text-right w-[120px]" data-node-id="503:1725">
-                      09:00 – 11:00
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <DaySchedule />
               <div className="absolute bg-gradient-to-t bottom-0 from-white h-[102px] left-0 to-[rgba(255,255,255,0)] w-[757px]" data-node-id="503:3229" />
             </div>
           </div>

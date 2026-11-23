@@ -10,7 +10,15 @@ import { useEffect, useRef } from 'react'
  * Copy and photos for all 5 steps come from the Figma "Section 1" frame (541:123).
  */
 
-type Step = { num: string; title: string; text: string; image: string; position: string }
+type Step = {
+  num: string
+  title: string
+  text: string
+  image: string
+  position: string
+  /** explicit crop (size/offset of the photo inside the frame), used where the design zooms in */
+  crop?: { width: string; height: string; left: string; top: string }
+}
 
 const STEPS: Step[] = [
   {
@@ -19,6 +27,8 @@ const STEPS: Step[] = [
     text: 'Sve počinje tvojim dolaskom. Posle upitnika i lekarskog pregleda sledi davanje krvi uz podršku našeg tima.',
     image: './assets/step1.jpg',
     position: '35% 50%',
+    // design crop: close-up of the arm with the red ball (Figma 540:357), fitted to the portrait frame
+    crop: { width: '414%', height: '175.4%', left: '-47.6%', top: '-75.4%' },
   },
   {
     num: '02',
@@ -146,7 +156,11 @@ export default function StepsScroll() {
             <div ref={stackRef} className="flex flex-col gap-[8px] will-change-transform">
               {STEPS.map((step, i) => (
                 <div key={i} className="h-[766px] relative rounded-[22px] shrink-0 w-full overflow-hidden bg-[#d9d9d9]">
-                  <img alt="" className="absolute max-w-none object-cover rounded-[22px] size-full" src={step.image} style={{ objectPosition: step.position }} />
+                  {step.crop ? (
+                    <img alt="" className="absolute max-w-none" src={step.image} style={step.crop} />
+                  ) : (
+                    <img alt="" className="absolute max-w-none object-cover rounded-[22px] size-full" src={step.image} style={{ objectPosition: step.position }} />
+                  )}
                 </div>
               ))}
             </div>

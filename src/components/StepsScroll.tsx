@@ -4,8 +4,8 @@ import { useEffect, useRef } from 'react'
  * "Tvoja krv nastavlja put." — sticky scroll section with 5 steps.
  * The row stays pinned while the page scrolls through it. Photos in the
  * centre move up with the scroll; step texts alternate left (01, 03, 05) and
- * right (02, 04). The active step is fully visible, the previous one stays
- * faded on the opposite side (as in the design), older ones leave.
+ * right (02, 04). Only the active step is visible; the previous one leaves
+ * completely (text slides up and out), the next one slides in on its side.
  *
  * Steps 01 and 02 are from the design. Steps 03–05 are not in the Figma file
  * yet: their copy and photos are PLACEHOLDERS to be replaced.
@@ -89,7 +89,7 @@ export default function StepsScroll() {
       active = a
       stepRefs.current.forEach((el, i) => {
         if (!el) return
-        el.dataset.state = i === a ? 'active' : i === a - 1 ? 'prev' : i < a ? 'past' : 'next'
+        el.dataset.state = i === a ? 'active' : i < a ? 'past' : 'next'
       })
     }
     const onScroll = () => {

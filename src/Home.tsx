@@ -77,7 +77,7 @@ type NavItemProps = {
 function NavItem({ className, property1 = true }: NavItemProps) {
   return (
     <div className={className || "content-stretch flex items-center justify-center px-[12px] py-[8px] relative"} data-node-id="234:990">
-      <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[normal] relative shrink-0 text-[13px] text-black whitespace-nowrap" data-node-id="234:981" style={{ fontVariationSettings: '"opsz" 14' }}>
+      <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[normal] relative shrink-0 text-[13px] text-black whitespace-nowrap" data-node-id="234:981">
         Daj krv
       </p>
     </div>
@@ -94,23 +94,23 @@ export default function Home() {
             <div className="content-stretch flex flex-[1_0_0] items-center min-w-px relative" data-node-id="503:796">
               <NavItem className="content-stretch flex items-center justify-center px-[12px] py-[8px] relative shrink-0" />
               <div className="content-stretch flex items-center justify-center px-[12px] py-[8px] relative shrink-0" data-node-id="503:798" data-name="Nav-Item">
-                <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[normal] relative shrink-0 text-[#a2a2a2] text-[13px] whitespace-nowrap" data-node-id="I503:798;234:989" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[normal] relative shrink-0 text-[#a2a2a2] text-[13px] whitespace-nowrap" data-node-id="I503:798;234:989">
                   Akcije i mesta
                 </p>
               </div>
               <div className="content-stretch flex items-center justify-center px-[12px] py-[8px] relative shrink-0" data-node-id="503:799" data-name="Nav-Item">
-                <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[normal] relative shrink-0 text-[#a2a2a2] text-[13px] whitespace-nowrap" data-node-id="I503:799;234:989" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[normal] relative shrink-0 text-[#a2a2a2] text-[13px] whitespace-nowrap" data-node-id="I503:799;234:989">
                   O nama
                 </p>
               </div>
               <div className="content-stretch flex items-center justify-center px-[12px] py-[8px] relative shrink-0" data-node-id="503:800" data-name="Nav-Item">
-                <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[normal] relative shrink-0 text-[#a2a2a2] text-[13px] whitespace-nowrap" data-node-id="I503:800;234:989" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[normal] relative shrink-0 text-[#a2a2a2] text-[13px] whitespace-nowrap" data-node-id="I503:800;234:989">
                   Pitanja i odgovori
                 </p>
               </div>
             </div>
             <div className="bg-[#d32027] content-stretch flex h-[40px] items-center justify-center px-[20px] py-[10px] relative rounded-[92px] shrink-0" data-node-id="503:801" data-name="Frame">
-              <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[normal] relative shrink-0 text-[13px] text-white whitespace-nowrap" data-node-id="503:802" style={{ fontVariationSettings: '"opsz" 14' }}>
+              <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[normal] relative shrink-0 text-[13px] text-white whitespace-nowrap" data-node-id="503:802">
                 Gde mogu da dam krv?
               </p>
             </div>
@@ -133,24 +133,24 @@ export default function Home() {
                     <div className="relative shrink-0 size-[2px]" data-node-id="503:816">
                       <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse46} />
                     </div>
-                    <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[22.5px] relative shrink-0 text-[10px] text-balance text-white tracking-[3px] uppercase whitespace-nowrap" data-node-id="503:817" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[22.5px] relative shrink-0 text-[10px] text-balance text-white tracking-[3px] uppercase whitespace-nowrap" data-node-id="503:817">
                       Dobrovoljno davanje krvi
                     </p>
                   </div>
                   <p className="[word-break:break-word] font-['Archivo_Variable'] font-light leading-[1.1] min-w-full relative shrink-0 text-[56px] text-balance text-white tracking-[-0.72px] w-[min-content]" data-node-id="503:818" style={{ fontVariationSettings: '"wdth" 100' }}>
                     Svaka krvna grupa je važna. I tvoja.
                   </p>
-                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.6] min-w-full relative shrink-0 text-[18px] text-[rgba(255,255,255,0.8)] text-balance w-[min-content]" data-node-id="503:819" style={{ fontVariationSettings: '"opsz" 14' }}>
+                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.6] min-w-full relative shrink-0 text-[18px] text-[rgba(255,255,255,0.8)] text-balance w-[min-content]" data-node-id="503:819">
                     Već danas možeš da učiniš nešto veliko i postaneš tihi heroj za nekoga koga možda nikada nećeš upoznati.
                   </p>
                   <div className="content-stretch flex gap-[16px] items-center relative shrink-0" data-node-id="503:820" data-name="Frame">
                     <div className="bg-[#d32027] content-stretch flex items-start px-[28px] py-[14px] relative rounded-[58px] shrink-0" data-node-id="503:821" data-name="Frame">
-                      <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-semibold leading-[normal] relative shrink-0 text-[14px] text-white whitespace-nowrap" data-node-id="503:822" style={{ fontVariationSettings: '"opsz" 14' }}>
+                      <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-semibold leading-[normal] relative shrink-0 text-[14px] text-white whitespace-nowrap" data-node-id="503:822">
                         Gde mogu da dam krv?
                       </p>
                     </div>
-                    <div className="border border-[rgba(255,255,255,0.4)] border-solid content-stretch flex items-start px-[28px] py-[14px] relative rounded-[62px] shrink-0" data-node-id="503:823" data-name="Frame">
-                      <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] relative shrink-0 text-[14px] text-white whitespace-nowrap" data-node-id="503:824" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <div className="content-stretch flex items-start px-[28px] py-[14px] relative rounded-[62px] shrink-0 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.4)]" data-node-id="503:823" data-name="Frame">
+                      <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] relative shrink-0 text-[14px] text-white whitespace-nowrap" data-node-id="503:824">
                         Dajem krv prvi put →
                       </p>
                     </div>
@@ -187,10 +187,10 @@ export default function Home() {
               <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup45} />
             </div>
             <p className="[word-break:break-word] font-['Archivo_Variable'] font-light leading-[55.2px] min-w-full relative shrink-0 text-[#483434] text-[40px] tracking-[-0.72px] w-[min-content]" data-node-id="503:85" style={{ fontVariationSettings: '"wdth" 100' }}>{`Davaoci svih krvnih grupa svakog dana pomažu da krv bude dostupna onima kojima je potrebna. `}</p>
-            <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[36px] min-w-full opacity-60 relative shrink-0 text-[#483434] text-[22px] text-balance tracking-[-0.72px] w-[min-content]" data-node-id="503:86" style={{ fontVariationSettings: '"opsz" 14' }}>
+            <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[36px] min-w-full opacity-60 relative shrink-0 text-[#483434] text-[22px] text-balance tracking-[-0.72px] w-[min-content]" data-node-id="503:86">
               Pogledaj trenutno stanje rezervi i pridruži im se
             </p>
-            <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[36px] min-w-full opacity-60 relative shrink-0 text-[#919191] text-[14px] text-balance w-[min-content]" data-node-id="503:87" style={{ fontVariationSettings: '"opsz" 14' }}>
+            <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[36px] min-w-full opacity-60 relative shrink-0 text-[#919191] text-[14px] text-balance w-[min-content]" data-node-id="503:87">
               Poslednje ažuriranje: 9 Septembar
             </p>
           </div>
@@ -280,7 +280,7 @@ export default function Home() {
           <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] font-['Archivo_Variable'] font-light leading-[55.2px] relative shrink-0 text-[#483434] text-[18px] tracking-[1px] w-full" data-node-id="503:1660" style={{ fontVariationSettings: '"wdth" 100' }}>
             Pronađi mesto. Izaberi termin.
           </p>
-          <p className="font-['DM_Sans_Variable'] font-normal leading-[1.2] relative shrink-0 text-[#5d6266] text-[30px] tracking-[-0.09px] w-full" data-node-id="503:1661" style={{ fontVariationSettings: '"opsz" 14' }}>
+          <p className="font-['DM_Sans_Variable'] font-normal leading-[1.2] relative shrink-0 text-[#5d6266] text-[30px] tracking-[-0.09px] w-full" data-node-id="503:1661">
             Krv možeš da daš u Zavodu u Novom Sadu ili na nekoj od terenskih akcija širom Vojvodine. Pronađi lokaciju i vreme koji ti odgovaraju.
           </p>
         </div>
@@ -302,16 +302,16 @@ export default function Home() {
                     U Zavodu u Novom Sadu
                   </p>
                   <div className="[word-break:break-word] content-stretch flex flex-col gap-[2px] items-start leading-[1.5] relative shrink-0 text-[#333] text-[18px] text-balance w-full" data-node-id="503:1670">
-                    <p className="font-['DM_Sans_Variable'] font-semibold relative shrink-0 w-full" data-node-id="503:1671" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="font-['DM_Sans_Variable'] font-semibold relative shrink-0 w-full" data-node-id="503:1671">
                       Hajduk Veljkova 9a
                     </p>
-                    <p className="font-['DM_Sans_Variable'] font-normal opacity-60 relative shrink-0 w-full" data-node-id="503:1672" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="font-['DM_Sans_Variable'] font-normal opacity-60 relative shrink-0 w-full" data-node-id="503:1672">
                       Radno vreme za davaoce: 09:30 do 14:00
                     </p>
                   </div>
                 </div>
                 <div className="bg-[#d32027] content-stretch flex h-[48px] items-center justify-center px-[32px] py-[14px] relative rounded-[86px] shrink-0" data-node-id="503:1673" data-name="Frame">
-                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-semibold leading-[normal] relative shrink-0 text-[14px] text-white whitespace-nowrap" data-node-id="503:1674" style={{ fontVariationSettings: '"opsz" 14' }}>
+                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-semibold leading-[normal] relative shrink-0 text-[14px] text-white whitespace-nowrap" data-node-id="503:1674">
                     Pogledaj lokaciju
                   </p>
                 </div>
@@ -337,12 +337,12 @@ export default function Home() {
                   <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Archivo_Variable'] font-extrabold leading-[1.2] min-w-full relative shrink-0 text-[#3b1616] text-[36px] text-balance tracking-[-0.72px] w-[min-content]" data-node-id="503:3227" style={{ fontVariationSettings: '"wdth" 100' }}>
                     Na terenskoj akciji
                   </p>
-                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.5] min-w-full opacity-60 relative shrink-0 text-[#333] text-[18px] text-balance w-[min-content]" data-node-id="503:1684" style={{ fontVariationSettings: '"opsz" 14' }}>
+                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.5] min-w-full opacity-60 relative shrink-0 text-[#333] text-[18px] text-balance w-[min-content]" data-node-id="503:1684">
                     Pogledaj gde smo u narednim danima. Izaberi akciju i sačuvaj termin u svom kalendaru.
                   </p>
                 </div>
                 <div className="bg-[#d32027] content-stretch flex h-[48px] items-start justify-center px-[32px] py-[14px] relative rounded-[86px] shrink-0" data-node-id="503:3222" data-name="Frame">
-                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-semibold leading-[normal] relative shrink-0 text-[14px] text-white whitespace-nowrap" data-node-id="503:3223" style={{ fontVariationSettings: '"opsz" 14' }}>
+                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-semibold leading-[normal] relative shrink-0 text-[14px] text-white whitespace-nowrap" data-node-id="503:3223">
                     Pogledaj sve akcije
                   </p>
                 </div>
@@ -350,60 +350,60 @@ export default function Home() {
               <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="503:1685">
                 <div className="content-stretch flex h-[64px] items-center relative shrink-0 w-full" data-node-id="503:1686">
                   <div className="border-[#d32027] border-b-9 border-solid content-stretch flex flex-[1_0_0] h-full items-center justify-center min-w-px px-[24px] relative" data-node-id="503:1687" data-name="Button">
-                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-bold leading-[normal] relative shrink-0 text-[#333c43] text-[20px] whitespace-nowrap" data-node-id="I503:1687;313:2843" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-bold leading-[normal] relative shrink-0 text-[#333c43] text-[20px] whitespace-nowrap" data-node-id="I503:1687;313:2843">
                       Pon
                     </p>
                   </div>
                   <div className="border-[rgba(93,98,102,0.2)] border-b border-solid content-stretch flex flex-[1_0_0] h-full items-center justify-center min-w-px px-[24px] relative" data-node-id="503:1688" data-name="Button">
-                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] opacity-30 relative shrink-0 text-[#5d6266] text-[20px] whitespace-nowrap" data-node-id="I503:1688;313:2834" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] opacity-30 relative shrink-0 text-[#5d6266] text-[20px] whitespace-nowrap" data-node-id="I503:1688;313:2834">
                       Uto
                     </p>
                   </div>
                   <div className="border-[rgba(93,98,102,0.2)] border-b border-solid content-stretch flex flex-[1_0_0] h-full items-center justify-center min-w-px px-[24px] relative" data-node-id="503:1689" data-name="Button">
-                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] opacity-30 relative shrink-0 text-[#5d6266] text-[20px] whitespace-nowrap" data-node-id="I503:1689;313:2834" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] opacity-30 relative shrink-0 text-[#5d6266] text-[20px] whitespace-nowrap" data-node-id="I503:1689;313:2834">
                       Sre
                     </p>
                   </div>
                   <div className="border-[rgba(93,98,102,0.2)] border-b border-solid content-stretch flex flex-[1_0_0] h-full items-center justify-center min-w-px px-[24px] relative" data-node-id="503:1690" data-name="Button">
-                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] opacity-30 relative shrink-0 text-[#5d6266] text-[20px] whitespace-nowrap" data-node-id="I503:1690;313:2834" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] opacity-30 relative shrink-0 text-[#5d6266] text-[20px] whitespace-nowrap" data-node-id="I503:1690;313:2834">
                       Čet
                     </p>
                   </div>
                   <div className="border-[rgba(93,98,102,0.2)] border-b border-solid content-stretch flex flex-[1_0_0] h-full items-center justify-center min-w-px px-[24px] relative" data-node-id="503:1691" data-name="Button">
-                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] opacity-30 relative shrink-0 text-[#5d6266] text-[20px] whitespace-nowrap" data-node-id="I503:1691;313:2834" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] opacity-30 relative shrink-0 text-[#5d6266] text-[20px] whitespace-nowrap" data-node-id="I503:1691;313:2834">
                       Pet
                     </p>
                   </div>
                   <div className="border-[rgba(93,98,102,0.2)] border-b border-solid content-stretch flex flex-[1_0_0] h-full items-center justify-center min-w-px px-[24px] relative" data-node-id="503:1692" data-name="Button">
-                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] opacity-30 relative shrink-0 text-[#5d6266] text-[20px] whitespace-nowrap" data-node-id="I503:1692;313:2834" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] opacity-30 relative shrink-0 text-[#5d6266] text-[20px] whitespace-nowrap" data-node-id="I503:1692;313:2834">
                       Sub
                     </p>
                   </div>
                   <div className="border-[rgba(93,98,102,0.2)] border-b border-solid content-stretch flex flex-[1_0_0] h-full items-center justify-center min-w-px px-[24px] relative" data-node-id="503:1693" data-name="Button">
-                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] opacity-30 relative shrink-0 text-[#5d6266] text-[20px] whitespace-nowrap" data-node-id="I503:1693;313:2834" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] opacity-30 relative shrink-0 text-[#5d6266] text-[20px] whitespace-nowrap" data-node-id="I503:1693;313:2834">
                       Ned
                     </p>
                   </div>
                 </div>
                 <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-node-id="503:1694" data-name="Frame">
                   <div className="[word-break:break-word] content-stretch flex font-['DM_Sans_Variable'] font-semibold gap-[12px] h-[32px] items-center justify-center leading-[normal] px-[8px] py-[12px] relative shrink-0 text-[#bfc8d0] text-[11px] tracking-[2px] uppercase w-full" data-node-id="503:1695" data-name="Frame">
-                    <p className="flex-[1_0_0] min-w-px relative" data-node-id="503:1696" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="flex-[1_0_0] min-w-px relative" data-node-id="503:1696">
                       Mesto / lokacija
                     </p>
-                    <p className="relative shrink-0 text-right w-[120px]" data-node-id="503:1697" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="relative shrink-0 text-right w-[120px]" data-node-id="503:1697">
                       Vreme
                     </p>
                   </div>
                   <div className="[word-break:break-word] bg-white border-[rgba(191,200,208,0.3)] border-solid border-t content-stretch flex gap-[10px] h-[56px] items-center justify-center leading-[normal] px-[8px] py-[16px] relative shrink-0 text-[16px] w-full" data-node-id="503:1698" data-name="Frame">
                     <div className="content-stretch flex flex-[1_0_0] gap-[12px] items-center min-w-px relative whitespace-nowrap" data-node-id="503:1699" data-name="Frame">
-                      <p className="font-['DM_Sans_Variable'] font-medium relative shrink-0 text-[#111]" data-node-id="503:1700" style={{ fontVariationSettings: '"opsz" 14' }}>
+                      <p className="font-['DM_Sans_Variable'] font-medium relative shrink-0 text-[#111]" data-node-id="503:1700">
                         Begeč
                       </p>
-                      <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#888]" data-node-id="503:1701" style={{ fontVariationSettings: '"opsz" 14' }}>
+                      <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#888]" data-node-id="503:1701">
                         Prostorije udruženja Begečka Nana
                       </p>
                     </div>
-                    <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#444] text-right w-[120px]" data-node-id="503:1702" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#444] text-right w-[120px]" data-node-id="503:1702">
                       09:00 – 11:00
                     </p>
                   </div>
@@ -414,53 +414,53 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] gap-[12px] items-center leading-[normal] min-w-px relative text-[16px] whitespace-nowrap" data-node-id="503:1707" data-name="Frame">
-                      <p className="font-['DM_Sans_Variable'] font-medium relative shrink-0 text-[#111]" data-node-id="503:1708" style={{ fontVariationSettings: '"opsz" 14' }}>
+                      <p className="font-['DM_Sans_Variable'] font-medium relative shrink-0 text-[#111]" data-node-id="503:1708">
                         Inđija
                       </p>
-                      <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#888]" data-node-id="503:1709" style={{ fontVariationSettings: '"opsz" 14' }}>
+                      <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#888]" data-node-id="503:1709">
                         Dom Zdravlja
                       </p>
                     </div>
-                    <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] relative shrink-0 text-[#444] text-[16px] text-right w-[120px]" data-node-id="503:1710" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[normal] relative shrink-0 text-[#444] text-[16px] text-right w-[120px]" data-node-id="503:1710">
                       09:00 – 11:00
                     </p>
                   </div>
                   <div className="[word-break:break-word] bg-white border-[rgba(191,200,208,0.3)] border-solid border-t content-stretch flex gap-[10px] h-[56px] items-center justify-center leading-[normal] px-[8px] py-[16px] relative shrink-0 text-[16px] w-full" data-node-id="503:1711" data-name="Frame">
                     <div className="content-stretch flex flex-[1_0_0] gap-[12px] items-center min-w-px relative whitespace-nowrap" data-node-id="503:1712" data-name="Frame">
-                      <p className="font-['DM_Sans_Variable'] font-medium relative shrink-0 text-[#111]" data-node-id="503:1713" style={{ fontVariationSettings: '"opsz" 14' }}>
+                      <p className="font-['DM_Sans_Variable'] font-medium relative shrink-0 text-[#111]" data-node-id="503:1713">
                         Sombor
                       </p>
-                      <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#888]" data-node-id="503:1714" style={{ fontVariationSettings: '"opsz" 14' }}>
+                      <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#888]" data-node-id="503:1714">
                         Crveni krst
                       </p>
                     </div>
-                    <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#444] text-right w-[120px]" data-node-id="503:1715" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#444] text-right w-[120px]" data-node-id="503:1715">
                       09:00 – 11:00
                     </p>
                   </div>
                   <div className="[word-break:break-word] bg-white border-[rgba(191,200,208,0.3)] border-solid border-t content-stretch flex gap-[10px] h-[56px] items-center justify-center leading-[normal] px-[8px] py-[16px] relative shrink-0 text-[16px] w-full" data-node-id="503:1716" data-name="Frame">
                     <div className="content-stretch flex flex-[1_0_0] gap-[12px] items-center min-w-px relative whitespace-nowrap" data-node-id="503:1717" data-name="Frame">
-                      <p className="font-['DM_Sans_Variable'] font-medium relative shrink-0 text-[#111]" data-node-id="503:1718" style={{ fontVariationSettings: '"opsz" 14' }}>
+                      <p className="font-['DM_Sans_Variable'] font-medium relative shrink-0 text-[#111]" data-node-id="503:1718">
                         Sremska Mitrovica
                       </p>
-                      <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#888]" data-node-id="503:1719" style={{ fontVariationSettings: '"opsz" 14' }}>
+                      <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#888]" data-node-id="503:1719">
                         KPZ
                       </p>
                     </div>
-                    <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#444] text-right w-[120px]" data-node-id="503:1720" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#444] text-right w-[120px]" data-node-id="503:1720">
                       09:00 – 11:00
                     </p>
                   </div>
                   <div className="[word-break:break-word] bg-white border-[rgba(191,200,208,0.3)] border-solid border-t content-stretch flex gap-[10px] h-[56px] items-center justify-center leading-[normal] px-[8px] py-[16px] relative shrink-0 text-[16px] w-full" data-node-id="503:1721" data-name="Frame">
                     <div className="content-stretch flex flex-[1_0_0] gap-[12px] items-center min-w-px relative whitespace-nowrap" data-node-id="503:1722" data-name="Frame">
-                      <p className="font-['DM_Sans_Variable'] font-medium relative shrink-0 text-[#111]" data-node-id="503:1723" style={{ fontVariationSettings: '"opsz" 14' }}>
+                      <p className="font-['DM_Sans_Variable'] font-medium relative shrink-0 text-[#111]" data-node-id="503:1723">
                         Pančevo
                       </p>
-                      <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#888]" data-node-id="503:1724" style={{ fontVariationSettings: '"opsz" 14' }}>
+                      <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#888]" data-node-id="503:1724">
                         Crveni krst
                       </p>
                     </div>
-                    <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#444] text-right w-[120px]" data-node-id="503:1725" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#444] text-right w-[120px]" data-node-id="503:1725">
                       09:00 – 11:00
                     </p>
                   </div>
@@ -476,7 +476,7 @@ export default function Home() {
           <p className="font-['Archivo_Variable'] font-light leading-[55.2px] relative shrink-0 text-[48px] tracking-[-0.72px] whitespace-nowrap" data-node-id="503:206" style={{ fontVariationSettings: '"wdth" 100' }}>
             Prvi put daješ krv? Tu smo za tebe.
           </p>
-          <p className="font-['DM_Sans_Variable'] font-normal leading-[22.5px] min-w-full opacity-60 relative shrink-0 text-[18px] text-balance tracking-[-0.09px] w-[min-content]" data-node-id="503:207" style={{ fontVariationSettings: '"opsz" 14' }}>
+          <p className="font-['DM_Sans_Variable'] font-normal leading-[22.5px] min-w-full opacity-60 relative shrink-0 text-[18px] text-balance tracking-[-0.09px] w-[min-content]" data-node-id="503:207">
             Svako ko redovno daje krv jednom je došao prvi put. Ako razmišljaš o svom prvom davanju, upoznaj se sa postupkom i dođi spremno. Naš tim je tu da te vodi kroz svaki korak.
           </p>
         </div>
@@ -505,14 +505,14 @@ export default function Home() {
                 </div>
                 <div className="absolute inset-0 rounded-[24px]" style={{ backgroundImage: "linear-gradient(179.99999999999926deg, rgba(255, 255, 255, 0) 64.968%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(180deg, rgba(255, 255, 255, 0) 53.424%, rgba(255, 255, 255, 0.6) 100%)" }} />
               </div>
-              <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-light leading-[normal] relative shrink-0 text-[18px] text-black text-center w-[24px]" data-node-id="503:211" style={{ fontVariationSettings: '"opsz" 14' }}>
+              <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-light leading-[normal] relative shrink-0 text-[18px] text-black text-center w-[24px]" data-node-id="503:211">
                 01
               </p>
               <div className="[word-break:break-word] content-stretch flex flex-col gap-[10px] items-start relative shrink-0 text-center w-full" data-node-id="503:212" data-name="Frame">
-                <p className="font-['DM_Sans_Variable'] font-bold leading-[normal] relative shrink-0 text-[#2d2d2d] text-[24px] tracking-[-1px] w-full" data-node-id="503:213" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="font-['DM_Sans_Variable'] font-bold leading-[normal] relative shrink-0 text-[#2d2d2d] text-[24px] tracking-[-1px] w-full" data-node-id="503:213">
                   Mogu li da dam krv?
                 </p>
-                <p className="font-['DM_Sans_Variable'] font-normal leading-[1.6] relative shrink-0 text-[#7b7b7b] text-[15px] text-balance w-full" data-node-id="503:214" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="font-['DM_Sans_Variable'] font-normal leading-[1.6] relative shrink-0 text-[#7b7b7b] text-[15px] text-balance w-full" data-node-id="503:214">
                   Pogledaj osnovne uslove i pronađi odgovore na nedoumice o davanju krvi.
                 </p>
               </div>
@@ -537,14 +537,14 @@ export default function Home() {
                   <img alt="" className="absolute h-[147.83%] left-[-93.88%] max-w-none top-[-44.25%] w-[269.65%]" src={imgFrame10} />
                 </div>
               </div>
-              <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-light leading-[normal] relative shrink-0 text-[#101010] text-[18px] text-center w-[24px]" data-node-id="503:216" style={{ fontVariationSettings: '"opsz" 14' }}>
+              <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-light leading-[normal] relative shrink-0 text-[#101010] text-[18px] text-center w-[24px]" data-node-id="503:216">
                 02
               </p>
               <div className="[word-break:break-word] content-stretch flex flex-col gap-[10px] items-start relative shrink-0 text-center w-[268px]" data-node-id="503:217" data-name="Frame">
-                <p className="font-['DM_Sans_Variable'] font-bold leading-[normal] relative shrink-0 text-[#303030] text-[24px] tracking-[-1px] w-full" data-node-id="503:218" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="font-['DM_Sans_Variable'] font-bold leading-[normal] relative shrink-0 text-[#303030] text-[24px] tracking-[-1px] w-full" data-node-id="503:218">
                   Kako da se pripremim?
                 </p>
-                <p className="font-['DM_Sans_Variable'] font-normal leading-[1.6] relative shrink-0 text-[#9d9d9d] text-[15px] text-balance w-full" data-node-id="503:219" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="font-['DM_Sans_Variable'] font-normal leading-[1.6] relative shrink-0 text-[#9d9d9d] text-[15px] text-balance w-full" data-node-id="503:219">
                   Saznaj šta treba da uradiš pre dolaska i šta da poneseš.
                 </p>
               </div>
@@ -565,14 +565,14 @@ export default function Home() {
                 </div>
                 <div className="absolute inset-0 rounded-[24px]" style={{ backgroundImage: "linear-gradient(179.99999999999926deg, rgba(0, 0, 0, 0) 64.968%, rgba(0, 0, 0, 0.6) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 53.424%, rgba(0, 0, 0, 0.6) 100%)" }} />
               </div>
-              <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-light leading-[normal] relative shrink-0 text-[#e2e2e2] text-[18px] text-center w-[24px]" data-node-id="503:225" style={{ fontVariationSettings: '"opsz" 14' }}>
+              <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-light leading-[normal] relative shrink-0 text-[#e2e2e2] text-[18px] text-center w-[24px]" data-node-id="503:225">
                 03
               </p>
               <div className="[word-break:break-word] content-stretch flex flex-col gap-[10px] items-start relative shrink-0 text-center w-full" data-node-id="503:226" data-name="Frame">
-                <p className="font-['DM_Sans_Variable'] font-bold leading-[normal] relative shrink-0 text-[24px] text-white tracking-[-1px] w-full" data-node-id="503:227" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="font-['DM_Sans_Variable'] font-bold leading-[normal] relative shrink-0 text-[24px] text-white tracking-[-1px] w-full" data-node-id="503:227">
                   Kako izgleda davanje?
                 </p>
-                <p className="font-['DM_Sans_Variable'] font-normal leading-[1.6] relative shrink-0 text-[#d8d8d8] text-[15px] text-balance w-full" data-node-id="503:228" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="font-['DM_Sans_Variable'] font-normal leading-[1.6] relative shrink-0 text-[#d8d8d8] text-[15px] text-balance w-full" data-node-id="503:228">
                   Upoznaj svaki korak, od dolaska i pregleda do odmora nakon davanja.
                 </p>
               </div>
@@ -581,7 +581,7 @@ export default function Home() {
         </div>
       </div>
       <div className="bg-white content-stretch flex flex-col gap-[24px] h-[900px] items-center overflow-clip px-[126px] py-[200px] relative shrink-0 w-full" data-node-id="503:237">
-        <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.4] opacity-62 relative shrink-0 text-[22px] text-balance text-black tracking-[-0.09px] whitespace-nowrap" data-node-id="503:238" style={{ fontVariationSettings: '"opsz" 14' }}>
+        <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.4] opacity-62 relative shrink-0 text-[22px] text-balance text-black tracking-[-0.09px] whitespace-nowrap" data-node-id="503:238">
           Svakih minut i po, nekome je potrebna krv.
         </p>
         <p className="[word-break:break-word] font-['Archivo_Variable'] font-light leading-[0] min-w-full relative shrink-0 text-[#262626] text-[64px] text-balance text-center tracking-[-0.72px] w-[min-content]" data-node-id="503:239" style={{ fontVariationSettings: '"wdth" 100' }}>
@@ -599,14 +599,14 @@ export default function Home() {
               <div className="relative shrink-0 size-[2px]" data-node-id="503:249">
                 <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse46} />
               </div>
-              <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[22.5px] opacity-60 relative shrink-0 text-[10px] text-balance text-black tracking-[3px] uppercase whitespace-nowrap" data-node-id="503:250" style={{ fontVariationSettings: '"opsz" 14' }}>
+              <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[22.5px] opacity-60 relative shrink-0 text-[10px] text-balance text-black tracking-[3px] uppercase whitespace-nowrap" data-node-id="503:250">
                 Put Krvi
               </p>
             </div>
             <p className="[word-break:break-word] font-['Archivo_Variable'] font-light leading-[55.2px] relative shrink-0 text-[#483434] text-[48px] text-center tracking-[-0.72px] whitespace-nowrap" data-node-id="503:251" style={{ fontVariationSettings: '"wdth" 100' }}>
               Tvoja krv nastavlja put.
             </p>
-            <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[22.5px] opacity-60 relative shrink-0 text-[#483434] text-[18px] text-balance text-center tracking-[-0.09px] w-[546px]" data-node-id="503:252" style={{ fontVariationSettings: '"opsz" 14' }}>
+            <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[22.5px] opacity-60 relative shrink-0 text-[#483434] text-[18px] text-balance text-center tracking-[-0.09px] w-[546px]" data-node-id="503:252">
               Tvojim davanjem počinje put pomoći. Naš tim zatim obrađuje, testira i priprema krv kako bi stigla do onih kojima je potrebna.
             </p>
           </div>
@@ -627,14 +627,14 @@ export default function Home() {
               <div className="relative shrink-0 size-[2px]" data-node-id="503:274">
                 <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse46} />
               </div>
-              <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[22.5px] opacity-60 relative shrink-0 text-[10px] text-balance text-black tracking-[3px] uppercase whitespace-nowrap" data-node-id="503:275" style={{ fontVariationSettings: '"opsz" 14' }}>
+              <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[22.5px] opacity-60 relative shrink-0 text-[10px] text-balance text-black tracking-[3px] uppercase whitespace-nowrap" data-node-id="503:275">
                 Tihi Heroji
               </p>
             </div>
             <p className="[word-break:break-word] font-['Archivo_Variable'] font-light leading-[55.2px] relative shrink-0 text-[#483434] text-[48px] text-center tracking-[-0.72px] whitespace-nowrap" data-node-id="503:276" style={{ fontVariationSettings: '"wdth" 100' }}>
               Iza svakog davanja su ljudi.
             </p>
-            <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[22.5px] opacity-60 relative shrink-0 text-[#483434] text-[18px] text-balance tracking-[-0.09px] w-[856px]" data-node-id="503:277" style={{ fontVariationSettings: '"opsz" 14' }}>
+            <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[22.5px] opacity-60 relative shrink-0 text-[#483434] text-[18px] text-balance tracking-[-0.09px] w-[856px]" data-node-id="503:277">
               Tihi heroji su ljudi poput tebe. Ljudi koji izdvoje vreme da pomognu nekome koga možda nikada neće upoznati. Ovde njihove priče susreću priče ljudi kojima krv pomaže.
             </p>
           </div>
@@ -645,7 +645,7 @@ export default function Home() {
                   <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] font-['Archivo_Variable'] leading-[1.3] relative shrink-0 text-[40px] text-balance text-black w-full" data-node-id="503:282" style={{ fontVariationSettings: '"wdth" 100' }}>
                     Neda Petrović
                   </p>
-                  <div className="flex flex-col font-['DM_Sans_Variable'] justify-end leading-[0] opacity-60 relative shrink-0 text-[#483434] text-[18px] tracking-[-0.09px] w-full" data-node-id="503:283" style={{ fontVariationSettings: '"opsz" 14' }}>
+                  <div className="flex flex-col font-['DM_Sans_Variable'] justify-end leading-[0] opacity-60 relative shrink-0 text-[#483434] text-[18px] tracking-[-0.09px] w-full" data-node-id="503:283">
                     <p className="leading-[22.5px] text-balance">Tihi heroji su ljudi poput tebe. Ljudi koji izdvoje vreme da pomognu nekome koga možda nikada neće upoznati. Ovde njihove priče susreću priče ljudi kojima krv pomaže.</p>
                   </div>
                 </div>
@@ -661,7 +661,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="border-[#e6e6e6] border-solid border-t content-stretch flex gap-[24px] items-center justify-center pt-[16px] relative shrink-0 w-full" data-node-id="503:285">
+              <div className="content-stretch flex gap-[24px] items-center justify-center pt-[16px] relative shrink-0 w-full shadow-[inset_0_1px_0_#e6e6e6]" data-node-id="503:285">
                 <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] flex-[1_0_0] font-['Archivo_Variable'] font-light leading-[55.2px] min-w-px relative text-[#483434] text-[24px] tracking-[-0.72px]" data-node-id="503:286" style={{ fontVariationSettings: '"wdth" 100' }}>
                   Upoznaj tihe heroje
                 </p>
@@ -686,7 +686,7 @@ export default function Home() {
             </div>
             <div className="content-stretch flex flex-[1_0_0] flex-col items-center justify-center min-w-px p-[32px] relative" data-node-id="503:295" data-name="Container">
               <div className="[word-break:break-word] content-stretch flex flex-col font-normal gap-[32px] items-start justify-end pt-[12px] relative shrink-0 text-black w-full" data-node-id="503:296">
-                <p className="font-['DM_Sans_Variable'] leading-[1.5] opacity-60 relative shrink-0 text-[24px] text-balance w-full" data-node-id="503:297" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="font-['DM_Sans_Variable'] leading-[1.5] opacity-60 relative shrink-0 text-[24px] text-balance w-full" data-node-id="503:297">
                   Saznaj kome pomažeš
                 </p>
                 <div className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] flex flex-col font-['Archivo_Variable'] justify-end leading-[0] relative shrink-0 text-[32px] tracking-[-0.72px] w-full whitespace-pre-wrap" data-node-id="503:298" style={{ fontVariationSettings: '"wdth" 100' }}>
@@ -711,7 +711,7 @@ export default function Home() {
             </div>
           </div>
           <div className="content-stretch flex items-center justify-center relative shrink-0 w-full" data-node-id="503:310">
-            <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.2] opacity-70 relative shrink-0 text-[#483434] text-[16px] text-balance text-center tracking-[-0.09px] w-[508.938px]" data-node-id="503:311" style={{ fontVariationSettings: '"opsz" 14' }}>
+            <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.2] opacity-70 relative shrink-0 text-[#483434] text-[16px] text-balance text-center tracking-[-0.09px] w-[508.938px]" data-node-id="503:311">
               Svako davanje znači mnogo. Kada daješ krv redovno, pomažeš da ona bude dostupna kad god nekome zatreba. Neka tvoj prvi dolazak bude početak dobre navike.
             </p>
           </div>
@@ -806,14 +806,14 @@ export default function Home() {
             <div className="relative shrink-0 size-[2px]" data-node-id="503:329">
               <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse46} />
             </div>
-            <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[22.5px] opacity-60 relative shrink-0 text-[10px] text-balance text-black tracking-[3px] uppercase whitespace-nowrap" data-node-id="503:330" style={{ fontVariationSettings: '"opsz" 14' }}>
+            <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[22.5px] opacity-60 relative shrink-0 text-[10px] text-balance text-black tracking-[3px] uppercase whitespace-nowrap" data-node-id="503:330">
               Put Krvi
             </p>
           </div>
           <p className="[word-break:break-word] font-['Archivo_Variable'] font-light leading-[55.2px] relative shrink-0 text-[#483434] text-[48px] text-center tracking-[-0.72px] whitespace-nowrap" data-node-id="503:331" style={{ fontVariationSettings: '"wdth" 100' }}>
             Pokreni svoj kolektiv.
           </p>
-          <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[22.5px] opacity-60 relative shrink-0 text-[#483434] text-[18px] text-balance text-center tracking-[-0.09px] w-[684px]" data-node-id="503:332" style={{ fontVariationSettings: '"opsz" 14' }}>
+          <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[22.5px] opacity-60 relative shrink-0 text-[#483434] text-[18px] text-balance text-center tracking-[-0.09px] w-[684px]" data-node-id="503:332">
             Dobra ideja dobija snagu kada joj se pridruže drugi. Okupi kolege, prijatelje ili svoju lokalnu zajednicu i zajedno podržite dobrovoljno davanje krvi.
           </p>
         </div>
@@ -824,7 +824,7 @@ export default function Home() {
                 <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] font-['Archivo_Variable'] leading-[45px] relative shrink-0 text-[24px] tracking-[-0.72px] w-full" data-node-id="503:337" style={{ fontVariationSettings: '"wdth" 100' }}>
                   Kompanije i ustanove
                 </p>
-                <p className="font-['DM_Sans_Variable'] leading-[1.5] opacity-60 relative shrink-0 text-[16px] w-full" data-node-id="503:338" style={{ fontVariationSettings: '"opsz" 14' }}>{`Pokreni inicijativu među kolegama. Poveži svoj kolektiv sa našim timom i saznaj kako možete da organizujete akciju davanja krvi. `}</p>
+                <p className="font-['DM_Sans_Variable'] leading-[1.5] opacity-60 relative shrink-0 text-[16px] w-full" data-node-id="503:338">{`Pokreni inicijativu među kolegama. Poveži svoj kolektiv sa našim timom i saznaj kako možete da organizujete akciju davanja krvi. `}</p>
               </div>
               <div className="content-stretch flex flex-col items-center justify-center relative shrink-0 size-[50px]" data-node-id="503:339" data-name="Aktovka">
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0" data-node-id="503:340">
@@ -837,7 +837,7 @@ export default function Home() {
               </div>
             </div>
             <div className="bg-[#d32027] content-stretch flex items-start px-[28px] py-[14px] relative rounded-[86px] shrink-0" data-node-id="503:345" data-name="Frame">
-              <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-semibold leading-[normal] relative shrink-0 text-[14px] text-white whitespace-nowrap" data-node-id="503:346" style={{ fontVariationSettings: '"opsz" 14' }}>
+              <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-semibold leading-[normal] relative shrink-0 text-[14px] text-white whitespace-nowrap" data-node-id="503:346">
                 Uključi svoj kolektiv
               </p>
             </div>
@@ -853,7 +853,7 @@ export default function Home() {
                 <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] font-['Archivo_Variable'] leading-[45px] relative shrink-0 text-[24px] tracking-[-0.72px] w-full" data-node-id="503:353" style={{ fontVariationSettings: '"wdth" 100' }}>
                   Škole i fakulteti
                 </p>
-                <p className="font-['DM_Sans_Variable'] leading-[1.5] opacity-60 relative shrink-0 text-[16px] w-full" data-node-id="503:354" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="font-['DM_Sans_Variable'] leading-[1.5] opacity-60 relative shrink-0 text-[16px] w-full" data-node-id="503:354">
                   Poveži svoju školu ili fakultet sa našim timom. Zajedno možemo da organizujemo edukaciju i pripremimo punoletne učenike i studente za davanje krvi.
                 </p>
               </div>
@@ -866,7 +866,7 @@ export default function Home() {
               </div>
             </div>
             <div className="bg-[#d32027] content-stretch flex items-start px-[28px] py-[14px] relative rounded-[86px] shrink-0" data-node-id="503:360" data-name="Frame">
-              <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-semibold leading-[normal] relative shrink-0 text-[14px] text-white whitespace-nowrap" data-node-id="503:361" style={{ fontVariationSettings: '"opsz" 14' }}>
+              <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-semibold leading-[normal] relative shrink-0 text-[14px] text-white whitespace-nowrap" data-node-id="503:361">
                 Uključi svoju školu ili fakultet
               </p>
             </div>
@@ -886,10 +886,10 @@ export default function Home() {
             </div>
           </div>
           <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col font-normal gap-[32px] items-start justify-end min-h-px pt-[12px] relative text-balance text-white w-full" data-node-id="503:370">
-            <p className="font-['DM_Sans_Variable'] leading-[1.5] opacity-60 relative shrink-0 text-[24px] w-full" data-node-id="503:371" style={{ fontVariationSettings: '"opsz" 14' }}>
+            <p className="font-['DM_Sans_Variable'] leading-[1.5] opacity-60 relative shrink-0 text-[24px] w-full" data-node-id="503:371">
               Podrška je i u tvom mestu.
             </p>
-            <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] font-['Archivo_Variable'] leading-[0] relative shrink-0 text-[0px] tracking-[-0.72px] w-full" data-node-id="503:372" style={{ fontVariationSettings: '"wdth" 100' }}>
+            <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] font-['Archivo_Variable'] leading-[1.3] relative shrink-0 text-[48px] tracking-[-0.72px] w-full" data-node-id="503:372" style={{ fontVariationSettings: '"wdth" 100' }}>
               <span className="leading-[1.3] text-[48px]">Lokalni</span>
               <span className="leading-[1.3] text-[#ff474e] text-[48px]">{` Crveni krst`}</span>
               <span className="leading-[1.3] text-[48px]">{` je kontakt za pojedince, kompanije i organizacije koji žele da se uključe. Pomaže u organizovanju akcija i povezuje davaoce sa informacijama i aktivnostima u njihovoj sredini.`}</span>
@@ -946,93 +946,93 @@ export default function Home() {
                 <p className="font-['Archivo_Variable'] leading-[1.2] relative shrink-0 text-[48px] tracking-[-0.72px] w-full" data-node-id="503:386" style={{ fontVariationSettings: '"wdth" 100' }}>
                   Iza svakog davanja su ljudi.
                 </p>
-                <p className="font-['DM_Sans_Variable'] leading-[1.5] opacity-70 relative shrink-0 text-[18px] tracking-[-0.09px] w-full" data-node-id="503:387" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="font-['DM_Sans_Variable'] leading-[1.5] opacity-70 relative shrink-0 text-[18px] tracking-[-0.09px] w-full" data-node-id="503:387">
                   Od pripreme do povratka svakodnevnim aktivnostima, ovde su odgovori na najčešće nedoumice.
                 </p>
               </div>
               <div className="bg-[#d32027] content-stretch flex items-center justify-center px-[28px] py-[14px] relative rounded-[86px] shrink-0" data-node-id="503:388" data-name="Frame">
-                <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-semibold leading-[normal] relative shrink-0 text-[14px] text-white whitespace-nowrap" data-node-id="503:389" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-semibold leading-[normal] relative shrink-0 text-[14px] text-white whitespace-nowrap" data-node-id="503:389">
                   Pogledaj sva pitanja i odgovore
                 </p>
               </div>
             </div>
             <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="503:390">
-              <div className="[word-break:break-word] border-[#e8e8e8] border-solid border-t content-stretch flex flex-col gap-[4px] items-start py-[16px] relative shrink-0 w-full" data-node-id="503:391" data-name="Frame">
-                <p className="font-['DM_Sans_Variable'] font-medium leading-[1.3] relative shrink-0 text-[#111] text-[20px] whitespace-nowrap" data-node-id="503:392" style={{ fontVariationSettings: '"opsz" 14' }}>
+              <div className="[word-break:break-word] content-stretch flex flex-col gap-[4px] items-start py-[16px] relative shrink-0 w-full shadow-[inset_0_1px_0_#e8e8e8]" data-node-id="503:391" data-name="Frame">
+                <p className="font-['DM_Sans_Variable'] font-medium leading-[1.3] relative shrink-0 text-[#111] text-[20px] whitespace-nowrap" data-node-id="503:392">
                   Ko može da da krv?
                 </p>
-                <p className="font-['DM_Sans_Variable'] font-normal leading-[1.6] min-w-full opacity-60 relative shrink-0 text-[#555] text-[15px] text-balance w-[min-content]" data-node-id="503:393" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="font-['DM_Sans_Variable'] font-normal leading-[1.6] min-w-full opacity-60 relative shrink-0 text-[#555] text-[15px] text-balance w-[min-content]" data-node-id="503:393">
                   Osnovi uslovi su dobro zdravlje, uzrast od 18 do 65 godina i telesna masa iznad 50 kg. Konačnu procenu donosi lekar na pregledu — dođi bez brige.
                 </p>
               </div>
-              <div className="border-[#e8e8e8] border-solid border-t content-stretch flex flex-col gap-[4px] items-start py-[16px] relative shrink-0 w-full" data-node-id="503:394" data-name="Frame">
+              <div className="content-stretch flex flex-col gap-[4px] items-start py-[16px] relative shrink-0 w-full shadow-[inset_0_1px_0_#e8e8e8]" data-node-id="503:394" data-name="Frame">
                 <div className="content-stretch flex items-baseline relative shrink-0" data-node-id="503:395" data-name="Frame">
-                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[1.3] relative shrink-0 text-[#111] text-[20px] whitespace-nowrap" data-node-id="503:396" style={{ fontVariationSettings: '"opsz" 14' }}>
+                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[1.3] relative shrink-0 text-[#111] text-[20px] whitespace-nowrap" data-node-id="503:396">
                     Kako da se pripremim?
                   </p>
                 </div>
-                <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.6] min-w-full opacity-60 relative shrink-0 text-[#555] text-[15px] text-balance w-[min-content]" data-node-id="503:397" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.6] min-w-full opacity-60 relative shrink-0 text-[#555] text-[15px] text-balance w-[min-content]" data-node-id="503:397">
                   Naspavaj se, pojedi lagan obrok i popij dovoljno vode. Na davanje krvi nemoj dolaziti gladan.
                 </p>
               </div>
-              <div className="border-[#e8e8e8] border-solid border-t content-stretch flex flex-col gap-[4px] items-start py-[16px] relative shrink-0 w-full" data-node-id="503:398" data-name="Frame">
+              <div className="content-stretch flex flex-col gap-[4px] items-start py-[16px] relative shrink-0 w-full shadow-[inset_0_1px_0_#e8e8e8]" data-node-id="503:398" data-name="Frame">
                 <div className="content-stretch flex items-baseline relative shrink-0" data-node-id="503:399" data-name="Frame">
-                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[1.3] relative shrink-0 text-[#111] text-[20px] whitespace-nowrap" data-node-id="503:400" style={{ fontVariationSettings: '"opsz" 14' }}>
+                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[1.3] relative shrink-0 text-[#111] text-[20px] whitespace-nowrap" data-node-id="503:400">
                     Šta treba da ponesem?
                   </p>
                 </div>
-                <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.6] min-w-full opacity-60 overflow-hidden relative shrink-0 text-[#555] text-[15px] text-balance text-ellipsis w-[min-content] whitespace-nowrap" data-node-id="503:401" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.6] min-w-full opacity-60 overflow-hidden relative shrink-0 text-[#555] text-[15px] text-balance text-ellipsis w-[min-content] whitespace-nowrap" data-node-id="503:401">
                   Ponesi lični dokument sa fotografijom i JMBG-om.
                 </p>
               </div>
-              <div className="border-[#e8e8e8] border-solid border-t content-stretch flex flex-col gap-[4px] items-start py-[16px] relative shrink-0 w-full" data-node-id="503:402" data-name="Frame">
+              <div className="content-stretch flex flex-col gap-[4px] items-start py-[16px] relative shrink-0 w-full shadow-[inset_0_1px_0_#e8e8e8]" data-node-id="503:402" data-name="Frame">
                 <div className="content-stretch flex items-baseline relative shrink-0" data-node-id="503:403" data-name="Frame">
-                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[1.3] relative shrink-0 text-[#111] text-[20px] whitespace-nowrap" data-node-id="503:404" style={{ fontVariationSettings: '"opsz" 14' }}>
+                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[1.3] relative shrink-0 text-[#111] text-[20px] whitespace-nowrap" data-node-id="503:404">
                     Koliko traje davanje krvi?
                   </p>
                 </div>
-                <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.6] min-w-full opacity-60 relative shrink-0 text-[#555] text-[15px] text-balance w-[min-content]" data-node-id="503:405" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.6] min-w-full opacity-60 relative shrink-0 text-[#555] text-[15px] text-balance w-[min-content]" data-node-id="503:405">
                   Za ceo postupak obično je potrebno oko 30 minuta, uključujući upitnik, pregled, davanje i kratki odmor. Vreme može zavisiti od gužve.
                 </p>
               </div>
-              <div className="border-[#e8e8e8] border-solid border-t content-stretch flex flex-col gap-[4px] items-start py-[16px] relative shrink-0 w-full" data-node-id="503:406" data-name="Frame">
+              <div className="content-stretch flex flex-col gap-[4px] items-start py-[16px] relative shrink-0 w-full shadow-[inset_0_1px_0_#e8e8e8]" data-node-id="503:406" data-name="Frame">
                 <div className="content-stretch flex items-baseline relative shrink-0" data-node-id="503:407" data-name="Frame">
-                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[1.3] relative shrink-0 text-[#111] text-[20px] whitespace-nowrap" data-node-id="503:408" style={{ fontVariationSettings: '"opsz" 14' }}>
+                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[1.3] relative shrink-0 text-[#111] text-[20px] whitespace-nowrap" data-node-id="503:408">
                     Da li davanje krvi boli?
                   </p>
                 </div>
-                <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.6] min-w-full opacity-60 relative shrink-0 text-[#555] text-[15px] text-balance w-[min-content]" data-node-id="503:409" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.6] min-w-full opacity-60 relative shrink-0 text-[#555] text-[15px] text-balance w-[min-content]" data-node-id="503:409">
                   Možeš osetiti kratak ubod pri postavljanju igle. Ako imaš tremu ili ti je neprijatno, reci našem timu.
                 </p>
               </div>
-              <div className="border-[#e8e8e8] border-solid border-t content-stretch flex flex-col gap-[4px] items-start py-[16px] relative shrink-0 w-full" data-node-id="503:410" data-name="Frame">
+              <div className="content-stretch flex flex-col gap-[4px] items-start py-[16px] relative shrink-0 w-full shadow-[inset_0_1px_0_#e8e8e8]" data-node-id="503:410" data-name="Frame">
                 <div className="content-stretch flex items-baseline relative shrink-0" data-node-id="503:411" data-name="Frame">
-                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[1.3] relative shrink-0 text-[#111] text-[20px] whitespace-nowrap" data-node-id="503:412" style={{ fontVariationSettings: '"opsz" 14' }}>
+                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[1.3] relative shrink-0 text-[#111] text-[20px] whitespace-nowrap" data-node-id="503:412">
                     Koliko često mogu da dajem krv?
                   </p>
                 </div>
-                <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.6] min-w-full opacity-60 relative shrink-0 text-[#555] text-[15px] text-balance w-[min-content]" data-node-id="503:413" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.6] min-w-full opacity-60 relative shrink-0 text-[#555] text-[15px] text-balance w-[min-content]" data-node-id="503:413">
                   Muškarci mogu da daju punu krv na svaka tri, a žene na svaka četiri meseca, uz ispunjene zdravstvene uslove.
                 </p>
               </div>
-              <div className="border-[#e8e8e8] border-solid border-t content-stretch flex flex-col gap-[4px] items-start py-[16px] relative shrink-0 w-full" data-node-id="503:414" data-name="Frame">
+              <div className="content-stretch flex flex-col gap-[4px] items-start py-[16px] relative shrink-0 w-full shadow-[inset_0_1px_0_#e8e8e8]" data-node-id="503:414" data-name="Frame">
                 <div className="content-stretch flex items-baseline relative shrink-0" data-node-id="503:415" data-name="Frame">
-                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[1.3] relative shrink-0 text-[#111] text-[20px] whitespace-nowrap" data-node-id="503:416" style={{ fontVariationSettings: '"opsz" 14' }}>
+                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[1.3] relative shrink-0 text-[#111] text-[20px] whitespace-nowrap" data-node-id="503:416">
                     Da li mogu da dam krv ako uzimam lekove?
                   </p>
                 </div>
-                <div className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[0] min-w-full opacity-60 relative shrink-0 text-[#555] text-[15px] w-[min-content] whitespace-pre-wrap" data-node-id="503:417" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <div className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[0] min-w-full opacity-60 relative shrink-0 text-[#555] text-[15px] w-[min-content] whitespace-pre-wrap" data-node-id="503:417">
                   <p className="leading-[1.6] mb-0 text-balance">{`Zavisi od terapije i razloga zbog kojeg je uzimaš. Posavetuj se sa lekarom i nemoj samoinicijativno prekidati terapiju zbog davanja krvi. `}</p>
                   <p className="leading-[1.6] text-balance">​</p>
                 </div>
               </div>
-              <div className="border-[#e8e8e8] border-solid border-t content-stretch flex flex-col gap-[4px] items-start py-[16px] relative shrink-0 w-full" data-node-id="503:418" data-name="Frame">
+              <div className="content-stretch flex flex-col gap-[4px] items-start py-[16px] relative shrink-0 w-full shadow-[inset_0_1px_0_#e8e8e8]" data-node-id="503:418" data-name="Frame">
                 <div className="content-stretch flex items-baseline relative shrink-0" data-node-id="503:419" data-name="Frame">
-                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[1.3] relative shrink-0 text-[#111] text-[20px] whitespace-nowrap" data-node-id="503:420" style={{ fontVariationSettings: '"opsz" 14' }}>
+                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-medium leading-[1.3] relative shrink-0 text-[#111] text-[20px] whitespace-nowrap" data-node-id="503:420">
                     Kako da provedem ostatak dana nakon davanja?
                   </p>
                 </div>
-                <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.6] min-w-full opacity-60 relative shrink-0 text-[#555] text-[15px] text-balance w-[min-content]" data-node-id="503:421" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.6] min-w-full opacity-60 relative shrink-0 text-[#555] text-[15px] text-balance w-[min-content]" data-node-id="503:421">
                   Unosi više tečnosti i izbegavaj težak fizički napor i rizične aktivnosti. Prati savete osoblja koje dobiješ nakon davanja.
                 </p>
               </div>
@@ -1050,11 +1050,11 @@ export default function Home() {
                 nekome mnogo da znači.
               </p>
               <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="503:427">
-                <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.4] opacity-50 relative shrink-0 text-[#0a142f] text-[16px] text-balance w-[576px]" data-node-id="503:428" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.4] opacity-50 relative shrink-0 text-[#0a142f] text-[16px] text-balance w-[576px]" data-node-id="503:428">
                   Pronađi mesto i termin koji ti odgovaraju i pridruži se tihim herojima. Bilo da dolaziš prvi put ili nastavljaš svoju dobru naviku, radujemo se tvom dolasku.
                 </p>
                 <div className="bg-[#d32027] content-stretch flex items-start px-[28px] py-[14px] relative rounded-[86px] shrink-0" data-node-id="503:429" data-name="Frame">
-                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-semibold leading-[normal] relative shrink-0 text-[14px] text-white whitespace-nowrap" data-node-id="503:430" style={{ fontVariationSettings: '"opsz" 14' }}>
+                  <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-semibold leading-[normal] relative shrink-0 text-[14px] text-white whitespace-nowrap" data-node-id="503:430">
                     Gde mogu da dam krv?
                   </p>
                 </div>
@@ -1068,74 +1068,74 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="border-[rgba(0,0,0,0.08)] border-solid border-t content-stretch flex flex-col gap-[32px] items-start pt-[64px] relative shrink-0 w-[1600px]" data-node-id="503:432">
+          <div className="content-stretch flex flex-col gap-[32px] items-start pt-[64px] relative shrink-0 w-[1600px] shadow-[inset_0_1px_0_rgba(0,0,0,0.08)]" data-node-id="503:432">
             <div className="[word-break:break-word] content-stretch flex h-[340px] items-start justify-between relative shrink-0 text-[#0a142f] text-[16px] w-full" data-node-id="503:433" data-name="Frame">
               <div className="content-stretch flex gap-[24px] items-start relative shrink-0 w-[700px]" data-node-id="503:434" data-name="Navigation">
                 <div className="content-stretch flex flex-col gap-[15px] items-start relative shrink-0 w-[224px]" data-node-id="503:435" data-name="O davanju krvi">
-                  <p className="font-['DM_Sans_Variable'] font-bold leading-[28px] relative shrink-0 w-full" data-node-id="503:436" style={{ fontVariationSettings: '"opsz" 14' }}>
+                  <p className="font-['DM_Sans_Variable'] font-bold leading-[28px] relative shrink-0 w-full" data-node-id="503:436">
                     Davanje krvi
                   </p>
                   <div className="content-stretch flex flex-col font-['DM_Sans_Variable'] font-normal gap-[10px] items-start leading-[normal] relative shrink-0 w-full" data-node-id="503:437">
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:438" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:438">
                       Prvo davanje
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:439" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:439">
                       Tok davanja
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:440" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:440">
                       Priprema za davanje
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:441" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:441">
                       Šta poneti
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:442" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:442">
                       Posle davanja
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:443" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:443">
                       Prava davalaca
                     </p>
                   </div>
                 </div>
                 <div className="content-stretch flex flex-col gap-[15px] items-start relative shrink-0 w-[204px]" data-node-id="503:444" data-name="Ko može da da krv">
-                  <p className="font-['DM_Sans_Variable'] font-bold leading-[28px] relative shrink-0 w-full" data-node-id="503:445" style={{ fontVariationSettings: '"opsz" 14' }}>
+                  <p className="font-['DM_Sans_Variable'] font-bold leading-[28px] relative shrink-0 w-full" data-node-id="503:445">
                     Ko može dati krv
                   </p>
                   <div className="content-stretch flex flex-col font-['DM_Sans_Variable'] font-normal gap-[10px] items-start leading-[normal] relative shrink-0 w-full" data-node-id="503:446">
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:447" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:447">
                       Uslovi za davanje
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:448" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:448">
                       Privremena odlaganja
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:449" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:449">
                       Lekovi i davanje krvi
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:450" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:450">
                       Žene i davanje krvi
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:451" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:451">
                       Vakcine i putovanja
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:452" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:452">
                       Zdravstvena pitanja
                     </p>
                   </div>
                 </div>
                 <div className="content-stretch flex flex-col gap-[15px] items-start relative shrink-0 w-[224px]" data-node-id="503:453" data-name="Zašto je važno">
-                  <p className="font-['DM_Sans_Variable'] font-bold leading-[28px] relative shrink-0 w-full" data-node-id="503:454" style={{ fontVariationSettings: '"opsz" 14' }}>
+                  <p className="font-['DM_Sans_Variable'] font-bold leading-[28px] relative shrink-0 w-full" data-node-id="503:454">
                     Zašto dati krv
                   </p>
                   <div className="content-stretch flex flex-col font-['DM_Sans_Variable'] font-normal gap-[10px] items-start leading-[normal] relative shrink-0 w-full" data-node-id="503:455">
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:456" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:456">
                       Zašto je krv potrebna
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:457" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:457">
                       Kome pomažete
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:458" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:458">
                       Od davaoca do pacijenta
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:459" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:459">
                       Krvne komponente
                     </p>
                   </div>
@@ -1143,76 +1143,76 @@ export default function Home() {
               </div>
               <div className="content-stretch flex gap-[24px] items-start relative shrink-0 text-right w-[700px]" data-node-id="503:460" data-name="Navigation">
                 <div className="content-stretch flex flex-col gap-[15px] items-start relative shrink-0 w-[224px]" data-node-id="503:461" data-name="Uključiti se">
-                  <p className="font-['DM_Sans_Variable'] font-bold leading-[28px] relative shrink-0 w-full" data-node-id="503:462" style={{ fontVariationSettings: '"opsz" 14' }}>
+                  <p className="font-['DM_Sans_Variable'] font-bold leading-[28px] relative shrink-0 w-full" data-node-id="503:462">
                     Uključite se
                   </p>
                   <div className="content-stretch flex flex-col font-['DM_Sans_Variable'] font-normal gap-[10px] items-start leading-[normal] relative shrink-0 w-full" data-node-id="503:463">
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:464" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:464">
                       Organizujte akciju
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:465" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:465">
                       Kompanije i ustanove
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:466" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:466">
                       Škole i fakulteti
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:467" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:467">
                       Edukacije
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:468" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:468">
                       Lokalni Crveni krst
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:469" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:469">
                       Volontiranje i promocija
                     </p>
                   </div>
                 </div>
                 <div className="content-stretch flex flex-col gap-[15px] items-start relative shrink-0 w-[204px]" data-node-id="503:470" data-name="Edukativni centar">
-                  <p className="font-['DM_Sans_Variable'] font-bold leading-[28px] relative shrink-0 w-full" data-node-id="503:471" style={{ fontVariationSettings: '"opsz" 14' }}>
+                  <p className="font-['DM_Sans_Variable'] font-bold leading-[28px] relative shrink-0 w-full" data-node-id="503:471">
                     O krvi i zdravlju
                   </p>
                   <div className="content-stretch flex flex-col font-['DM_Sans_Variable'] font-normal gap-[10px] items-start leading-[normal] relative shrink-0 w-full" data-node-id="503:472">
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:473" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:473">
                       Osnove o krvi
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:474" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:474">
                       Krvne grupe i Rh
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:475" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:475">
                       Testiranje i obrada krvi
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:476" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:476">
                       Mitovi i činjenice
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:477" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:477">
                       Česta pitanja
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:478" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:478">
                       Edukativni materijali
                     </p>
                   </div>
                 </div>
                 <div className="content-stretch flex flex-col gap-[15px] items-start relative shrink-0 w-[224px]" data-node-id="503:479" data-name="Vesti i zajednica">
-                  <p className="font-['DM_Sans_Variable'] font-bold leading-[28px] relative shrink-0 w-full" data-node-id="503:480" style={{ fontVariationSettings: '"opsz" 14' }}>
+                  <p className="font-['DM_Sans_Variable'] font-bold leading-[28px] relative shrink-0 w-full" data-node-id="503:480">
                     Vesti i kontakt
                   </p>
                   <div className="content-stretch flex flex-col font-['DM_Sans_Variable'] font-normal gap-[10px] items-start leading-[normal] relative shrink-0 w-full" data-node-id="503:481">
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:482" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:482">
                       Vesti
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:483" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:483">
                       Kampanje
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:484" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:484">
                       Priče ljudi
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:485" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:485">
                       Priče davalaca
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:486" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:486">
                       Crveni krst
                     </p>
-                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:487" style={{ fontVariationSettings: '"opsz" 14' }}>
+                    <p className="opacity-50 relative shrink-0 w-full" data-node-id="503:487">
                       Kontakt
                     </p>
                   </div>
@@ -1221,13 +1221,13 @@ export default function Home() {
             </div>
             <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-node-id="503:488">
               <div className="[word-break:break-word] content-stretch flex font-['DM_Sans_Variable'] font-normal gap-[36px] items-start leading-[28px] relative shrink-0 text-[#0a142f] text-[14px] whitespace-nowrap" data-node-id="503:489" data-name="Terms Privacy Cookies">
-                <p className="relative shrink-0" data-node-id="503:490" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="relative shrink-0" data-node-id="503:490">
                   Terms
                 </p>
-                <p className="relative shrink-0" data-node-id="503:491" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="relative shrink-0" data-node-id="503:491">
                   Privacy
                 </p>
-                <p className="relative shrink-0" data-node-id="503:492" style={{ fontVariationSettings: '"opsz" 14' }}>
+                <p className="relative shrink-0" data-node-id="503:492">
                   Cookies
                 </p>
               </div>

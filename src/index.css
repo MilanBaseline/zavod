@@ -129,3 +129,13 @@ body { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 .ck-stage[data-state="two"] .ck-out { clip-path: inset(0 0 100% 0); }
 .ck-out-2 { transition-delay: 0.08s; }
 .ck-out-3 { transition-delay: 0.16s; }
+
+/* ---------- "Prvi put daješ krv?" cards: clean rounded corners ----------
+   The design stacks several separately-rounded photo/gradient layers; their
+   anti-aliased edges leave a fringe at the corners. Clip the stack once instead. */
+[data-node-id="503:209"] > div { isolation: isolate; clip-path: inset(0 round 24px); }
+[data-node-id="503:209"] > div > [aria-hidden] { clip-path: inset(0 round 24px); }
+[data-node-id="503:209"] > div > [aria-hidden],
+[data-node-id="503:209"] > div > [aria-hidden] * { border-radius: 0 !important; }
+/* only the top photo layer (and anything above it) is visible in the design; hide every layer underneath so none can peek out at the edges */
+[data-node-id="503:209"] > div > [aria-hidden] > *:has(~ div.overflow-hidden) { display: none; }

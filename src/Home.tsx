@@ -130,6 +130,8 @@ export default function Home() {
               <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[24px]">
                 <div className="absolute inset-0 object-cover rounded-[24px]" />
                 <video className="hero-video absolute max-w-none object-cover rounded-[24px] size-full" src="./assets/hero.mp4" poster="./assets/hero-poster.jpg" autoPlay muted loop playsInline preload="auto" disablePictureInPicture disableRemotePlayback controls={false} />
+                <div className="hero-video-tint absolute inset-0 rounded-[24px]" />
+                <div className="hero-video-dots absolute inset-0 rounded-[24px]" />
                 <div className="absolute inset-0 rounded-[24px]" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 72.833%, rgba(0, 0, 0, 0.5) 100%), linear-gradient(-53.5619064073359deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 52.768%), linear-gradient(48.82080790705824deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 47.361%)" }} />
               </div>
               <div className="content-stretch flex items-end justify-between relative shrink-0 w-full" data-node-id="503:813">

@@ -147,3 +147,8 @@ body { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 [data-orbit-frame] > [data-node-id],
 .popup-tile { border-radius: 2px; overflow: hidden; clip-path: inset(0 round 2px); }
 [data-orbit-frame] > [data-node-id] > [aria-hidden] > *:not(:last-child) { display: none; }
+
+/* hero video: autoplay loop, no controls or play overlay */
+.hero-video::-webkit-media-controls,
+.hero-video::-webkit-media-controls-start-playback-button,
+.hero-video::-webkit-media-controls-overlay-play-button { display: none !important; -webkit-appearance: none; }

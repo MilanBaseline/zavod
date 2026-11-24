@@ -152,12 +152,3 @@ body { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 .hero-video::-webkit-media-controls,
 .hero-video::-webkit-media-controls-start-playback-button,
 .hero-video::-webkit-media-controls-overlay-play-button { display: none !important; -webkit-appearance: none; }
-
-/* hero video overlay (from the CodePen reference): dark tint + 3px pixel texture */
-.hero-video-tint { background: rgba(0, 0, 0, 0.15); }
-.hero-video-dots {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAIUlEQVR42mL5//8/AyMj42YGIGBigABfEMEIkoEBgAADAKvuBwVS8BAjAAAAAElFTkSuQmCC);
-  background-size: 3px 3px;
-  image-rendering: pixelated;
-  opacity: 0.35;
-}

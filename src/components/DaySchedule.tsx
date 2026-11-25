@@ -65,9 +65,75 @@ const DAYS: { label: string; rows: Row[] }[] = [
 
 const MAX_ROWS = 5
 
-export default function DaySchedule() {
+export default function DaySchedule({ mobile = false }: { mobile?: boolean }) {
   const [day, setDay] = useState(0)
   const rows = DAYS[day].rows.slice(0, MAX_ROWS)
+
+  if (mobile) {
+    // Mobile 390 (Figma 351:1047): 84px tabs in a row that scrolls sideways, rows stacked
+    return (
+      <div data-no-split className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full">
+        <div role="tablist" aria-label="Dani u nedelji" className="day-tabs-m flex h-[64px] items-center relative shrink-0 w-full overflow-x-auto">
+          {DAYS.map((d, i) => {
+            const active = i === day
+            return (
+              <button
+                key={d.label}
+                type="button"
+                role="tab"
+                aria-selected={active}
+                onClick={() => setDay(i)}
+                className={`day-tab m content-stretch flex h-[64px] items-center justify-center relative shrink-0 w-[84px] cursor-pointer bg-transparent ${active ? 'is-active' : ''}`}
+              >
+                <span
+                  className={`[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] font-['DM_Sans_Variable'] leading-[normal] relative shrink-0 text-[22px] whitespace-nowrap ${
+                    active ? 'font-bold text-[#333c43]' : 'font-normal opacity-30 text-[#5d6266]'
+                  }`}
+                >
+                  {d.label}
+                </span>
+              </button>
+            )
+          })}
+        </div>
+        <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
+          <div className="[word-break:break-word] content-stretch flex font-['DM_Sans_Variable'] font-semibold gap-[16px] items-start justify-between leading-[1.45] py-[12px] relative shrink-0 text-[#474f57] text-[12px] tracking-[2px] uppercase w-full">
+            <p className="relative shrink-0">Mesto / lokacija</p>
+            <p className="relative shrink-0 text-right">Vreme</p>
+          </div>
+          <div key={day} className="contents" role="tabpanel">
+            {rows.length === 0 && (
+              <div className="day-row shadow-[inset_0_1px_0_rgba(191,200,208,0.3)] py-[16px] w-full">
+                <p className="font-['DM_Sans_Variable'] font-normal leading-[1.45] text-[#888] text-[16px]">Nema akcija za ovaj dan.</p>
+              </div>
+            )}
+            {rows.map((r, i) => (
+              <div
+                key={i}
+                style={{ animationDelay: `${i * 60}ms` }}
+                className="day-row shadow-[inset_0_1px_0_rgba(191,200,208,0.3)] content-stretch flex gap-[17px] items-start py-[16px] relative shrink-0 w-full"
+              >
+                <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start leading-[1.45] min-w-px relative text-[16px]">
+                  <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full">
+                    <p className="font-['DM_Sans_Variable'] font-medium relative shrink-0 text-[#111] w-full">{r.city}</p>
+                    <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#888] w-full">{r.place}</p>
+                  </div>
+                  <p className="font-['DM_Sans_Variable'] font-normal relative shrink-0 text-[#444] w-full">{r.time}</p>
+                </div>
+                {r.warning && (
+                  <div className="bg-[#d32027] content-stretch flex items-center p-[3.25px] relative rounded-[69.875px] shrink-0 w-[26px]">
+                    <div className="relative shrink-0 size-[19.5px]">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src="./assets/imgErrorWarningFill.svg" />
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div data-no-split className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="503:1685">

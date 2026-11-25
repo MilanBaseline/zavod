@@ -185,3 +185,90 @@ export default function StepsScroll() {
     </div>
   )
 }
+
+/**
+ * Mobile 390 (Figma 351:1139): the photo sits on top and the step text below it.
+ * The block stays pinned while the page scrolls; photos move up through the
+ * frame and the step text swaps with the same line mask as on desktop.
+ */
+const M_IMG_H = 'clamp(260px, calc(100svh - 380px), 610px)'
+
+export function StepsScrollMobile() {
+  const outerRef = useRef<HTMLDivElement>(null)
+  const frameRef = useRef<HTMLDivElement>(null)
+  const stackRef = useRef<HTMLDivElement>(null)
+  const stickyRef = useRef<HTMLDivElement>(null)
+  const stepRefs = useRef<(HTMLDivElement | null)[]>([])
+
+  useEffect(() => {
+    const outer = outerRef.current!
+    const stack = stackRef.current!
+    const frame = frameRef.current!
+    const sticky = stickyRef.current!
+    let active = -1
+    let raf = 0
+
+    const update = () => {
+      raf = 0
+      const rect = outer.getBoundingClientRect()
+      const h = sticky.offsetHeight
+      const stickyTop = Math.max(0, (window.innerHeight - h) / 2)
+      sticky.style.top = `${stickyTop}px`
+      const distance = outer.offsetHeight - h
+      const p = Math.min(1, Math.max(0, (stickyTop - rect.top) / distance))
+      const s = p * (STEPS.length - 1)
+      stack.style.transform = `translate3d(0, ${-s * (frame.offsetHeight + 6)}px, 0)`
+      const a = Math.round(s)
+      if (a === active) return
+      active = a
+      stepRefs.current.forEach((el, i) => {
+        if (!el) return
+        el.dataset.state = i === a ? 'active' : i < a ? 'past' : 'next'
+      })
+    }
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update)
+    }
+    update()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
+      cancelAnimationFrame(raf)
+    }
+  }, [])
+
+  return (
+    <div ref={outerRef} data-reveal-manual className="relative shrink-0 w-full" style={{ height: `calc(${M_IMG_H} + 330px + ${STEPS.length - 1} * ${SCROLL_PER_STEP})` }}>
+      <div ref={stickyRef} className="sticky content-stretch flex flex-col gap-[48px] items-center w-full">
+        <div ref={frameRef} className="overflow-clip relative rounded-[14px] shrink-0 w-[310px] max-w-full" style={{ height: M_IMG_H }}>
+          <div ref={stackRef} className="flex flex-col gap-[6px] will-change-transform h-full">
+            {STEPS.map((step, i) => (
+              <div key={i} className="h-full relative rounded-[14px] shrink-0 w-full overflow-hidden bg-[#d9d9d9]">
+                <img alt="" className="absolute max-w-none object-cover size-full" src={step.image} style={{ objectPosition: step.position }} />
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="grid w-full">
+          {STEPS.map((step, i) => (
+            <div key={i} ref={(el) => (stepRefs.current[i] = el)} className="step col-1 row-1" data-state="next">
+              <div className="[word-break:break-word] content-stretch flex flex-col gap-[20px] items-start px-[16px] py-[20px] relative text-balance w-full">
+                <div className="content-stretch flex flex-col font-['Archivo_Variable'] font-light gap-[20px] items-start leading-[1.2] relative shrink-0 text-[32px] tracking-[-0.72px] w-full">
+                  <p className="relative shrink-0 text-[#ed9912] w-full" style={{ fontVariationSettings: '"wdth" 100' }}>
+                    {step.num}
+                  </p>
+                  <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] relative shrink-0 text-[#483434] w-full" style={{ fontVariationSettings: '"wdth" 100' }}>
+                    {step.title}
+                  </p>
+                </div>
+                <p className="font-['DM_Sans_Variable'] font-normal leading-[1.45] opacity-70 relative shrink-0 text-[#483434] text-[16px] tracking-[-0.09px] w-full">{step.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}

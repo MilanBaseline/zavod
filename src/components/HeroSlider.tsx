@@ -43,7 +43,7 @@ const HEROES: Hero[] = [
 
 const IMG_IN = 900
 
-export default function HeroSlider() {
+export default function HeroSlider({ mobile = false }: { mobile?: boolean }) {
   const rootRef = useRef<HTMLDivElement>(null)
   const textRefs = useRef<(HTMLDivElement | null)[]>([])
   const imgRefs = useRef<(HTMLDivElement | null)[]>([])
@@ -94,6 +94,76 @@ export default function HeroSlider() {
     io.observe(rootRef.current!)
     return () => io.disconnect()
   }, [])
+
+  const arrows = (
+    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
+      <button
+        type="button"
+        aria-label="Prethodni heroj"
+        onClick={() => go(-1)}
+        className="slider-btn border-[0.55px] border-[rgba(61,66,46,0.3)] border-solid col-1 content-stretch flex items-center justify-center ml-0 mt-0 overflow-clip relative rounded-[55.023px] row-1 size-[26.411px] cursor-pointer bg-transparent p-0"
+      >
+        <span className="relative shrink-0 size-[13.206px]">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src="./assets/imgIcon.svg" />
+        </span>
+      </button>
+      <button
+        type="button"
+        aria-label="Sledeći heroj"
+        onClick={() => go(1)}
+        className="slider-btn border-[#08153f] border-[0.825px] border-solid col-1 content-stretch flex items-center justify-center ml-[30.29px] mt-0 overflow-clip relative rounded-[55.023px] row-1 size-[26.411px] cursor-pointer bg-transparent p-0"
+      >
+        <span className="relative shrink-0 size-[13.206px]">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src="./assets/imgIcon1.svg" />
+        </span>
+      </button>
+    </div>
+  )
+
+  if (mobile) {
+    // Mobile 390 (Figma 351:1165): arrows on top, photo right-aligned, then name and story
+    return (
+      <div ref={rootRef} data-reveal-manual className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0 w-full" data-node-id="351:1165">
+        <div className="content-stretch flex gap-[20px] h-[44px] items-end relative shrink-0 w-full shadow-[inset_0_1px_0_#e6e6e6]">
+          <p
+            className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] flex-[1_0_0] font-['Archivo_Variable'] font-light leading-[1.45] min-w-px relative text-[#483434] text-[20px] tracking-[-0.72px]"
+            data-reveal-auto
+            style={{ fontVariationSettings: '"wdth" 100' }}
+          >
+            Upoznaj tihe heroje
+          </p>
+          {arrows}
+        </div>
+        <div className="content-stretch flex flex-col gap-[44px] items-end relative shrink-0 w-full">
+          <div className="hero-slider-photo h-[147px] relative shrink-0 w-[126px]">
+            {HEROES.map((h, i) => (
+              <div key={i} ref={(el) => (imgRefs.current[i] = el)} aria-hidden className="absolute inset-0 overflow-hidden pointer-events-none">
+                <img alt="" className={h.imgClass} src={h.image} />
+              </div>
+            ))}
+          </div>
+          <div className="grid items-start relative shrink-0 w-full">
+            {HEROES.map((h, i) => (
+              <div
+                key={i}
+                ref={(el) => (textRefs.current[i] = el)}
+                data-state="next"
+                className="step col-1 row-1 [word-break:break-word] content-stretch flex flex-col font-normal gap-[20px] items-start relative"
+              >
+                <p
+                  className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] font-['Archivo_Variable'] leading-[1.2] relative shrink-0 text-[24px] text-balance text-black w-full"
+                  style={{ fontVariationSettings: '"wdth" 100' }}
+                >
+                  {h.name}
+                </p>
+                <p className="font-['DM_Sans_Variable'] leading-[1.45] opacity-60 relative shrink-0 text-[#483434] text-[16px] text-balance tracking-[-0.09px] w-full">{h.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div

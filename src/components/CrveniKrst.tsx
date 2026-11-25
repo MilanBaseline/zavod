@@ -19,7 +19,7 @@ const MID = '44.167%' // 477 / 1080
 const LOW = '71.111%' // 768 / 1080
 const BOT = '28.889%' // 312 / 1080
 
-export default function CrveniKrst() {
+export default function CrveniKrst({ mobile = false }: { mobile?: boolean }) {
   const outerRef = useRef<HTMLDivElement>(null)
   const stageRef = useRef<HTMLDivElement>(null)
 
@@ -53,6 +53,55 @@ export default function CrveniKrst() {
       cancelAnimationFrame(raf)
     }
   }, [])
+
+  if (mobile) {
+    // Mobile: same two states and photo swaps, stacked for a narrow screen
+    return (
+      <div ref={outerRef} data-reveal-manual className="relative shrink-0 w-full" style={{ height: '200vh' }}>
+        <div ref={stageRef} data-state="idle" className="ck-stage sticky top-0 h-[100svh] w-full overflow-hidden bg-[#480c0c]">
+          {/* photo slots: each swaps in place — the state 1 photo masks out upward, revealing the state 2 photo */}
+          <div className="absolute left-[20px] top-0 w-[134px] h-[86px] overflow-hidden">
+            <img alt="" className="absolute inset-0 size-full object-cover" src="./assets/ck_cpr_group.jpg" />
+            <img alt="" className="ck-out absolute inset-0 size-full object-cover" src="./assets/ck_cpr_boy.jpg" />
+          </div>
+          <div className="absolute right-0 top-[12%] w-[120px] h-[76px] overflow-hidden">
+            <img alt="" className="absolute inset-0 size-full object-cover" src="./assets/ck_mit.jpg" />
+            <img alt="" className="ck-out ck-out-2 absolute inset-0 size-full object-cover" src="./assets/ck_volunteers.jpg" />
+          </div>
+          <div className="absolute right-0 bottom-[6%] w-[120px] h-[76px] overflow-hidden">
+            <img alt="" className="absolute inset-0 size-full object-cover" src="./assets/ck_tent.jpg" />
+            <img alt="" className="ck-out ck-out-3 absolute inset-0 size-full object-cover" src="./assets/ck_mit.jpg" />
+          </div>
+
+          {/* state 1 text */}
+          <div className="ck-one -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Archivo_Variable'] font-normal gap-[24px] items-center left-[32px] right-[32px] text-center text-white top-1/2">
+            <p className="leading-[1.2] text-[28px] tracking-[-0.72px] text-balance" style={{ fontVariationSettings: '"wdth" 100' }}>
+              Lokalni <span className="text-[#ee1c25]">Crveni krst</span> je kontakt za pojedince, kompanije i organizacije koji žele da se uključe.
+            </p>
+            <p className="leading-[1.3] opacity-60 text-[16px] tracking-[1px] text-balance" style={{ fontVariationSettings: '"wdth" 100' }}>
+              Pomaže u organizovanju akcija i povezuje davaoce sa informacijama i aktivnostima u njihovoj sredini.
+            </p>
+          </div>
+
+          {/* state 2: red cross + text */}
+          <div className="ck-two -translate-y-1/2 absolute flex flex-col gap-[28px] items-center left-[32px] right-[32px] top-1/2 text-center">
+            <div className="flex flex-col gap-[10px] items-center relative shrink-0 w-[96px]">
+              <img alt="" className="ck-cross block size-[96px]" src="./assets/ck_cross.png" />
+              <img alt="1876" className="ck-year block h-[11px] w-[32px]" src="./assets/ck_1876.svg" />
+            </div>
+            <div className="[word-break:break-word] flex flex-col font-normal gap-[16px] items-center relative shrink-0 text-balance text-white w-full">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] font-['DM_Sans_Variable'] leading-[1.3] text-[30px]">
+                <span className="text-[#ee1c25]">Podrška</span> je i u tvom mestu.
+              </p>
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] font-['Archivo_Variable'] leading-[1.3] opacity-60 text-[18px] tracking-[1px]" style={{ fontVariationSettings: '"wdth" 100' }}>
+                Crveni Krst Srbije
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div ref={outerRef} data-reveal-manual className="relative shrink-0 w-full" style={{ height: '200vh' }}>

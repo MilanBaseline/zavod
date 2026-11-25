@@ -2,6 +2,8 @@ import ReserveChart from './components/ReserveChart'
 import PulseHeart from './components/PulseHeart'
 import HeroSlider from './components/HeroSlider'
 import DaySchedule from './components/DaySchedule'
+import Popups from './components/Popups'
+import CrveniKrst from './components/CrveniKrst'
 import { StepsScrollMobile } from './components/StepsScroll'
 import { useReveal } from './lib/reveal'
 import { useOrbitIn } from './lib/orbitIn'
@@ -15,16 +17,19 @@ import { useScrollFill } from './lib/scrollFill'
  * and the clockwise photo load-in.
  */
 
-const A = './assets/m/'
+const A = './assets/'
+const AM = './assets/m/'
 const vw = { fontVariationSettings: '"wdth" 100' } as const
+// crop used by desktop for imgRectangle30
+const CROP30: React.CSSProperties = { height: '104.32%', left: 0, top: '-2.16%', width: '100%', objectFit: 'fill' }
 
 function Pill({ label }: { label: string }) {
   return (
-    <div className="shadow-[inset_0_0_0_0.75px_rgba(226,226,226,0.3)] content-stretch flex gap-[7.5px] h-[19.5px] items-center justify-center pl-[7.5px] pr-[12px] py-[1.5px] relative rounded-[29.25px] shrink-0">
-      <div className="relative shrink-0 size-[1.5px]">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={`${A}imgEllipse47.svg`} />
+    <div className="shadow-[inset_0_0_0_1px_rgba(226,226,226,0.3)] content-stretch flex gap-[10px] h-[26px] items-center justify-center pl-[10px] pr-[16px] py-[2px] relative rounded-[39px] shrink-0">
+      <div className="relative shrink-0 size-[2px]">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={`${A}imgEllipse46.svg`} />
       </div>
-      <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[16.875px] opacity-60 relative shrink-0 text-[7.5px] text-black tracking-[2.25px] uppercase whitespace-nowrap">
+      <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[22.5px] opacity-60 relative shrink-0 text-[10px] text-black tracking-[3px] uppercase whitespace-nowrap">
         {label}
       </p>
     </div>
@@ -61,35 +66,36 @@ const FOOTER: [string, string[]][] = [
   ['Vesti i kontakt', ['Vesti', 'Kampanje', 'Priče ljudi', 'Priče davalaca', 'Crveni krst', 'Kontakt']],
 ]
 
-const CARD_GRADIENT = 'linear-gradient(180deg, rgba(0, 0, 0, 0) 72.611%, rgba(0, 0, 0, 0.6) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 53.424%, rgba(0, 0, 0, 0.6) 100%)'
-
+// Same photos, crops and colours as the desktop cards (503:210, 503:215, 503:224)
 const CARDS = [
   {
     num: '01',
     title: 'Mogu li da dam krv?',
     text: 'Pogledaj osnovne uslove i pronađi odgovore na nedoumice o davanju krvi.',
-    // design: photo mirrored horizontally (negative width in Figma)
-    img: <img alt="" className="absolute max-w-none" src={`${A}imgFrame1.jpg`} style={{ height: '99.84%', top: '0.07%', width: '200.07%', left: '-36.17%', transform: 'scaleX(-1)' }} />,
-    gradient: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.08) 45%, rgba(0,0,0,0.92) 100%)',
-    numColor: 'text-white',
-    textColor: 'text-[#bcbcbc]',
+    img: <img alt="" className="absolute max-w-none" src={`${A}imgFrame5.jpg`} style={{ height: '100.02%', left: '-14.35%', top: '-0.06%', width: '147.38%' }} />,
+    gradient: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 64.968%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(180deg, rgba(255, 255, 255, 0) 53.424%, rgba(255, 255, 255, 0.6) 100%)',
+    numColor: 'text-black',
+    titleColor: 'text-[#2d2d2d]',
+    textColor: 'text-[#7b7b7b]',
   },
   {
     num: '02',
     title: 'Kako da se pripremim?',
     text: 'Saznaj šta treba da uradiš pre dolaska i šta da poneseš.',
-    img: <img alt="" className="absolute max-w-none object-cover size-full" src={`${A}imgFrame5.jpg`} />,
-    gradient: CARD_GRADIENT,
-    numColor: 'text-[#e2e2e2]',
-    textColor: 'text-[#d8d8d8]',
+    img: <img alt="" className="absolute max-w-none" src={`${A}imgFrame10.jpg`} style={{ height: '147.83%', left: '-93.88%', top: '-44.25%', width: '269.65%' }} />,
+    gradient: 'none',
+    numColor: 'text-[#101010]',
+    titleColor: 'text-[#303030]',
+    textColor: 'text-[#9d9d9d]',
   },
   {
     num: '03',
     title: 'Kako izgleda davanje?',
     text: 'Upoznaj svaki korak, od dolaska i pregleda do odmora nakon davanja.',
-    img: <img alt="" className="absolute max-w-none" src={`${A}imgFrame2.jpg`} style={{ height: '99.97%', left: '-27.26%', top: '0.01%', width: '133.33%' }} />,
-    gradient: CARD_GRADIENT,
+    img: <img alt="" className="absolute max-w-none" src={`${A}imgFrame11.jpg`} style={{ height: '103.52%', left: '-27.79%', top: '-3.57%', width: '155.54%' }} />,
+    gradient: 'linear-gradient(180deg, rgba(0, 0, 0, 0) 64.968%, rgba(0, 0, 0, 0.6) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 53.424%, rgba(0, 0, 0, 0.6) 100%)',
     numColor: 'text-[#e2e2e2]',
+    titleColor: 'text-white',
     textColor: 'text-[#d8d8d8]',
   },
 ]
@@ -97,7 +103,6 @@ const CARDS = [
 export default function HomeMobile() {
   useReveal()
   useOrbitIn('345:12595')
-  useOrbitIn('351:1241')
   useScrollFill('351:1125')
 
   return (
@@ -114,7 +119,7 @@ export default function HomeMobile() {
             <span className="content-stretch flex flex-col items-center justify-center relative shrink-0 size-[24px]">
               <span className="h-[6px] relative shrink-0 w-[16px]">
                 <span className="absolute inset-[-16.67%_0]">
-                  <img alt="" className="block max-w-none size-full" src={`${A}imgFrame67.svg`} />
+                  <img alt="" className="block max-w-none size-full" src={`${AM}imgFrame67.svg`} />
                 </span>
               </span>
             </span>
@@ -209,85 +214,66 @@ export default function HomeMobile() {
         </div>
       </div>
 
-      {/* ---------- Locations ---------- */}
-      <div className="bg-[#e9f4fe] content-stretch flex flex-col items-center overflow-clip px-[20px] py-[56px] relative shrink-0 w-full" data-node-id="351:1020">
-        <div className="content-stretch flex flex-col gap-[20px] items-start relative shrink-0 w-full">
-          <div className="content-stretch flex flex-col gap-[20px] items-start relative shrink-0 w-full">
-            <div className="[word-break:break-word] content-stretch flex flex-col gap-[20px] items-center p-[20px] relative shrink-0 text-balance w-full">
-              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] font-['Archivo_Variable'] font-light leading-[1.45] relative shrink-0 text-[#483434] text-[16px] tracking-[1px] w-full" style={vw}>
-                Pronađi mesto. Izaberi termin.
-              </p>
-              <p className="font-['DM_Sans_Variable'] font-normal leading-[1.2] relative shrink-0 text-[#5d6266] text-[24px] tracking-[-0.09px] w-full">
-                Krv možeš da daš u Zavodu u Novom Sadu ili na nekoj od terenskih akcija širom Vojvodine. Pronađi lokaciju i vreme koji ti odgovaraju.
-              </p>
-            </div>
-            <div className="bg-white content-stretch flex flex-col gap-[24px] h-[324px] items-center overflow-clip px-[48px] py-[42px] relative rounded-[18px] shrink-0 w-full">
-              <div className="content-stretch flex flex-[1_0_0] flex-col gap-[22.5px] items-start min-h-px pt-[7.5px] relative shrink-0 w-[289px]">
-                <div className="content-stretch flex flex-col gap-[15px] items-start relative shrink-0 w-full">
-                  <div className="content-stretch flex gap-[15px] items-center relative shrink-0 w-full">
-                    <div className="-scale-y-100 flex-none rotate-180">
-                      <div className="h-[10.5px] relative w-[12.25px]">
-                        <div className="absolute inset-[-35.71%_-30.61%]">
-                          <PulseHeart variant="small" />
-                        </div>
-                      </div>
-                    </div>
-                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] flex-[1_0_0] font-['Archivo_Variable'] font-medium leading-[1.2] min-w-px relative text-[#3b1616] text-[22.5px] text-balance tracking-[-0.54px]" style={vw}>
-                      U Zavodu u Novom Sadu
-                    </p>
-                  </div>
-                  <div className="[word-break:break-word] content-stretch flex flex-col gap-[1.5px] items-start leading-[1.5] relative shrink-0 text-[#333] text-[13.5px] text-balance w-full">
-                    <p className="font-['DM_Sans_Variable'] font-semibold relative shrink-0 w-full">Hajduk Veljkova 9a</p>
-                    <p className="font-['DM_Sans_Variable'] font-normal opacity-60 relative shrink-0 w-full">Radno vreme za davaoce: 09:30 do 14:00</p>
-                  </div>
-                </div>
-                <div className="bg-[#d32027] content-stretch flex items-center justify-center px-[24px] py-[10.5px] relative rounded-[64.5px] shrink-0 w-full">
-                  <p className="font-['DM_Sans_Variable'] font-semibold leading-[normal] relative shrink-0 text-[10.5px] text-white whitespace-nowrap">
-                    Pogledaj lokaciju i informacije za dolazak
-                  </p>
-                </div>
-              </div>
-              <div
-                aria-hidden
-                className="absolute h-[454.402px] left-[calc(50%-398.48px)] top-[86.64px] w-[807.826px] pointer-events-none"
-                style={{
-                  maskImage: `url("${A}imgMinimalisticArtwork2.svg")`,
-                  WebkitMaskImage: `url("${A}imgMinimalisticArtwork2.svg")`,
-                  maskPosition: '68.48px 144.363px',
-                  WebkitMaskPosition: '68.48px 144.363px',
-                  maskSize: '688.037px 229.5px',
-                  WebkitMaskSize: '688.037px 229.5px',
-                  maskRepeat: 'no-repeat',
-                  WebkitMaskRepeat: 'no-repeat',
-                }}
-              >
-                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={`${A}imgMinimalisticArtwork3.png`} />
-              </div>
-            </div>
-          </div>
-          <div className="content-stretch flex flex-col gap-[20px] items-start overflow-clip p-[20px] relative rounded-[32px] shrink-0 w-full">
-            <div className="content-stretch flex flex-col gap-[20px] items-start relative shrink-0 w-full">
-              <div className="content-stretch flex gap-[20px] items-center relative shrink-0 w-full">
-                <div className="h-[14px] relative shrink-0 w-[16.333px]">
+      {/* ---------- Locations (desktop 503:1658, stacked) ---------- */}
+      <div className="bg-[#e9f4fe] content-stretch flex flex-col gap-[20px] items-center overflow-clip px-[20px] py-[56px] relative shrink-0 w-full" data-node-id="351:1020">
+        <div className="[word-break:break-word] content-stretch flex flex-col gap-[20px] items-center p-[20px] relative shrink-0 text-balance text-center w-full">
+          <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] font-['Archivo_Variable'] font-light leading-[1.45] relative shrink-0 text-[#483434] text-[16px] tracking-[1px] w-full" style={vw}>
+            Pronađi mesto. Izaberi termin.
+          </p>
+          <p className="font-['DM_Sans_Variable'] font-normal leading-[1.2] relative shrink-0 text-[#5d6266] text-[24px] tracking-[-0.09px] w-full">
+            Krv možeš da daš u Zavodu u Novom Sadu ili na nekoj od terenskih akcija širom Vojvodine. Pronađi lokaciju i vreme koji ti odgovaraju.
+          </p>
+        </div>
+
+        {/* U Zavodu u Novom Sadu */}
+        <div className="bg-white content-stretch flex flex-col items-start overflow-clip relative rounded-[18px] shrink-0 w-full">
+          <div className="content-stretch flex flex-col gap-[24px] items-start px-[32px] pt-[40px] pb-[28px] relative w-full">
+            <div className="content-stretch flex flex-col gap-[18px] items-start relative shrink-0 w-full">
+              <div className="-scale-y-100 flex-none rotate-180 shrink-0">
+                <div className="h-[14px] relative w-[16.333px]">
                   <div className="absolute inset-[-35.71%_-30.61%]">
                     <PulseHeart variant="small" />
                   </div>
                 </div>
-                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] font-['Archivo_Variable'] font-medium leading-[1.2] relative shrink-0 text-[#3b1616] text-[24px] tracking-[-0.72px]" style={vw}>
-                  Na terenskoj akciji
-                </p>
               </div>
-              <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.45] opacity-60 relative shrink-0 text-[#333] text-[16px] text-balance w-full">
-                Pogledaj gde smo u narednim danima. Izaberi akciju i sačuvaj termin u svom kalendaru.
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Archivo_Variable'] font-extrabold leading-[1.2] relative shrink-0 text-[#3b1616] text-[28px] text-balance tracking-[-0.72px] w-full" style={vw}>
+                U Zavodu u Novom Sadu
               </p>
+              <div className="[word-break:break-word] content-stretch flex flex-col gap-[2px] items-start leading-[1.5] relative shrink-0 text-[#333] text-[16px] text-balance w-full">
+                <p className="font-['DM_Sans_Variable'] font-semibold relative shrink-0 w-full">Hajduk Veljkova 9a</p>
+                <p className="font-['DM_Sans_Variable'] font-normal opacity-60 relative shrink-0 w-full">Radno vreme za davaoce: 09:30 do 14:00</p>
+              </div>
             </div>
-            <DaySchedule mobile />
-            <div className="bg-[#d32027] content-stretch flex items-start px-[12px] py-[14px] relative rounded-[86px] shrink-0 w-full">
-              <p className="flex-[1_0_0] font-['DM_Sans_Variable'] font-semibold leading-[1.45] min-w-px relative text-[14px] text-center text-white">
-                Pogledaj lokaciju i informacije za dolazak
-              </p>
+            <div className="bg-[#d32027] content-stretch flex h-[48px] items-center justify-center px-[32px] py-[14px] relative rounded-[86px] shrink-0">
+              <p className="font-['DM_Sans_Variable'] font-semibold leading-[normal] relative shrink-0 text-[14px] text-white whitespace-nowrap">Pogledaj lokaciju</p>
             </div>
           </div>
+          <div className="relative shrink-0 w-full aspect-[599/334]">
+            <img alt="Zavod za transfuziju krvi Vojvodine, Novi Sad" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={`${A}imgFotografijaRestauracije1.png`} />
+          </div>
+        </div>
+
+        {/* Na terenskoj akciji */}
+        <div className="bg-white content-stretch flex flex-col gap-[24px] items-start overflow-clip px-[20px] pt-[40px] pb-[16px] relative rounded-[24px] shrink-0 w-full">
+          <div className="content-stretch flex flex-col gap-[18px] items-start px-[12px] relative shrink-0 w-full">
+            <div className="-scale-y-100 flex-none rotate-180 shrink-0">
+                <div className="h-[14px] relative w-[16.333px]">
+                  <div className="absolute inset-[-35.71%_-30.61%]">
+                    <PulseHeart variant="small" />
+                  </div>
+                </div>
+              </div>
+            <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] font-['Archivo_Variable'] font-extrabold leading-[1.2] relative shrink-0 text-[#3b1616] text-[28px] tracking-[-0.72px] w-full" style={vw}>
+              Na terenskoj akciji
+            </p>
+            <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.5] opacity-60 relative shrink-0 text-[#333] text-[16px] text-balance w-full">
+              Pogledaj gde smo u narednim danima. Izaberi akciju i sačuvaj termin u svom kalendaru.
+            </p>
+            <div className="bg-[#d32027] content-stretch flex h-[48px] items-center justify-center px-[32px] py-[14px] relative rounded-[86px] shrink-0">
+              <p className="font-['DM_Sans_Variable'] font-semibold leading-[normal] relative shrink-0 text-[14px] text-white whitespace-nowrap">Pogledaj sve akcije</p>
+            </div>
+          </div>
+          <DaySchedule mobile />
         </div>
       </div>
 
@@ -309,10 +295,10 @@ export default function HomeMobile() {
                 <div className="absolute inset-0 overflow-hidden">{c.img}</div>
                 <div className="absolute inset-0" style={{ backgroundImage: c.gradient }} />
               </div>
-              <p className={`font-['DM_Sans_Variable'] font-bold leading-[normal] relative shrink-0 text-[9px] ${c.numColor}`}>{c.num}</p>
-              <div className="[word-break:break-word] content-stretch flex flex-col gap-[6px] items-center relative shrink-0 text-center w-full max-w-[277px]">
-                <p className="font-['DM_Sans_Variable'] font-bold leading-[normal] relative shrink-0 text-[15px] text-white tracking-[-0.75px] w-full">{c.title}</p>
-                <p className={`font-['DM_Sans_Variable'] font-normal leading-[1.6] relative shrink-0 text-[11.25px] text-balance w-full ${c.textColor}`}>{c.text}</p>
+              <p className={`font-['DM_Sans_Variable'] font-light leading-[normal] relative shrink-0 text-[14px] text-center ${c.numColor}`}>{c.num}</p>
+              <div className="[word-break:break-word] content-stretch flex flex-col gap-[8px] items-center relative shrink-0 text-center w-full max-w-[277px]">
+                <p className={`font-['DM_Sans_Variable'] font-bold leading-[normal] relative shrink-0 text-[20px] tracking-[-0.75px] w-full ${c.titleColor}`}>{c.title}</p>
+                <p className={`font-['DM_Sans_Variable'] font-normal leading-[1.6] relative shrink-0 text-[13px] text-balance w-full ${c.textColor}`}>{c.text}</p>
               </div>
             </div>
           ))}
@@ -320,21 +306,14 @@ export default function HomeMobile() {
       </div>
 
       {/* ---------- Svakih minut i po ---------- */}
-      <div className="bg-white content-stretch flex flex-col gap-[32px] items-center overflow-clip px-[20px] py-[56px] relative shrink-0 w-full" data-node-id="351:1123">
+      <div className="bg-white content-stretch flex flex-col gap-[32px] items-center overflow-clip px-[20px] py-[150px] relative shrink-0 w-full" data-node-id="351:1123">
         <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[1.45] opacity-62 relative shrink-0 text-[20px] text-balance text-black text-center tracking-[-0.09px] w-full">
           Svakih minut i po, nekome je potrebna krv.
         </p>
         <p className="[word-break:break-word] font-['Archivo_Variable'] font-light leading-[1.3] relative shrink-0 text-[#a9a9a9] text-[32px] text-balance text-center tracking-[-0.72px] w-full" data-node-id="351:1125" style={vw}>
           Svakog dana u Srbiji potrebno je oko 1.000 jedinica krvi. Iza svake potrebe je osoba kojoj davalac poput tebe može da pomogne.
         </p>
-        <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
-          <Photo className="col-1 ml-0 mt-[90px] opacity-10 relative rounded-[1.75px] row-1 size-[21px]" src={`${A}imgRectangle766.jpg`} />
-          <Photo className="col-1 ml-[10.5px] mt-[28px] opacity-40 relative rounded-[6.028px] row-1 size-[72.333px]" src={`${A}imgRectangle767.jpg`} />
-          <Photo className="col-1 ml-[31.5px] mt-[14.25px] relative rounded-[6.028px] row-1 size-[72.333px]" src={`${A}imgFrame5.jpg`} />
-          <div className="col-1 ml-[75.75px] mt-0 relative rounded-[3.25px] row-1 size-[39px] overflow-hidden bg-[#211e1e]">
-            <img alt="" className="absolute max-w-none" src={`${A}imgFrame1.jpg`} style={{ height: '207.14%', left: '-111.12%', top: '-11.04%', width: '286.42%' }} />
-          </div>
-        </div>
+        <Popups />
       </div>
 
       {/* ---------- Put krvi ---------- */}
@@ -404,21 +383,22 @@ export default function HomeMobile() {
               </p>
             </div>
           </div>
+          {/* same photos as desktop 503:312–325, in the mobile arrangement */}
           <div data-orbit-frame className="absolute inset-0 pointer-events-none">
-            <Photo className="absolute h-[41.691px] left-[181.31px] top-[253.24px] w-[65.257px]" src={`${A}imgRectangle26.jpg`} />
+            <Photo className="absolute h-[41.691px] left-[181.31px] top-[253.24px] w-[65.257px]" src={`${A}imgRectangle30.jpg`} imgStyle={CROP30} />
             <Photo className="absolute h-[61.642px] left-[824.25px] top-[286.2px] w-[96.486px]" src={`${A}imgRectangle10.jpg`} />
             <Photo className="absolute h-[90.756px] left-[358.04px] top-[100.92px] w-[142.057px]" src={`${A}imgRectangle755.jpg`} />
-            <Photo className="absolute h-[56.944px] left-[163px] top-[384.26px] w-[89.133px]" src={`${A}imgRectangle26.jpg`} />
+            <Photo className="absolute h-[56.944px] left-[163px] top-[384.26px] w-[89.133px]" src={`${A}imgRectangle19.jpg`} />
             <div className="absolute bg-[#d32027] h-[30.622px] left-[264.62px] top-[487.21px] w-[47.932px]" />
             <div className="absolute bg-[#d32027] h-[16.506px] left-[712.73px] top-[521.95px] w-[25.836px]" />
             <div className="absolute bg-[#d32027] h-[13.921px] left-[252.13px] top-[211.7px] w-[21.79px]" />
             <div className="absolute bg-[#d32027] h-[13.921px] left-[701.83px] top-[174.29px] w-[21.79px]" />
-            <Photo className="absolute h-[56.944px] left-[397.23px] top-[528.49px] w-[89.133px]" src={`${A}imgRectangle26.jpg`} />
-            <Photo className="absolute h-[33.123px] left-[747.35px] top-[487.21px] w-[51.846px]" src={`${A}imgRectangle26.jpg`} />
-            <Photo className="absolute h-[74.507px] left-[814.24px] top-[409.21px] w-[51.846px]" src={`${A}imgRectangle25.jpg`} />
-            <Photo className="absolute h-[84.136px] left-[521.02px] top-[521.95px] w-[89.133px]" src={`${A}imgRectangle25.jpg`} />
-            <Photo className="absolute h-[37.279px] left-[736.99px] top-[195.3px] w-[58.351px]" src={`${A}imgRectangle27.jpg`} />
-            <Photo className="absolute h-[64.915px] left-[519.98px] top-[120.93px] w-[101.608px]" src={`${A}imgRectangle27.jpg`} />
+            <Photo className="absolute h-[56.944px] left-[397.23px] top-[528.49px] w-[89.133px]" src={`${A}imgRectangle30.jpg`} imgStyle={CROP30} />
+            <Photo className="absolute h-[33.123px] left-[747.35px] top-[487.21px] w-[51.846px]" src={`${A}imgRectangle30.jpg`} imgStyle={CROP30} />
+            <Photo className="absolute h-[74.507px] left-[814.24px] top-[409.21px] w-[51.846px]" src={`${A}imgRectangle29.jpg`} />
+            <Photo className="absolute h-[84.136px] left-[521.02px] top-[521.95px] w-[89.133px]" src={`${A}imgRectangle29.jpg`} />
+            <Photo className="absolute h-[37.279px] left-[736.99px] top-[195.3px] w-[58.351px]" src={`${A}imgRectangle34.jpg`} />
+            <Photo className="absolute h-[64.915px] left-[519.98px] top-[120.93px] w-[101.608px]" src={`${A}imgRectangle23.jpg`} />
           </div>
         </div>
       </div>
@@ -461,40 +441,18 @@ export default function HomeMobile() {
         </div>
       </div>
 
-      {/* ---------- Crveni krst ---------- */}
-      <div className="bg-[#480c0c] content-stretch flex flex-col gap-[32px] items-start overflow-clip pb-[56px] pt-[124px] px-[20px] relative shrink-0 w-full" data-node-id="351:1241">
-        <div data-orbit-frame className="absolute inset-0 pointer-events-none">
-          <Photo className="absolute h-[114.285px] left-[390.72px] top-[213.67px] w-[178.886px]" src={`${A}imgRectangle10.jpg`} />
-          <div className="absolute bg-[#d32027] h-[21.813px] left-[280px] top-[634.47px] w-[34.143px]" />
-          <div className="absolute bg-[#d32027] h-[21.813px] left-[262.75px] top-[85.42px] w-[34.143px]" />
-          <Photo className="absolute h-[43.772px] left-[340.48px] top-[578.92px] w-[68.515px]" src={`${A}imgRectangle26.jpg`} />
-          <Photo className="absolute h-[98.462px] left-[428.87px] top-[409.05px] w-[68.515px]" src={`${A}imgRectangle25.jpg`} />
-          <Photo className="absolute h-[49.264px] left-[326.78px] top-[97.99px] w-[77.111px]" src={`${A}imgRectangle27.jpg`} />
-          <Photo className="absolute h-[85.785px] left-[40px] top-[-0.29px] w-[134.277px]" src={`${A}imgRectangle27.jpg`} />
-        </div>
-        <div className="content-stretch flex flex-col gap-[20px] items-start p-[20px] relative shrink-0 w-full">
-          <div className="relative shrink-0 w-[56.876px] h-[68.92px]">
-            <img alt="" className="absolute block left-0 top-0 size-[56.876px] max-w-none" src={`${A}imgUnion.png`} />
-            <img alt="1876" className="absolute block h-[6.612px] left-[19px] top-[62.31px] w-[19.181px] max-w-none" src={`${A}img1876.svg`} />
-          </div>
-          <div className="[word-break:break-word] content-stretch flex flex-col font-normal gap-[20px] items-start relative shrink-0 text-balance text-white w-full">
-            <p className="font-['DM_Sans_Variable'] leading-[1.45] opacity-60 relative shrink-0 text-[20px] w-full">Podrška je i u tvom mestu.</p>
-            <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] font-['Archivo_Variable'] leading-[1.2] relative shrink-0 text-[28px] tracking-[-0.72px] w-full" style={vw}>
-              Lokalni <span className="text-[#ff474e]">Crveni krst</span> je kontakt za pojedince, kompanije i organizacije koji žele da se uključe. Pomaže u organizovanju akcija i povezuje davaoce sa informacijama i aktivnostima u njihovoj sredini.
-            </p>
-          </div>
-        </div>
-      </div>
+      {/* ---------- Crveni krst: same two scroll states as desktop ---------- */}
+      <CrveniKrst mobile />
 
       {/* ---------- FAQ ---------- */}
       <div className="bg-white content-stretch flex items-start overflow-clip px-[24px] py-[56px] relative shrink-0 w-full" data-node-id="351:1260">
         <div className="content-stretch flex flex-[1_0_0] flex-col gap-[64px] items-start min-w-px relative">
-          <div className="content-stretch flex flex-col gap-[28px] items-center justify-center relative shrink-0 w-full">
-            <div className="[word-break:break-word] content-stretch flex flex-col font-normal gap-[18px] items-center relative shrink-0 text-[#483434] text-balance text-center w-full">
+          <div className="content-stretch flex flex-col gap-[28px] items-start justify-center relative shrink-0 w-full">
+            <div className="[word-break:break-word] content-stretch flex flex-col font-normal gap-[18px] items-start relative shrink-0 text-[#483434] text-balance text-left w-full">
               <p className="font-['Archivo_Variable'] leading-[1.2] relative shrink-0 text-[36px] tracking-[-0.54px] w-full" style={vw}>
                 Iza svakog davanja su ljudi.
               </p>
-              <p className="font-['DM_Sans_Variable'] leading-[1.5] opacity-70 relative shrink-0 text-[13.5px] tracking-[-0.0675px] w-full">
+              <p className="font-['DM_Sans_Variable'] leading-[1.5] opacity-70 relative shrink-0 text-[16px] tracking-[-0.0675px] w-full">
                 Od pripreme do povratka svakodnevnim aktivnostima, ovde su odgovori na najčešće nedoumice.
               </p>
             </div>
@@ -503,10 +461,10 @@ export default function HomeMobile() {
             </div>
           </div>
           <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-            {FAQ.map(([q, a], i) => (
-              <div key={q} className="[word-break:break-word] shadow-[inset_0_0.75px_0_#e8e8e8] content-stretch flex flex-col gap-[6px] items-center py-[16px] relative shrink-0 text-center text-balance w-full">
+            {FAQ.map(([q, a]) => (
+              <div key={q} className="[word-break:break-word] shadow-[inset_0_0.75px_0_#e8e8e8] content-stretch flex flex-col gap-[6px] items-start py-[16px] relative shrink-0 text-left text-balance w-full">
                 <p className="font-['DM_Sans_Variable'] font-medium leading-[1.3] relative shrink-0 text-[#111] text-[16px] w-full">{q}</p>
-                <p className={`font-['DM_Sans_Variable'] font-normal leading-[1.6] opacity-60 relative shrink-0 text-[#555] w-full ${i === 0 ? 'text-[14px]' : 'text-[11.25px]'}`}>{a}</p>
+                <p className={`font-['DM_Sans_Variable'] font-normal leading-[1.6] opacity-60 relative shrink-0 text-[#555] w-full text-[14px]`}>{a}</p>
               </div>
             ))}
           </div>

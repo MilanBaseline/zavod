@@ -17,13 +17,16 @@ const RECT_CHANCE = 0.12
 const RECT_COOLDOWN = 9000 // ms with no red rectangle after one leaves
 const RATIO = 1.565 // width / height of every tile in the design
 const SLOTS = 7
-const GAP = 28 // min distance between tiles / text
+const GAP = 28 // min distance between tiles / text (halved on phones)
 const EDGE = 24 // keep away from the section edges
 
 type Box = { x: number; y: number; w: number; h: number }
 const rand = (a: number, b: number) => a + Math.random() * (b - a)
-const overlaps = (a: Box, b: Box) =>
-  a.x < b.x + b.w + GAP && a.x + a.w + GAP > b.x && a.y < b.y + b.h + GAP && a.y + a.h + GAP > b.y
+const gapFor = () => (window.innerWidth < 768 ? GAP / 2 : GAP)
+const overlaps = (a: Box, b: Box) => {
+  const g = gapFor()
+  return a.x < b.x + b.w + g && a.x + a.w + g > b.x && a.y < b.y + b.h + g && a.y + a.h + g > b.y
+}
 
 export default function Popups() {
   const wrapRef = useRef<HTMLDivElement>(null)
@@ -72,9 +75,9 @@ export default function Popups() {
       const H = section.clientHeight
       const t = textBox()
       const x0 = EDGE, x3 = W - EDGE
-      const x1 = t.x - GAP, x2 = t.x + t.w + GAP
+      const x1 = t.x - gapFor(), x2 = t.x + t.w + gapFor()
       const y0 = EDGE, y3 = H - EDGE
-      const y1 = t.y - GAP, y2 = t.y + t.h + GAP
+      const y1 = t.y - gapFor(), y2 = t.y + t.h + gapFor()
       const mid1 = t.x + t.w / 3, mid2 = t.x + (2 * t.w) / 3
       return [
         { x: x0, y: y0, w: mid1 - x0, h: y1 - y0 }, // top-left
@@ -120,7 +123,9 @@ export default function Popups() {
       const el = tiles[i]
       // Red rectangles are rare: at most one on screen, and only occasionally.
       const isRect = rectSlots.size === 0 && Date.now() >= rectAllowedAt && Math.random() < RECT_CHANCE
-      const w = isRect ? rand(37, 82) : rand(99, 175)
+      // phones: smaller tiles so they fit in the space around the text
+      const k = section.clientWidth < 768 ? 0.55 : 1
+      const w = (isRect ? rand(37, 82) : rand(99, 175)) * k
       const h = w / RATIO
       const spot = findSpot(i, w, h)
       if (!spot) {

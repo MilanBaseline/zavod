@@ -86,7 +86,7 @@ export default function DaySchedule({ mobile = false }: { mobile?: boolean }) {
                 className={`day-tab m content-stretch flex h-[64px] items-center justify-center relative shrink-0 w-[84px] cursor-pointer bg-transparent ${active ? 'is-active' : ''}`}
               >
                 <span
-                  className={`[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] font-['DM_Sans_Variable'] leading-[normal] relative shrink-0 text-[22px] whitespace-nowrap ${
+                  className={`[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] font-['DM_Sans_Variable'] leading-[normal] relative shrink-0 text-[20px] whitespace-nowrap ${
                     active ? 'font-bold text-[#333c43]' : 'font-normal opacity-30 text-[#5d6266]'
                   }`}
                 >
@@ -97,7 +97,7 @@ export default function DaySchedule({ mobile = false }: { mobile?: boolean }) {
           })}
         </div>
         <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-          <div className="[word-break:break-word] content-stretch flex font-['DM_Sans_Variable'] font-semibold gap-[16px] items-start justify-between leading-[1.45] py-[12px] relative shrink-0 text-[#474f57] text-[12px] tracking-[2px] uppercase w-full">
+          <div className="[word-break:break-word] content-stretch flex font-['DM_Sans_Variable'] font-semibold gap-[16px] items-start justify-between leading-[1.45] py-[12px] relative shrink-0 text-[#bfc8d0] text-[11px] tracking-[2px] uppercase w-full">
             <p className="relative shrink-0">Mesto / lokacija</p>
             <p className="relative shrink-0 text-right">Vreme</p>
           </div>

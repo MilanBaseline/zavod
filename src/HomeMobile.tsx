@@ -287,7 +287,7 @@ export default function HomeMobile() {
             Svako ko redovno daje krv jednom je došao prvi put. Ako razmišljaš o svom prvom davanju, upoznaj se sa postupkom i dođi spremno. Naš tim je tu da te vodi kroz svaki korak.
           </p>
         </div>
-        <div className="cards-m flex gap-[22.5px] h-[471px] items-start relative shrink-0 w-[calc(100%+40px)] -mx-[20px] px-[20px] overflow-x-auto snap-x snap-mandatory">
+        <div className="cards-m flex gap-[22.5px] h-[471px] items-start relative shrink-0 w-[calc(100%+40px)] -mx-[20px] px-[20px] scroll-px-[20px] overflow-x-auto snap-x snap-mandatory after:content-[''] after:shrink-0 after:w-px">
           {CARDS.map((c) => (
             <div key={c.num} className="content-stretch flex flex-col gap-[18px] h-full items-center justify-end overflow-clip px-[24px] py-[36px] relative rounded-[18px] shrink-0 w-[325px] snap-start [clip-path:inset(0_round_18px)]">
               <div aria-hidden className="absolute inset-0 pointer-events-none">

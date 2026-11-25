@@ -19,7 +19,11 @@ export function useScrollFill(nodeId: string) {
 
     const wrapChars = () => {
       const el = document.querySelector<HTMLElement>(`[data-node-id="${nodeId}"]`)
-      if (!el || chars.length) return
+      if (!el) return
+      // already wrapped and still in the page: nothing to do (re-split replaces the spans)
+      if (chars.length && chars[0].isConnected) return
+      chars = []
+      last = -1
       const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT)
       const texts: Text[] = []
       while (walker.nextNode()) texts.push(walker.currentNode as Text)
@@ -64,7 +68,7 @@ export function useScrollFill(nodeId: string) {
 
     // wait until the line-reveal has split the heading into lines
     if (document.getElementById('root')?.classList.contains('reveal-ready')) wrapChars()
-    else window.addEventListener('reveal:split', wrapChars, { once: true })
+    window.addEventListener('reveal:split', wrapChars)
     window.addEventListener('scroll', onScroll, { passive: true })
     window.addEventListener('resize', onScroll)
     return () => {

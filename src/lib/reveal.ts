@@ -11,9 +11,13 @@ import { useEffect } from 'react'
 const LINE_STAGGER = 0.08 // s between lines
 const START_DELAY_MS = 1000 // wait for the preloader before revealing the first screen
 
+// original markup of every split paragraph, so it can be re-split when its width changes
+const originals = new WeakMap<HTMLElement, string>()
+
 function splitIntoLines(p: HTMLElement) {
   if (p.dataset.split) return
   p.dataset.split = '1'
+  if (!originals.has(p)) originals.set(p, p.innerHTML)
 
   // 1. Wrap each word in a span, remembering which inline wrappers (e.g. coloured spans) it belongs to.
   type Token = { word: HTMLSpanElement; chain: HTMLElement[]; space: boolean }
@@ -84,6 +88,7 @@ function splitIntoLines(p: HTMLElement) {
 export function useReveal() {
   useEffect(() => {
     let observer: IntersectionObserver | undefined
+    let resizeObs: ResizeObserver | undefined
     let timer: number | undefined
     let cancelled = false
 
@@ -95,6 +100,36 @@ export function useReveal() {
       ps.forEach(splitIntoLines)
       root.classList.add('reveal-ready')
       window.dispatchEvent(new Event('reveal:split'))
+
+      // Line breaks depend on the paragraph width. If it changes (window resized, page
+      // first laid out at a different size, in-app browsers), split the text again.
+      const widths = new WeakMap<Element, number>()
+      let pending = new Set<HTMLElement>()
+      let raf = 0
+      resizeObs = new ResizeObserver((entries) => {
+        entries.forEach((e) => {
+          const el = e.target as HTMLElement
+          const w = Math.round(e.contentRect.width)
+          const prev = widths.get(el)
+          widths.set(el, w)
+          if (prev !== undefined && prev !== w) pending.add(el)
+        })
+        if (pending.size && !raf)
+          raf = requestAnimationFrame(() => {
+            raf = 0
+            const list = pending
+            pending = new Set()
+            list.forEach((el) => {
+              const html = originals.get(el)
+              if (html === undefined) return
+              el.innerHTML = html
+              delete el.dataset.split
+              splitIntoLines(el)
+            })
+            window.dispatchEvent(new Event('reveal:split'))
+          })
+      })
+      ps.forEach((p) => resizeObs!.observe(p))
 
       const auto = ps.filter((p) => !p.closest('[data-reveal-manual]') || p.hasAttribute('data-reveal-auto'))
       observer = new IntersectionObserver(
@@ -109,7 +144,11 @@ export function useReveal() {
         { rootMargin: '0px 0px -8% 0px' },
       )
       timer = window.setTimeout(() => {
-        auto.forEach((p) => observer!.observe(p))
+        auto.forEach((p) => {
+          // [data-reveal-now]: first-screen text (the hero) reveals on load, wherever it sits on screen
+          if (p.closest('[data-reveal-now]')) p.classList.add('is-revealed')
+          else observer!.observe(p)
+        })
       }, START_DELAY_MS)
     })
 
@@ -117,6 +156,7 @@ export function useReveal() {
       cancelled = true
       window.clearTimeout(timer)
       observer?.disconnect()
+      resizeObs?.disconnect()
     }
   }, [])
 }

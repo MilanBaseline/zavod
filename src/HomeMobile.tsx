@@ -103,7 +103,7 @@ export default function HomeMobile() {
   return (
     <div className="home-m bg-white content-stretch flex flex-col items-center relative w-full overflow-x-clip" data-node-id="351:933">
       {/* ---------- Header + hero ---------- */}
-      <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="351:935">
+      <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="351:935" data-reveal-now>
         <div className="bg-white content-stretch flex gap-[10px] h-[48px] items-center justify-end px-[24px] py-[16px] relative shrink-0 w-full z-[2]" data-node-id="351:936">
           <div className="absolute bg-white content-stretch flex items-center left-0 p-[16.923px] rounded-bl-[67.692px] rounded-br-[67.692px] top-0">
             <div className="relative shrink-0 size-[76.154px]">

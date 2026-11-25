@@ -161,25 +161,6 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="content-stretch flex flex-col gap-[20px] items-start p-[32px] relative rounded-[16px] shrink-0 w-[272px]" data-node-id="503:825">
-                  <div className="flex items-center justify-center relative shrink-0" data-node-id="503:826">
-                    <div className="-scale-y-100 flex-none rotate-180">
-                      <div className="h-[14px] relative w-[16.333px]" data-name="Vector">
-                        <div className="absolute inset-[-41.67%_-35.71%]">
-                          <PulseHeart variant="large" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="[word-break:break-word] content-stretch flex flex-col font-['Host_Grotesk_Variable'] font-normal gap-[14px] items-start relative shrink-0 text-white w-full" data-node-id="503:827">
-                    <div className="flex flex-col justify-end leading-[0] relative shrink-0 text-[8px] text-center tracking-[3px] uppercase whitespace-nowrap" data-node-id="503:828">
-                      <p className="leading-[1.3] text-balance">Tihi Heroj</p>
-                    </div>
-                    <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] leading-[1.3] min-w-full relative shrink-0 text-[20px] text-balance tracking-[-0.288px] w-[min-content]" data-node-id="503:829">
-                      Ana je spasila svojim donacijama 5 života
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

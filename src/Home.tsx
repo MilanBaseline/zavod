@@ -93,8 +93,8 @@ export default function Home() {
   useScrollFill('503:239')
   return (
     <div className="bg-white content-stretch flex flex-col items-center relative size-full" data-node-id="503:47" data-name="Home">
-      <div className="h-[1000px] overflow-clip relative shrink-0 w-full" data-node-id="503:784" data-name="Preloader">
-        <div className="absolute content-stretch flex flex-col h-[1000px] isolate items-center left-0 top-0 w-full" data-node-id="503:794" data-name="Hero frame">
+      <div className="h-[100svh] min-h-[640px] overflow-clip relative shrink-0 w-full" data-node-id="503:784" data-name="Preloader">
+        <div className="absolute content-stretch flex flex-col h-[100svh] min-h-[640px] isolate items-center left-0 top-0 w-full" data-node-id="503:794" data-name="Hero frame">
           <div className="bg-white content-stretch flex gap-[10px] h-[64px] items-center justify-end p-[16px] relative shrink-0 w-full z-[2]" data-node-id="503:795" data-name="Hero">
             <div className="content-stretch flex flex-[1_0_0] items-center min-w-px relative" data-node-id="503:796">
               <NavItem className="content-stretch flex items-center justify-center px-[12px] py-[8px] relative shrink-0" />

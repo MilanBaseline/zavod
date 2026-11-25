@@ -108,11 +108,8 @@ export function useReveal() {
         },
         { rootMargin: '0px 0px -8% 0px' },
       )
-      // Footer logo also gets observed; the CSS plays its drop-in once it is in view.
-      const footerLogo = root.querySelector('[data-node-id="503:506"]')
       timer = window.setTimeout(() => {
         auto.forEach((p) => observer!.observe(p))
-        if (footerLogo) observer!.observe(footerLogo)
       }, START_DELAY_MS)
     })
 

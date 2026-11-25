@@ -30,9 +30,6 @@ body { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
   67.758%, 100% { opacity: 1; }
 }
 /* footer logo uses the same drop, played when the footer is in view */
-[data-node-id="503:506"] { translate: 0 -143.717px; }
-[data-node-id="503:506"].is-revealed { animation: footer-logo 1s cubic-bezier(0.076, 1.185, 1, 1) both; }
-@keyframes footer-logo { from { translate: 0 -143.717px; } to { translate: 0 0; } }
 
 /* ---------- Popups ---------- */
 .popup-tile {

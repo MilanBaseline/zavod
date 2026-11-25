@@ -1,0 +1,24 @@
+/* Adjacent section surfaces share one canvas. Cards and artwork keep their fills. */
+[data-scroll-canvas] { background-color: var(--scroll-canvas) !important; }
+[data-scroll-surface] { background-color: transparent !important; }
+[data-scroll-canvas] { transition: background-color 850ms cubic-bezier(.33,0,.22,1); }
+@media (prefers-reduced-motion: reduce) {
+  [data-scroll-canvas] { transition: none; }
+}
+.ck-stage:not(.ck-entered)>*{visibility:hidden}
+.ck-stage.ck-entered .ck-photo{animation:ck-open .86s cubic-bezier(.22,1,.36,1) var(--delay) backwards}
+.ck-stage.ck-entered .ck-photo::after{content:"";position:absolute;inset:0;background:#741c22;pointer-events:none;animation:ck-uncover .72s cubic-bezier(.65,0,.25,1) calc(var(--delay) + .17s) both}
+.ck-stage.ck-entered .ck-line{animation:ck-draw .9s cubic-bezier(.22,1,.36,1) var(--delay) backwards}
+.ck-stage.ck-entered .ck-one{animation:ck-copy .65s ease-out .85s backwards}
+.ck-h{--start:scaleX(0);transform-origin:left center}
+.ck-v{--start:scaleY(0);transform-origin:center top}
+.ck-line:nth-child(even){transform-origin:bottom right}
+@keyframes ck-open{from{clip-path:inset(100% 0 0)}to{clip-path:inset(0)}}
+@keyframes ck-uncover{from{transform:translateY(0)}to{transform:translateY(-101%)}}
+@keyframes ck-draw{from{transform:var(--start)}to{transform:none}}
+@keyframes ck-copy{from{opacity:0}to{opacity:1}}
+html.ck-hold{overflow:hidden;scrollbar-gutter:stable}
+@media(prefers-reduced-motion:reduce){.ck-stage.ck-entered .ck-photo,.ck-stage.ck-entered .ck-line,.ck-stage.ck-entered .ck-one{animation:none}.ck-photo::after{display:none}}
+.ck-stage.ck-entered .ck-line,.ck-stage.ck-entered .ck-photo,.ck-stage.ck-entered .ck-one{animation-fill-mode:both}
+html.ck-hold .ck-stage{position:fixed!important;inset:0;width:100%;height:100dvh} html.ck-hold,html.ck-hold body{overscroll-behavior:none;scroll-behavior:auto!important}
+#lokacija [data-node-id="503:1669"],#lokacija [data-node-id="503:3227"],.home-m #lokacija p.font-extrabold{font-weight:400;font-size:36px;line-height:1.2}

@@ -417,7 +417,7 @@ export default function HomeMobile() {
         <div className="content-stretch flex flex-col gap-[24px] items-start justify-center relative shrink-0 w-full">
           {[
             { bg: 'bg-[#480c0c]', fg: 'text-white', title: 'Kompanije i ustanove', text: 'Pokreni inicijativu među kolegama. Poveži svoj kolektiv sa našim timom i saznaj kako možete da organizujete akciju davanja krvi.', cta: 'Uključi svoj kolektiv', icon: 'imgGroup70.svg', iconBox: 'h-[31.2px] w-[33.6px] mt-[4px]' },
-            { bg: 'bg-[#fffbe3]', fg: 'text-[#480c0c]', title: 'Škole i fakulteti', text: 'Poveži svoju školu ili fakultet sa našim timom. Zajedno možemo da organizujemo edukaciju i pripremimo punoletne učenike i studente za davanje krvi.', cta: 'Uključi svoju školu ili fakultet', icon: 'imgGraduationCapLine.svg', iconBox: 'size-[40px]' },
+            { bg: 'bg-[#fffbe3]', fg: 'text-[#480c0c]', title: 'Škole i fakulteti', text: 'Poveži svoju školu ili fakultet sa našim timom. Zajedno možemo da organizujemo edukaciju i pripremimo punoletne učenike i studente za davanje krvi.', cta: 'Uključi svoju školu ili fakultet', icon: 'imgGroup67.svg', iconBox: 'h-[33.6px] w-[40px] mt-[3px]' },
           ].map((c) => (
             <div key={c.title} className={`${c.bg} content-stretch flex flex-col gap-[28px] items-start overflow-clip p-[28px] relative rounded-[20px] shrink-0 w-full`}>
               <div className="content-stretch flex gap-[15px] items-start relative shrink-0 w-full">

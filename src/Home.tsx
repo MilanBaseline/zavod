@@ -302,7 +302,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="absolute h-[334px] left-[-60px] top-[362px] w-[599px]" data-node-id="528:124" data-name="Fotografija restauracije 1">
+              <div className="absolute bottom-0 h-[334px] left-[-60px] w-[599px]" data-node-id="528:124" data-name="Fotografija restauracije 1">
                 <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFotografijaRestauracije1} />
               </div>
             </div>

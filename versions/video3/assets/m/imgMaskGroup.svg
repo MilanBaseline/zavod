@@ -1,0 +1,9 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="149.219" height="60.832" viewBox="0 0 149.219 60.832" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Mask group">
+<mask id="mask0_0_60" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="150" height="61">
+<path id="Subtract" d="M67.125 0C74.1138 2.91652 108 16.8746 116.625 18.75C123 21.375 133.875 19.5 135 19.5C135.375 18.375 135.618 17.25 137.25 17.25C138 16.1246 138.577 15.5777 139.875 15.375C141 15.375 141.75 15.75 142.875 16.875C144.375 14.25 147.291 15.4446 148.5 16.125C150.516 17.2602 147.55 18.9503 148.5 20.25C133.5 34.25 98.25 62.55 74.25 60.75C50.25 58.95 14.75 46 0 40.125V16.125L67.125 0Z" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_0_60)">
+</g>
+</g>
+</svg>

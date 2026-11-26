@@ -1,6 +1,7 @@
 import ReserveChart from './components/ReserveChart'
 import Popups from './components/Popups'
 import PulseHeart from './components/PulseHeart'
+import HeroPeople, { HERO_PEOPLE_ENABLED } from './components/HeroPeople'
 import HeroSlider from './components/HeroSlider'
 import DaySchedule from './components/DaySchedule'
 import CrveniKrst from './components/CrveniKrst'
@@ -161,6 +162,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+                {HERO_PEOPLE_ENABLED && <HeroPeople />}
               </div>
             </div>
           </div>

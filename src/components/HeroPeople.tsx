@@ -11,11 +11,11 @@ import PulseHeart from './PulseHeart'
  */
 
 const PEOPLE = [
-  { name: 'Jelena', count: 8 },
-  { name: 'Stefan', count: 9 },
-  { name: 'Marija', count: 7 },
-  { name: 'Nikola', count: 14 },
-  { name: 'Milica', count: 20 },
+  { name: 'Jelena', count: 8, text: 'Danas prati nove davaoce na njihovo prvo davanje krvi.' },
+  { name: 'Stefan', count: 9, text: 'Sa kolegama je organizovao zajednički odlazak na davanje krvi.' },
+  { name: 'Marija', count: 7, text: 'Posle svog prvog davanja ohrabrila je koleginicu da pođe s njom.' },
+  { name: 'Nikola', count: 14, text: 'Na sledeću akciju poveo je prijatelja koji se dugo premišljao.' },
+  { name: 'Milica', count: 20, text: 'Na akciju u svom kraju dovela je još troje davalaca.' },
 ]
 const CLIP_SECONDS = 5
 
@@ -67,7 +67,7 @@ export default function HeroPeople({ mobile = false }: { mobile?: boolean }) {
   return (
     <div
       data-reveal-manual
-      className={`content-stretch flex flex-col gap-[20px] items-start relative rounded-[16px] shrink-0 ${mobile ? 'w-full pt-[4px]' : 'p-[32px] w-[272px]'}`}
+      className={`content-stretch flex flex-col gap-[20px] items-start relative rounded-[16px] shrink-0 ${mobile ? 'w-full pt-[4px]' : 'p-[32px] w-[320px]'}`}
       data-node-id="503:825"
     >
       <div className="flex items-center justify-center relative shrink-0">
@@ -87,10 +87,11 @@ export default function HeroPeople({ mobile = false }: { mobile?: boolean }) {
         </div>
         <div className="grid w-full">
           {PEOPLE.map((p, i) => (
-            <div key={p.name} ref={(el) => (msgRefs.current[i] = el)} data-state="next" className="step col-1 row-1">
+            <div key={p.name} ref={(el) => (msgRefs.current[i] = el)} data-state="next" className="step col-1 row-1 self-end flex flex-col gap-[10px]">
               <p className={`[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] leading-[1.3] relative text-balance tracking-[-0.288px] w-full ${mobile ? 'text-[18px]' : 'text-[20px]'}`}>
                 {p.name} · {p.count} davanja krvi
               </p>
+              <p className={`font-['DM_Sans_Variable'] leading-[1.4] opacity-80 relative text-balance w-full ${mobile ? 'text-[14px]' : 'text-[14px]'}`}>{p.text}</p>
             </div>
           ))}
         </div>

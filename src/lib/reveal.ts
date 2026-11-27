@@ -109,7 +109,7 @@ export function useReveal() {
       resizeObs = new ResizeObserver((entries) => {
         entries.forEach((e) => {
           const el = e.target as HTMLElement
-          const w = Math.round(e.contentRect.width)
+          const w = Math.round(e.contentRect.width) * 1000 + Math.round(parseFloat(getComputedStyle(el).fontSize) * 10)
           const prev = widths.get(el)
           widths.set(el, w)
           if (prev !== undefined && prev !== w) pending.add(el)

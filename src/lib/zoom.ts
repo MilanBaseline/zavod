@@ -21,6 +21,7 @@ export function getZoom() {
  * just enough. Headlines are never touched (they stay above the floor).
  */
 const MIN_PX = 14
+const LABEL_MIN_PX = 8
 
 function boostText(root: HTMLElement, z: number) {
   const els = root.querySelectorAll<HTMLElement>('p, span, a, button, li, h1, h2, h3, h4, label, small')
@@ -35,7 +36,9 @@ function boostText(root: HTMLElement, z: number) {
     }
     const s = parseFloat(el.dataset.fs!)
     if (!s) return
-    const target = Math.min(s, MIN_PX)
+    // small uppercase labels (pills, column titles) only need a light floor
+    const upper = getComputedStyle(el).textTransform === 'uppercase'
+    const target = Math.min(s, upper ? LABEL_MIN_PX : MIN_PX)
     if (s * z >= target - 0.01) {
       el.style.fontSize = ''
       el.style.lineHeight = ''

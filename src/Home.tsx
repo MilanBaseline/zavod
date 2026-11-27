@@ -627,14 +627,6 @@ export default function Home() {
       </div>
       <div className="bg-white content-stretch flex flex-col gap-[24px] items-center justify-center overflow-clip px-[84px] py-[160px] relative shrink-0 w-full" data-node-id="503:326">
         <div className="content-stretch flex flex-col gap-[24px] items-center justify-center p-[32px] relative shrink-0 w-full" data-node-id="503:327" data-name="Container">
-          <div className="border border-[rgba(226,226,226,0.3)] border-solid content-stretch flex gap-[10px] h-[26px] items-center justify-center pl-[10px] pr-[16px] py-[2px] relative rounded-[39px] shrink-0" data-node-id="503:328">
-            <div className="relative shrink-0 size-[2px]" data-node-id="503:329">
-              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse46} />
-            </div>
-            <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-normal leading-[22.5px] opacity-60 relative shrink-0 text-[10px] text-balance text-black tracking-[3px] uppercase whitespace-nowrap" data-node-id="503:330">
-              Put Krvi
-            </p>
-          </div>
           <p className="[word-break:break-word] font-['Archivo_Variable'] font-light leading-[55.2px] relative shrink-0 text-[#483434] text-[48px] text-center tracking-[-0.72px] whitespace-nowrap" data-node-id="503:331" style={{ fontVariationSettings: '"wdth" 100' }}>
             Pokreni svoj kolektiv.
           </p>
@@ -643,7 +635,7 @@ export default function Home() {
           </p>
         </div>
         <div className="content-stretch flex gap-[16px] items-center relative shrink-0 w-[1306px]" data-node-id="503:333">
-          <div className="bg-[#480c0c] content-stretch flex flex-[1_0_0] flex-col gap-[32px] h-[326px] items-start justify-end min-w-px overflow-clip p-[64px] relative rounded-[20px]" data-node-id="503:334">
+          <div className="bg-[#480c0c] content-stretch flex flex-[1_0_0] flex-col gap-[32px] min-h-[326px] self-stretch items-start justify-start min-w-px overflow-clip p-[64px] relative rounded-[20px]" data-node-id="503:334">
             <div className="content-stretch flex gap-[20px] items-start relative shrink-0 w-full" data-node-id="503:335">
               <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col font-normal gap-[20px] items-start min-w-px pt-[12px] relative text-balance text-white" data-node-id="503:336">
                 <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] font-['Archivo_Variable'] leading-[45px] relative shrink-0 text-[24px] tracking-[-0.72px] w-full" data-node-id="503:337" style={{ fontVariationSettings: '"wdth" 100' }}>
@@ -665,11 +657,6 @@ export default function Home() {
               <p className="[word-break:break-word] font-['DM_Sans_Variable'] font-semibold leading-[normal] relative shrink-0 text-[14px] text-white whitespace-nowrap" data-node-id="503:346">
                 Uključi svoj kolektiv
               </p>
-            </div>
-            <div className="absolute contents left-[-44px] top-[343px]" data-node-id="503:347" data-name="Mask group">
-              <div className="absolute h-[491px] left-[-118px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[74px_156px] mask-size-[743.5px_248px] top-[187px] w-[873px]" data-node-id="503:349" style={{ maskImage: `url("${imgMinimalisticArtwork2}")` }} data-name="Minimalistic Artwork 2">
-                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgMinimalisticArtwork3} />
-              </div>
             </div>
           </div>
           <div className="bg-[#fffbe3] content-stretch flex flex-[1_0_0] flex-col gap-[32px] items-start min-w-px p-[64px] relative rounded-[20px]" data-node-id="503:350">
@@ -830,7 +817,7 @@ export default function Home() {
             </div>
           </div>
           <div className="content-stretch flex flex-col gap-[32px] items-start pt-[64px] relative shrink-0 w-[1600px] shadow-[inset_0_1px_0_rgba(0,0,0,0.08)]" data-node-id="503:432">
-            <div className="[word-break:break-word] content-stretch flex h-[340px] items-start justify-between relative shrink-0 text-[#0a142f] text-[16px] w-full" data-node-id="503:433" data-name="Frame">
+            <div className="[word-break:break-word] content-stretch flex min-h-[340px] pb-[48px] items-start justify-between relative shrink-0 text-[#0a142f] text-[16px] w-full" data-node-id="503:433" data-name="Frame">
               <div className="content-stretch flex gap-[24px] items-start relative shrink-0 w-[700px]" data-node-id="503:434" data-name="Navigation">
                 <div className="content-stretch flex flex-col gap-[15px] items-start relative shrink-0 w-[224px]" data-node-id="503:435" data-name="O davanju krvi">
                   <p className="font-['DM_Sans_Variable'] font-bold leading-[28px] relative shrink-0 w-full" data-node-id="503:436">

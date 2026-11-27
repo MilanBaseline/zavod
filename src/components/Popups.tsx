@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { getZoom } from '../lib/zoom'
 
 /**
  * "Svakih minut i po, nekome je potrebna krv." section.
@@ -64,7 +65,8 @@ export default function Popups() {
           r.b = Math.max(r.b, b.bottom)
         })
       })
-      return { x: r.l - s.left, y: r.t - s.top, w: r.r - r.l, h: r.b - r.t }
+      const z = getZoom()
+      return { x: (r.l - s.left) / z, y: (r.t - s.top) / z, w: (r.r - r.l) / z, h: (r.b - r.t) / z }
     }
 
     // The free space around the text is split into 8 areas (corners, top, bottom, sides).

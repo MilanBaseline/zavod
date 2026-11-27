@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { getZoom } from '../lib/zoom'
 
 /**
  * "Tvoja krv nastavlja put." — sticky scroll section with 5 steps.
@@ -103,8 +104,9 @@ export default function StepsScroll() {
     const update = () => {
       raf = 0
       const rect = outer.getBoundingClientRect()
-      const stickyTop = window.innerHeight / 2 - ROW_H / 2
-      const distance = outer.offsetHeight - ROW_H
+      const z = getZoom()
+      const stickyTop = window.innerHeight / 2 - (ROW_H * z) / 2
+      const distance = (outer.offsetHeight - ROW_H) * z
       const p = Math.min(1, Math.max(0, (stickyTop - rect.top) / distance))
       const s = p * (STEPS.length - 1)
 
@@ -146,9 +148,9 @@ export default function StepsScroll() {
       ref={outerRef}
       data-reveal-manual
       className="relative shrink-0 w-full"
-      style={{ height: `calc(${ROW_H}px + ${STEPS.length - 1} * ${SCROLL_PER_STEP})` }}
+      style={{ height: `calc(${ROW_H}px + ${STEPS.length - 1} * ${SCROLL_PER_STEP} / var(--z, 1))` }}
     >
-      <div className="sticky w-full" style={{ top: `calc(50vh - ${ROW_H / 2}px)` }}>
+      <div className="sticky w-full" style={{ top: `calc(50vh / var(--z, 1) - ${ROW_H / 2}px)` }}>
         <div className="content-stretch flex gap-[32px] h-[940px] items-center py-[126px] relative w-full" data-node-id="503:253">
           <div className="grid shrink-0 w-[360.52px]">{side(0)}</div>
 

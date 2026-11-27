@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { getZoom } from './zoom'
 
 /**
  * Used by "Krv je potrebna svakog dana." and "Crveni krst" — the photos and red rectangles load in
@@ -31,8 +32,9 @@ export function useOrbitIn(sectionId: string, itemSelector = '[data-orbit-frame]
 
       const placed = items.map((el) => {
         const r = el.getBoundingClientRect()
-        const x = r.left + r.width / 2 - cx
-        const y = r.top + r.height / 2 - cy
+        const z = getZoom()
+        const x = (r.left + r.width / 2 - cx) / z
+        const y = (r.top + r.height / 2 - cy) / z
         // clockwise angle from 12 o'clock, 0..360
         const angle = ((Math.atan2(x, -y) * 180) / Math.PI + 360) % 360
         return { el, x, y, angle }

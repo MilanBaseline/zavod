@@ -9,6 +9,7 @@ import StepsScroll from './components/StepsScroll'
 import { useReveal } from './lib/reveal'
 import { useOrbitIn } from './lib/orbitIn'
 import { useScrollFill } from './lib/scrollFill'
+import { useDesktopZoom } from './lib/zoom'
 const imgVector = "./assets/imgVector.png";
 const imgFotografijaRestauracije1 = "./assets/imgFotografijaRestauracije1.png";
 const imgFrame = "./assets/imgFrame.jpg";
@@ -92,10 +93,11 @@ export default function Home() {
   useReveal()
   useOrbitIn('503:304')
   useScrollFill('503:239')
+  useDesktopZoom('503:47')
   return (
     <div className="bg-white content-stretch flex flex-col items-center relative size-full" data-node-id="503:47" data-name="Home">
-      <div className="h-[100svh] min-h-[640px] overflow-clip relative shrink-0 w-full" data-node-id="503:784" data-name="Preloader">
-        <div className="absolute content-stretch flex flex-col h-[100svh] min-h-[640px] isolate items-center left-0 top-0 w-full" data-node-id="503:794" data-name="Hero frame">
+      <div className="h-[calc(100svh/var(--z,1))] min-h-[640px] overflow-clip relative shrink-0 w-full" data-node-id="503:784" data-name="Preloader">
+        <div className="absolute content-stretch flex flex-col h-[calc(100svh/var(--z,1))] min-h-[640px] isolate items-center left-0 top-0 w-full" data-node-id="503:794" data-name="Hero frame">
           <div className="bg-white content-stretch flex gap-[10px] h-[64px] items-center justify-end p-[16px] relative shrink-0 w-full z-[2]" data-node-id="503:795" data-name="Hero">
             <div className="content-stretch flex flex-[1_0_0] items-center min-w-px relative" data-node-id="503:796">
               <NavItem className="content-stretch flex items-center justify-center px-[12px] py-[8px] relative shrink-0" />

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { getZoom } from '../lib/zoom'
 
 /**
  * "Crveni krst" section — two states from the Figma "Section 2" frame (544:151).
@@ -33,7 +34,7 @@ export default function CrveniKrst({ mobile = false }: { mobile?: boolean }) {
       raf = 0
       const r = outer.getBoundingClientRect()
       const vh = window.innerHeight
-      const distance = outer.offsetHeight - vh
+      const distance = outer.offsetHeight * getZoom() - vh
       const p = Math.min(1, Math.max(0, -r.top / distance))
       // before the section is mostly on screen its first state is not revealed yet
       const next = r.top > vh * 0.35 ? 'idle' : p < 0.5 ? 'one' : 'two'
@@ -104,8 +105,8 @@ export default function CrveniKrst({ mobile = false }: { mobile?: boolean }) {
   }
 
   return (
-    <div ref={outerRef} data-reveal-manual className="relative shrink-0 w-full" style={{ height: '200vh' }}>
-      <div ref={stageRef} data-state="idle" className="ck-stage sticky top-0 h-screen w-full overflow-hidden bg-[#480c0c]">
+    <div ref={outerRef} data-reveal-manual className="relative shrink-0 w-full" style={{ height: 'calc(200vh / var(--z, 1))' }}>
+      <div ref={stageRef} data-state="idle" className="ck-stage sticky top-0 h-[calc(100vh/var(--z,1))] w-full overflow-hidden bg-[#480c0c]">
         {/* grid lines */}
         <div className="absolute inset-y-0 left-[280px] w-px bg-[rgba(195,195,195,0.3)]" />
         <div className="absolute inset-y-0 right-[280px] w-px bg-[rgba(195,195,195,0.3)]" />
